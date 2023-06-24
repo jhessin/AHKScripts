@@ -12,6 +12,11 @@
 ; 'neovide' vim.
 SetTitleMatchMode "RegEx"
 
+; Some simple tweaks
+SetCapsLockState "AlwaysOff"
+SetNumLockState "AlwaysOn"
+CapsLock::Esc
+
 ; This is the RegEx I use to test if Neovim or Neovide are active
 NeovimTest := "Neov(im)|(ide)"
 MagellanTest := "Magellan"
@@ -31,15 +36,18 @@ SendPortPkg(keyname) {
 }
 
 SendRename(keyname) {
-	Send "{Ctrl down}"
-	Send "a"
-	Send "{Ctrl up}"
-	Send "{Shift down}"
-	Send "{F2}"
-	Send "{Shift up}"
-	Send "{Ctrl down}"
-	Send "v"
-	Send "{Ctrl up}"
+	; Send "{Ctrl down}"
+	; Send "a"
+	; Send "{Ctrl up}"
+	; Send "{Shift down}"
+	; Send "{F2}"
+	; Send "{Shift up}"
+	; Send "{Ctrl down}"
+	; Send "v"
+	; Send "{Ctrl up}"
+	Send "^a"
+	Send "+{F2}"
+	Send "^v"
 }
 
 SendTiePoint(keyname) {
