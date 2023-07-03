@@ -35,16 +35,19 @@ SendPortPkg(keyname) {
 	SendText "PORT PKG"
 }
 
-SendRename(keyname) {
-	; Send "{Ctrl down}"
-	; Send "a"
-	; Send "{Ctrl up}"
-	; Send "{Shift down}"
-	; Send "{F2}"
-	; Send "{Shift up}"
-	; Send "{Ctrl down}"
-	; Send "v"
-	; Send "{Ctrl up}"
+RenameZip(keyname) {
+	Send "^v"
+	SendText "PORT PKG"
+}
+
+RenameAndOpenTP(keyname) {
+	Send "{F2}"
+	SendText "TIE POINT"
+	Send "{Enter}"
+	Send "{Enter}"
+}
+
+BulkRename(keyname) {
 	Send "^a"
 	Send "+{F2}"
 	Send "^v"
@@ -96,9 +99,10 @@ MagellanPaste(keyname) {
 ; Here are the keys that are always active.
 Hotkey "XButton1", WinCopy
 Hotkey "XButton2", WinPaste
+Hotkey "F4", RenameZip
 Hotkey "F5", SendPortPkg
-Hotkey "F6", SendRename
-Hotkey "F7", SendTiePoint
+Hotkey "F6", BulkRename
+Hotkey "F7", RenameAndOpenTP
 
 ; Only activate this hotkeys if I'm in Magellan.
 HotIfWinActive MagellanTest
