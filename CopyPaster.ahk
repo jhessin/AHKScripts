@@ -40,6 +40,11 @@ RenameZip(keyname) {
 	SendText "PORT PKG"
 }
 
+RenameRevisedZip(keyname) {
+	Send "^v"
+	SendText "REVISED PORT PKG"
+}
+
 RenameAndOpenTP(keyname) {
 	Send "{F2}"
 	SendText "TIE POINT"
@@ -55,6 +60,10 @@ BulkRename(keyname) {
 
 SendTiePoint(keyname) {
 	SendText "TIE POINT"
+}
+
+WinCut(keyname) {
+	send "^x"
 }
 
 WinCopy(keyname) {
@@ -99,6 +108,8 @@ MagellanPaste(keyname) {
 ; Here are the keys that are always active.
 Hotkey "XButton1", WinCopy
 Hotkey "XButton2", WinPaste
+Hotkey "F1", WinCut
+Hotkey "F3", RenameRevisedZip
 Hotkey "F4", RenameZip
 Hotkey "F5", SendPortPkg
 Hotkey "F6", BulkRename
