@@ -31,8 +31,12 @@ F10::Active.Value := !Active.Value
 
 ; These are some helper functions that are called whenever the hotkeys are pressed
 ; Notice I need to send the original key if I want to keep basic behaviour.
-SendPortPkg(keyname) {
+PortPkg(keyname) {
 	SendText "PORT PKG"
+}
+
+RevisedPortPkg(keyname) {
+	SendText "REVISED PORT PKG"
 }
 
 RenameZip(keyname) {
@@ -58,7 +62,7 @@ BulkRename(keyname) {
 	Send "^v"
 }
 
-SendTiePoint(keyname) {
+TiePoint(keyname) {
 	SendText "TIE POINT"
 }
 
@@ -109,9 +113,10 @@ MagellanPaste(keyname) {
 Hotkey "XButton1", WinCopy
 Hotkey "XButton2", WinPaste
 Hotkey "F1", WinCut
-Hotkey "F3", RenameRevisedZip
 Hotkey "F4", RenameZip
-Hotkey "F5", SendPortPkg
+Hotkey "+F4", RenameRevisedZip
+Hotkey "F5", PortPkg
+Hotkey "+F5", RevisedPortPkg
 Hotkey "F6", BulkRename
 Hotkey "F7", RenameAndOpenTP
 
