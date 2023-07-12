@@ -18,7 +18,7 @@ SetNumLockState "AlwaysOn"
 CapsLock::Esc
 
 ; This is the RegEx I use to test if Neovim or Neovide are active
-NeovimTest := "Neov(im)|(ide)"
+NeovimTest := "(Neov(im)|(ide))|(Windows PowerShell)"
 MagellanTest := "Magellan"
 
 ; This Hud provides feedback to show if I am in VimMode for copy pasting.
