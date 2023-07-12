@@ -66,6 +66,14 @@ TiePoint(keyname) {
 	SendText "TIE POINT"
 }
 
+Allocations(keyname) {
+	SendText "ALLOCATIONS"
+}
+
+MuxDetail(keyname) {
+	SendText "MUX DETAIL"
+}
+
 WinCut(keyname) {
 	send "^x"
 }
@@ -109,10 +117,13 @@ MagellanPaste(keyname) {
 		Send "p"
 	}
 }
+
 ; Here are the keys that are always active.
 Hotkey "XButton1", WinCopy
 Hotkey "XButton2", WinPaste
 Hotkey "F1", WinCut
+Hotkey "F3", Allocations
+Hotkey "F8", MuxDetail
 Hotkey "F4", RenameZip
 Hotkey "+F4", RenameRevisedZip
 Hotkey "F5", PortPkg
