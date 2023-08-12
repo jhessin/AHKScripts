@@ -18,7 +18,8 @@ SetNumLockState "AlwaysOn"
 CapsLock::Esc
 
 ; This is the RegEx I use to test if Neovim or Neovide are active
-NeovimTest := "(Neov(im)|(ide))|(Windows PowerShell)|(PowerShell)|(Command Prompt)"
+NeovimTest :=
+	"(Neov(im)|(ide))|(Windows PowerShell)|(PowerShell)|(Command Prompt)"
 MagellanTest := "Magellan"
 
 ; This Hud provides feedback to show if I am in VimMode for copy pasting.
@@ -27,7 +28,7 @@ Active := Hud.AddCheckBox("+w75")
 Hud.Show()
 
 ; This is a quick Hotkey to toggle if I am in CopyPaste mode.
-F10::Active.Value := !Active.Value
+F10:: Active.Value := !Active.Value
 
 ; These are some helper functions that are called whenever the hotkeys are pressed
 ; Notice I need to send the original key if I want to keep basic behaviour.
@@ -112,7 +113,8 @@ Paste(keyname) {
 
 MagellanPaste(keyname) {
 	if (Active.Value) {
-		Send "^v{bs}{bs}"
+		RunWait('python cbtrim.py', unset, 'Hide')
+		Send "^v"
 	} else {
 		Send "p"
 	}
@@ -148,4 +150,3 @@ HotIfWinNotActive NeovimTest
 ; And finally the hotkeys I want to replace
 Hotkey "y", Copy
 Hotkey "p", Paste
-
