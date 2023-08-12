@@ -1,0 +1,10 @@
+﻿#Requires AutoHotkey v2.0
+
+TURBO_ACTIONS_PER_SECOND := 10 ;1 SECOND = 1000 MILLI SECONDS, 1000 MILLISECONDS / 10 ACTIONS = 1ACTION EVERY 100MS
+
+RButton:: {
+	while (GetKeyState('RButton', 'P')) {
+		Click()
+		Sleep(1000 / TURBO_ACTIONS_PER_SECOND)
+	}
+}
