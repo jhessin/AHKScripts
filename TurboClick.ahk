@@ -5,7 +5,7 @@ TURBO_ACTIONS_PER_SECOND := 10 ;1 SECOND = 1000 MILLI SECONDS, 1000 MILLISECONDS
 
 auto_click := False
 
-^+ESC:: Exit
+^+Escape:: ExitApp()
 
 RButton:: {
 	global auto_click
