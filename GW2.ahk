@@ -7,10 +7,10 @@ SetTitleMatchMode "RegEx"
 
 #HotIf WinActive("Guild Wars 2")
 
-+LButton::{
+~+LButton::{
 	Send("{Raw}[{}(")
 }
 
-+RButton::{
-	Send("=*)+]")
+~+RButton::{
+	Send("{Raw}=*)+]")
 }
