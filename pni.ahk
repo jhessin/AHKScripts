@@ -6,5 +6,5 @@ SetCapsLockState "AlwaysOff"
 SetNumLockState "AlwaysOn"
 CapsLock::Esc
 
-F1::Send("r{BS}{LBUTTON}r")
+INSERT::Send("r{BS}{LBUTTON}r")
 ; Hotkey "XButton2", WinPaste
