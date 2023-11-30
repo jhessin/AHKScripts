@@ -14,9 +14,18 @@ SetNumLockState "AlwaysOn"
 CapsLock::Esc
 
 ; This is the RegEx I use to test if Neovim or Neovide are active
-NeovimTest :=
-	"(Neov(im)|(ide))"
-MagellanTest := "Magellan"
+NeovimTest() {
+	; return RegExMatch(title, "(Neov(im)|(ide))")
+	return (
+		WinActive("ahk_exe Code.exe") 
+		or WinActive("ahk_exe nvim-qt.exe")
+		or WinActive("ahk_exe WindowsTerminal.exe")
+	)
+}
+; MagellanTest := "Magellan"
+MagellanTest() {
+	return WinActive('ahk_exe Magellan.exe')
+}
 
 ; These are some helper functions that are called whenever the hotkeys are pressed
 ; Notice I need to send the original key if I want to keep basic behaviour.
@@ -41,16 +50,12 @@ VimPaste(keyname) {
 }
 
 MagellanPaste(keyname) {
-	if (Active.Value) {
-		RunWait('python cbtrim.py', unset, 'Hide')
-		Send "^v"
-	} else {
-		Send "p"
-	}
+	RunWait('python cbtrim.py', unset, 'Hide')
+	Send "^v"
 }
 
 Copy(keyname) {
-	if (WinActive(NeovimTest)) {
+	if (NeovimTest()) {
 		Send("y")
 	} else {
 		WinCopy(keyname)
@@ -58,9 +63,9 @@ Copy(keyname) {
 }
 
 Paste(keyname) {
-	if (WinActive(NeovimTest)) {
+	if (NeovimTest()) {
 		Send("p")
-	} else if (WinActive(MagellanTest)) {
+	} else if (MagellanTest()) {
 		MagellanPaste(keyname)
 	} else {
 		WinPaste(keyname)
