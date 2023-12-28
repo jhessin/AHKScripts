@@ -19,7 +19,7 @@ CapsLock::Esc
 
 ; This is the RegEx I use to test if Neovim or Neovide are active
 NeovimTest :=
-	"(Neov(im)|(ide))"
+	"(Neov(im)|(ide))|(Windows PowerShell)|(PowerShell)|(Command Prompt)"
 MagellanTest := "Magellan"
 
 ; This Hud provides feedback to show if I am in VimMode for copy pasting.
@@ -121,8 +121,8 @@ MagellanPaste(keyname) {
 }
 
 ; Here are the keys that are always active.
-Hotkey "XButton1", WinCopy
-Hotkey "XButton2", WinPaste
+; Hotkey "XButton1", WinCopy
+; Hotkey "XButton2", WinPaste
 Hotkey "F1", WinCut
 Hotkey "F3", Allocations
 Hotkey "F8", MuxDetail
@@ -137,12 +137,12 @@ Hotkey "F7", RenameAndOpenTP
 HotIfWinActive MagellanTest
 
 Hotkey "p", MagellanPaste
-Hotkey "XButton2", MagellanPaste
+; Hotkey "XButton2", MagellanPaste
 
 ; This helps my mouse buttons copy/paste in neovim
 HotIfWinActive NeovimTest
-Hotkey "XButton1", VimCopy
-Hotkey "XButton2", VimPaste
+; Hotkey "XButton1", VimCopy
+; Hotkey "XButton2", VimPaste
 
 ; Only activate hotkeys if I'm not already in vim.
 HotIfWinNotActive NeovimTest
