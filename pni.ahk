@@ -1,14 +1,39 @@
 #Requires AutoHotkey v2.0
 #SingleInstance
 
-; Some simple tweaks
-SetCapsLockState "AlwaysOff"
-SetNumLockState "AlwaysOn"
-CapsLock::Esc
+CoordMode "Mouse", "Screen"
 
-INSERT::{
-	Send("r{BS}{LBUTTON}r")
-	if ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "place_one.png")
-		click(x, y)
+MoveByDragging(keyname) {
+	MouseGetPos(&StartX, &StartY)
+	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 move.png")
+	click(613, 308)
+;	click(x, y)
+	MouseMove(StartX, StartY)
 }
-; Hotkey "XButton2", WinPaste
+
+PlaceText(keyname) {
+	MouseGetPos(&StartX, &StartY)
+	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 move.png")
+	click(693, 361)
+;	click(x, y)
+	MouseMove(StartX, StartY)
+}
+
+PlaceOne(keyname) {
+	MouseGetPos(&StartX, &StartY)
+	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
+	click(1573, 305)
+;	click(x, y)
+	MouseMove(StartX, StartY)
+}
+
+TrimDrop(keyname) {
+	Send("r{BS}{LBUTTON}r")
+	PlaceOne(keyname)
+}
+
+Hotkey "HOME", MoveByDragging
+Hotkey "INSERT", TrimDrop
+Hotkey "Pause", PlaceOne
+Hotkey "PgUp", PlaceText
+

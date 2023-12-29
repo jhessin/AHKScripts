@@ -17,14 +17,14 @@ CapsLock::Esc
 NeovimTest() {
 	; return RegExMatch(title, "(Neov(im)|(ide))")
 	return (
-		WinActive("ahk_exe Code.exe") 
+		WinActive("ahk_exe Code.exe")
 		or WinActive("ahk_exe nvim-qt.exe")
 		or WinActive("ahk_exe WindowsTerminal.exe")
 	)
 }
 ; MagellanTest := "Magellan"
 MagellanTest() {
-	return WinActive('ahk_exe Magellan.exe')
+	return WinActive('Magellan')
 }
 
 ; These are some helper functions that are called whenever the hotkeys are pressed
