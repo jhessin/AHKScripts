@@ -14,6 +14,10 @@ SetNumLockState "AlwaysOn"
 CapsLock::Esc
 
 ; This is the RegEx I use to test if Neovim or Neovide are active
+DisableTest() {
+	return WinActive("ahk_exe Gw2-64.exe")
+}
+
 NeovimTest() {
 	; return RegExMatch(title, "(Neov(im)|(ide))")
 	return (
@@ -55,7 +59,9 @@ MagellanPaste(keyname) {
 }
 
 Copy(keyname) {
-	if (NeovimTest()) {
+	if (DisableTest()) {
+		Send("{" keyname "}")
+	} else if (NeovimTest()) {
 		Send("y")
 	} else {
 		WinCopy(keyname)
@@ -63,7 +69,9 @@ Copy(keyname) {
 }
 
 Paste(keyname) {
-	if (NeovimTest()) {
+	if (DisableTest()) {
+		Send("{" keyname "}")
+	} else if (NeovimTest()) {
 		Send("p")
 	} else if (MagellanTest()) {
 		MagellanPaste(keyname)
@@ -72,6 +80,6 @@ Paste(keyname) {
 	}
 }
 
-; Here are the keys that are always active.
+
 Hotkey "XButton1", Copy
 Hotkey "XButton2", Paste
