@@ -3,6 +3,18 @@
 
 CoordMode "Mouse", "Screen"
 
+MacroTask(keyname) {
+	MouseGetPos(&StartX, &StartY)
+	Send("{F2}")
+	click(465, 363)
+	click(230, 40)
+	click(646, 360)
+	; click(1610, 526)
+	; Send("2{Enter}2")
+	; click(1619, 306)
+	MouseMove(StartX, StartY)
+}
+
 SelectTool(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	click(457, 306)
@@ -52,6 +64,7 @@ TrimDrop(keyname) {
 
 Hotkey "SC002", SelectTool
 Hotkey "SC029", ClearTrail
+;Hotkey "SC029", MacroTask
 Hotkey "F3", PlaceText
 Hotkey "F4", PlaceOne
 Hotkey "F5", MoveByDragging
