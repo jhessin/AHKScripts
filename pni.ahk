@@ -3,15 +3,26 @@
 
 CoordMode "Mouse", "Screen"
 
+PNI_WINDOW := "ahk_class VMwareUnityHostWndClass"
+
 MacroTask(keyname) {
 	MouseGetPos(&StartX, &StartY)
-	Send("{F2}")
-	click(465, 363)
-	click(230, 40)
-	click(646, 360)
+	; Send("{F2}")
+	click(465, 363) ; Offset
+	click(230, 40) ; Confirm
+	PlaceOne(keyname)
+	; click(646, 360) ; make trail
 	; click(1610, 526)
 	; Send("2{Enter}2")
 	; click(1619, 306)
+	MouseMove(StartX, StartY)
+}
+
+PlaceCount(keyname) {
+	MouseGetPos(&StartX, &StartY)
+	click(465, 363) ; Offset
+	click(230, 40) ; Confirm
+	PlaceOne(keyname)
 	MouseMove(StartX, StartY)
 }
 
@@ -64,10 +75,10 @@ TrimDrop(keyname) {
 
 Hotkey "SC002", SelectTool
 Hotkey "SC029", ClearTrail
-;Hotkey "SC029", MacroTask
 Hotkey "F3", PlaceText
 Hotkey "F4", PlaceOne
 Hotkey "F5", MoveByDragging
 Hotkey "F6", RotateByDragging
+Hotkey "F7", PlaceCount
 Hotkey "F9", TrimDrop
 

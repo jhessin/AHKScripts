@@ -18,6 +18,10 @@ DisableTest() {
 	return WinActive("ahk_exe Gw2-64.exe")
 }
 
+PNITest() {
+	return WinActive("ahk_class VMwareUnityHostWndClass")
+}
+
 NeovimTest() {
 	; return RegExMatch(title, "(Neov(im)|(ide))")
 	return (
@@ -26,7 +30,7 @@ NeovimTest() {
 		or WinActive("ahk_exe WindowsTerminal.exe")
 	)
 }
-; MagellanTest := "Magellan"
+
 MagellanTest() {
 	return WinActive('Magellan')
 }
@@ -63,6 +67,8 @@ Copy(keyname) {
 		Send("{" keyname "}")
 	} else if (NeovimTest()) {
 		Send("y")
+	} else if (PNITest()) {
+		Send("^j")
 	} else {
 		WinCopy(keyname)
 	}
@@ -75,6 +81,8 @@ Paste(keyname) {
 		Send("p")
 	} else if (MagellanTest()) {
 		MagellanPaste(keyname)
+	} else if (PNITest()) {
+		Send("^k")
 	} else {
 		WinPaste(keyname)
 	}
