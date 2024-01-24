@@ -69,7 +69,7 @@ PlaceOne(keyname) {
 }
 
 TrimDrop(keyname) {
-	Send("r{BS}{LBUTTON}r")
+	Send("{LBUTTON}r{BS}")
 	PlaceOne(keyname)
 }
 
