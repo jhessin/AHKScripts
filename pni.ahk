@@ -5,6 +5,21 @@ CoordMode "Mouse", "Screen"
 
 PNI_WINDOW := "ahk_class VMwareUnityHostWndClass"
 
+AssociateTap(keyname) {
+	MouseGetPos(&StartX, &StartY)
+	click(1738, 332) ; Associate
+	click(1725, 409) ; Drop
+	MouseMove(StartX, StartY)
+}
+
+AutoAssociate(keyname) {
+	MouseGetPos(&StartX, &StartY)
+	Send("c")
+	click(1738, 332) ; Associate
+	click(1740, 484) ; Drop
+	MouseMove(StartX, StartY)
+}
+
 MacroTask(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	; Send("{F2}")
@@ -75,6 +90,8 @@ TrimDrop(keyname) {
 
 Hotkey "SC002", SelectTool
 Hotkey "SC029", ClearTrail
+Hotkey "SC003", AutoAssociate
+Hotkey "SC004", AssociateTap
 Hotkey "F3", PlaceText
 Hotkey "F4", PlaceOne
 Hotkey "F5", MoveByDragging
