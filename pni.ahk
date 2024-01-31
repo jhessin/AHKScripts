@@ -5,6 +5,19 @@ CoordMode "Mouse", "Screen"
 
 PNI_WINDOW := "ahk_class VMwareUnityHostWndClass"
 
+HotIfWinActive(PNI_WINDOW)
+
+AssociateCable(keyname) {
+	MouseGetPos(&StartX, &StartY)
+	click(1800, 332) ; Associate
+	click(1800, 356) ; To Structures
+	Sleep(500)
+	if (ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "finish.png")) {
+		click(x, y)
+	}
+	MouseMove(StartX, StartY)
+}
+
 AssociateTap(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	click(1738, 332) ; Associate
@@ -92,6 +105,7 @@ Hotkey "SC002", SelectTool
 Hotkey "SC029", ClearTrail
 Hotkey "SC003", AutoAssociate
 Hotkey "SC004", AssociateTap
+Hotkey "SC005", AssociateCable
 Hotkey "F3", PlaceText
 Hotkey "F4", PlaceOne
 Hotkey "F5", MoveByDragging
