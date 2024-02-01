@@ -54,6 +54,18 @@ PlaceCount(keyname) {
 	MouseMove(StartX, StartY)
 }
 
+
+PlaceBorderAnnotation(keyname) {
+	MouseGetPos(&StartX, &StartY)
+	click(465, 363) ; Offset
+	click(230, 40) ; Confirm
+	; Annotate
+	click(1662, 337)
+	; Place Border Annotation
+	click(1671, 360)
+	MouseMove(StartX, StartY)
+}
+
 SelectTool(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	click(457, 306)
@@ -110,6 +122,7 @@ Hotkey "F3", PlaceText
 Hotkey "F4", PlaceOne
 Hotkey "F5", MoveByDragging
 Hotkey "F6", RotateByDragging
-Hotkey "F7", PlaceCount
+; Hotkey "F7", PlaceCount
+Hotkey "F7", PlaceBorderAnnotation
 Hotkey "F9", TrimDrop
 
