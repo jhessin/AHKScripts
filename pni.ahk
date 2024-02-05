@@ -7,6 +7,14 @@ PNI_WINDOW := "ahk_class VMwareUnityHostWndClass"
 
 HotIfWinActive(PNI_WINDOW)
 
+MacroTask(keyname) {
+	MouseGetPos(&StartX, &StartY)
+	click(1631, 447) ; Address
+	Send('5023')
+	click(1621, 307) ; Update
+	MouseMove(StartX, StartY)
+}
+
 AssociateCable(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	click(1800, 332) ; Associate
@@ -30,19 +38,6 @@ AutoAssociate(keyname) {
 	Send("c")
 	click(1738, 332) ; Associate
 	click(1740, 484) ; Drop
-	MouseMove(StartX, StartY)
-}
-
-MacroTask(keyname) {
-	MouseGetPos(&StartX, &StartY)
-	; Send("{F2}")
-	click(465, 363) ; Offset
-	click(230, 40) ; Confirm
-	PlaceOne(keyname)
-	; click(646, 360) ; make trail
-	; click(1610, 526)
-	; Send("2{Enter}2")
-	; click(1619, 306)
 	MouseMove(StartX, StartY)
 }
 
@@ -122,7 +117,27 @@ Hotkey "F3", PlaceText
 Hotkey "F4", PlaceOne
 Hotkey "F5", MoveByDragging
 Hotkey "F6", RotateByDragging
-; Hotkey "F7", PlaceCount
-Hotkey "F7", PlaceBorderAnnotation
+Hotkey "F7", PlaceCount
+; Hotkey "F7", PlaceBorderAnnotation
+; Hotkey "F7", MacroTask
 Hotkey "F9", TrimDrop
+
+DropLength(keyname) {
+	MouseGetPos(&StartX, &StartY)
+;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
+	click(1623, 463)
+;	click(x, y)
+	MouseMove(StartX, StartY)
+}
+
+Update(keyname) {
+	MouseGetPos(&StartX, &StartY)
+;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
+	click(1597, 305)
+;	click(x, y)
+	MouseMove(StartX, StartY)
+}
+
+Hotkey "SC04E", DropLength
+Hotkey "SC11C", Update
 
