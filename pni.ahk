@@ -122,22 +122,32 @@ Hotkey "F7", PlaceCount
 ; Hotkey "F7", MacroTask
 Hotkey "F9", TrimDrop
 
-DropLength(keyname) {
+EditProp(keyname) {
 	MouseGetPos(&StartX, &StartY)
 ;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
-	click(1623, 463)
+	click(1623, 445)
 ;	click(x, y)
+	MouseMove(StartX, StartY)
+}
+
+PasteProp(keyname) {
+	MouseGetPos(&StartX, &StartY)
+;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
+	click(1623, 506)
+	send('^k')
+	click(1620, 305)
 	MouseMove(StartX, StartY)
 }
 
 Update(keyname) {
 	MouseGetPos(&StartX, &StartY)
 ;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
-	click(1597, 305)
+	click(1620, 305)
 ;	click(x, y)
 	MouseMove(StartX, StartY)
 }
 
-Hotkey "SC04E", DropLength
-Hotkey "SC11C", Update
+; Hotkey "SC04E", EditProp
+; Hotkey "SC11C", Update
+; Hotkey "SC11C", PasteProp
 
