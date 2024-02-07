@@ -108,6 +108,18 @@ TrimDrop(keyname) {
 	PlaceOne(keyname)
 }
 
+Copy(keyname) {
+	Send("^j")
+}
+
+
+Paste(keyname) {
+	Send("^k")
+}
+
+Hotkey "XButton1", Copy
+Hotkey "XButton2", Paste
+
 Hotkey "SC002", SelectTool
 Hotkey "SC029", ClearTrail
 Hotkey "SC003", AutoAssociate
