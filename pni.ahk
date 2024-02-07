@@ -7,53 +7,95 @@ PNI_WINDOW := "ahk_class VMwareUnityHostWndClass"
 
 HotIfWinActive(PNI_WINDOW)
 
-MacroTask(keyname) {
-	MouseGetPos(&StartX, &StartY)
-	click(1631, 447) ; Address
-	Send('5023')
-	click(1621, 307) ; Update
-	MouseMove(StartX, StartY)
+
+;;;; - UTILITY FUNCTIONS ---
+ClickClearTrail() {
+	if (ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "clear_trail.png")) {
+		click(x, y)
+	} else {
+		click(528, 382)
+	}
 }
 
-AssociateCable(keyname) {
-	MouseGetPos(&StartX, &StartY)
-	click(1800, 332) ; Associate
-	click(1800, 356) ; To Structures
+ClickSelectTool() {
+	click(585, 325)
+}
+
+ClickMoveByDragging() {
+	click(742, 322)
+}
+
+ClickRotate() {
+	click(777, 322)
+}
+
+ClickPlaceOne() {
+	click(1344, 328)
+}
+
+ClickPlaceText() {
+	click(820, 385)
+}
+
+ClickOffset() {
+	click(594, 382)
+	click(230, 40) ; Confirm
+}
+
+ClickReverseTrail() {
+	click(481, 382)
+}
+
+ClickAutoAssociate() {
+	Send("c")
+	click(1512, 353)
+	click(1512, 500)
+}
+
+ClickAssociateTap() {
+	click(1512, 353)
+	click(1512, 428)
+}
+
+ClickCableAssociation() {
+	click(1573, 354)
+	click(1573, 378)
 	Sleep(500)
 	if (ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "finish.png")) {
 		click(x, y)
 	}
+}
+
+;;; --- KEYBIND FUNTIONS ---
+AssociateCable(keyname) {
+	MouseGetPos(&StartX, &StartY)
+	ClickCableAssociation()
 	MouseMove(StartX, StartY)
 }
 
 AssociateTap(keyname) {
 	MouseGetPos(&StartX, &StartY)
-	click(1738, 332) ; Associate
-	click(1725, 409) ; Drop
+	ClickAssociateTap()
 	MouseMove(StartX, StartY)
 }
 
 AutoAssociate(keyname) {
 	MouseGetPos(&StartX, &StartY)
-	Send("c")
-	click(1738, 332) ; Associate
-	click(1740, 484) ; Drop
+	ClickAutoAssociate()
 	MouseMove(StartX, StartY)
 }
 
 PlaceCount(keyname) {
 	MouseGetPos(&StartX, &StartY)
-	click(465, 363) ; Offset
-	click(230, 40) ; Confirm
-	PlaceOne(keyname)
+	ClickOffset()
+	ClickPlaceOne()
 	MouseMove(StartX, StartY)
 }
 
 
 PlaceBorderAnnotation(keyname) {
 	MouseGetPos(&StartX, &StartY)
-	click(465, 363) ; Offset
-	click(230, 40) ; Confirm
+	ClickOffset()
 	; Annotate
 	click(1662, 337)
 	; Place Border Annotation
@@ -63,26 +105,26 @@ PlaceBorderAnnotation(keyname) {
 
 SelectTool(keyname) {
 	MouseGetPos(&StartX, &StartY)
-	click(457, 306)
+	ClickSelectTool()
 	MouseMove(StartX, StartY)
 }
 
 ClearTrail(keyname) {
 	MouseGetPos(&StartX, &StartY)
-	click(401, 360)
+	ClickClearTrail()
 	MouseMove(StartX, StartY)
 }
 
 MoveByDragging(keyname) {
 	MouseGetPos(&StartX, &StartY)
-	click(613, 308)
+	ClickMoveByDragging()
 	MouseMove(StartX, StartY)
 }
 
 RotateByDragging(keyname) {
 	MouseGetPos(&StartX, &StartY)
 ;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 move.png")
-	click(641, 308)
+	ClickRotate()
 ;	click(x, y)
 	MouseMove(StartX, StartY)
 }
@@ -90,7 +132,7 @@ RotateByDragging(keyname) {
 PlaceText(keyname) {
 	MouseGetPos(&StartX, &StartY)
 ;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 move.png")
-	click(693, 361)
+	ClickPlaceText()
 ;	click(x, y)
 	MouseMove(StartX, StartY)
 }
@@ -98,27 +140,30 @@ PlaceText(keyname) {
 PlaceOne(keyname) {
 	MouseGetPos(&StartX, &StartY)
 ;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
-	click(1573, 305)
+	ClickPlaceOne()
 ;	click(x, y)
 	MouseMove(StartX, StartY)
 }
 
 TrimDrop(keyname) {
+	MouseGetPos(&StartX, &StartY)
 	Send("{LBUTTON}r{BS}")
-	PlaceOne(keyname)
+	ClickPlaceOne()
+	MouseMove(StartX, StartY)
 }
 
 Copy(keyname) {
-	Send("^j")
+	Send('^j')
 }
 
 
 Paste(keyname) {
-	Send("^k")
+	Send('^k')
 }
 
 Hotkey "XButton1", Copy
-Hotkey "XButton2", Paste
+; Hotkey "XButton2", Paste
+Hotkey "XButton2", TrimDrop
 
 Hotkey "SC002", SelectTool
 Hotkey "SC029", ClearTrail
@@ -131,13 +176,22 @@ Hotkey "F5", MoveByDragging
 Hotkey "F6", RotateByDragging
 Hotkey "F7", PlaceCount
 ; Hotkey "F7", PlaceBorderAnnotation
-; Hotkey "F7", MacroTask
 Hotkey "F9", TrimDrop
+
+; --- SPECIAL FUNCTIONS ---
+
+MacroTask(keyname) {
+	MouseGetPos(&StartX, &StartY)
+	click(1631, 447) ; Address
+	Send('5023')
+	click(1621, 307) ; Update
+	MouseMove(StartX, StartY)
+}
 
 EditProp(keyname) {
 	MouseGetPos(&StartX, &StartY)
 ;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
-	click(1623, 445)
+	click(1445, 469)
 ;	click(x, y)
 	MouseMove(StartX, StartY)
 }
@@ -154,7 +208,7 @@ PasteProp(keyname) {
 Update(keyname) {
 	MouseGetPos(&StartX, &StartY)
 ;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
-	click(1620, 305)
+	click(1395, 326)
 ;	click(x, y)
 	MouseMove(StartX, StartY)
 }
