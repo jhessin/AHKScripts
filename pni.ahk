@@ -191,7 +191,7 @@ MacroTask(keyname) {
 EditProp(keyname) {
 	MouseGetPos(&StartX, &StartY)
 ;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
-	click(1445, 469)
+	click(1445, 507)
 ;	click(x, y)
 	MouseMove(StartX, StartY)
 }
@@ -215,5 +215,6 @@ Update(keyname) {
 
 ; Hotkey "SC04E", EditProp
 ; Hotkey "SC11C", Update
+; Hotkey "SC11C", PlaceOne
 ; Hotkey "SC11C", PasteProp
 
