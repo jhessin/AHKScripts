@@ -191,7 +191,8 @@ MacroTask(keyname) {
 EditProp(keyname) {
 	MouseGetPos(&StartX, &StartY)
 ;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
-	click(1445, 507)
+	click(1445, 467)
+	Send("mmmmmmmmmmmmmm")
 ;	click(x, y)
 	MouseMove(StartX, StartY)
 }
