@@ -120,6 +120,14 @@ MagellanPaste(keyname) {
 	}
 }
 
+LodeMacro(keyname) {
+	if (Active.Value) {
+		Send("0..1{ENTER}{ENTER}")
+	} else {
+		Send("{" keyname "}")
+	}
+}
+
 ; Here are the keys that are always active.
 ; Hotkey "XButton1", WinCopy
 ; Hotkey "XButton2", WinPaste
@@ -132,6 +140,7 @@ Hotkey "F5", PortPkg
 Hotkey "+F5", RevisedPortPkg
 Hotkey "F6", BulkRename
 Hotkey "F7", RenameAndOpenTP
+; Hotkey "SC029", LodeMacro
 
 ; Only activate this hotkeys if I'm in Magellan.
 HotIfWinActive MagellanTest
