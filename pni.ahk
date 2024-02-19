@@ -66,6 +66,10 @@ ClickCableAssociation() {
 	}
 }
 
+ClickTrailSize() {
+	click(408, 1005)
+}
+
 ;;; --- KEYBIND FUNTIONS ---
 AssociateCable(keyname) {
 	MouseGetPos(&StartX, &StartY)
@@ -97,9 +101,9 @@ PlaceBorderAnnotation(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	ClickOffset()
 	; Annotate
-	click(1662, 337)
+	click(1435, 353)
 	; Place Border Annotation
-	click(1671, 360)
+	click(1435, 377)
 	MouseMove(StartX, StartY)
 }
 
@@ -174,8 +178,8 @@ Hotkey "F3", PlaceText
 Hotkey "F4", PlaceOne
 Hotkey "F5", MoveByDragging
 Hotkey "F6", RotateByDragging
-Hotkey "F7", PlaceCount
-; Hotkey "F7", PlaceBorderAnnotation
+; Hotkey "F7", PlaceCount
+Hotkey "F7", PlaceBorderAnnotation
 Hotkey "F9", TrimDrop
 
 ; --- SPECIAL FUNCTIONS ---
@@ -191,8 +195,12 @@ MacroTask(keyname) {
 EditProp(keyname) {
 	MouseGetPos(&StartX, &StartY)
 ;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
-	click(1445, 467)
-	Send("mmmmmmmmmmmmmm")
+	; click(1445, 467)
+	; Underground Route
+	; click(1445, 488)
+	; Underground Cable
+	click(1445, 505)
+	; Send("mmmmmmmmmmmmmm")
 ;	click(x, y)
 	MouseMove(StartX, StartY)
 }
@@ -214,8 +222,23 @@ Update(keyname) {
 	MouseMove(StartX, StartY)
 }
 
+EditTrail(keyname) {
+	MouseGetPos(&StartX, &StartY)
+	ClickTrailSize()
+	MouseMove(StartX, StartY)
+}
+
+ReversePlaceOne(keyname) {
+	Send('{SC11C}')
+	sleep(500)
+	Send('r')
+	PlaceOne(keyname)
+}
+
 ; Hotkey "SC04E", EditProp
+; Hotkey "SC04E", EditTrail
 ; Hotkey "SC11C", Update
+; Hotkey "SC11C", ReversePlaceOne
 ; Hotkey "SC11C", PlaceOne
 ; Hotkey "SC11C", PasteProp
 
