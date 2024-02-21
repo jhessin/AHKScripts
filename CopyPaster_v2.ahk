@@ -10,25 +10,15 @@
 
 ; This sets the matchmode so I can test for either work 'neovim' or home
 ; 'neovide' vim.
-SetTitleMatchMode "RegEx"
 
-; Some simple tweaks
-SetCapsLockState "AlwaysOff"
-SetNumLockState "AlwaysOn"
-CapsLock::Esc
+; Here are the tests to see if I'm in a window I want to remap the keys for.
+ActiveTest(*) {
+	return WinActive("ahk_exe EXCEL.EXE") OR WinActive("ahk_exe WINWORD.EXE")
+}
 
-; This is the RegEx I use to test if Neovim or Neovide are active
-NeovimTest :=
-	"(Neov(im)|(ide))|(Windows PowerShell)|(PowerShell)|(Command Prompt)"
-MagellanTest := "Magellan"
-
-; This Hud provides feedback to show if I am in VimMode for copy pasting.
-Hud := Gui("+AlwaysOnTop -MinimizeBox +ToolWindow -SysMenu", "VimMode")
-Active := Hud.AddCheckBox("+w75")
-Hud.Show()
-
-; This is a quick Hotkey to toggle if I am in CopyPaste mode.
-F10:: Active.Value := !Active.Value
+MagellanTest(*) {
+	return WinActive("ahk_exe Magellan.exe")
+}
 
 ; These are some helper functions that are called whenever the hotkeys are pressed
 ; Notice I need to send the original key if I want to keep basic behaviour.
@@ -87,75 +77,49 @@ WinPaste(keyname) {
 	send "^v"
 }
 
-VimCopy(keyname) {
-	send "y"
-}
-
-VimPaste(keyname) {
-	send "p"
-}
-
 Copy(keyname) {
-	if (Active.Value) {
+	if (ActiveTest() OR MagellanTest()) {
 		WinCopy(keyname)
-	} else {
-		Send "y"
-	}
-}
-
-Paste(keyname) {
-	if (Active.Value) {
-		WinPaste(keyname)
-	} else {
-		Send "p"
-	}
-}
-
-MagellanPaste(keyname) {
-	if (Active.Value) {
-		RunWait('python cbtrim.py', unset, 'Hide')
-		Send "^v"
-	} else {
-		Send "p"
-	}
-}
-
-LodeMacro(keyname) {
-	if (Active.Value) {
-		Send("0..1{ENTER}{ENTER}")
 	} else {
 		Send("{" keyname "}")
 	}
 }
 
+MagellanPaste(keyname) {
+		RunWait('python cbtrim.py', unset, 'Hide')
+		Send "^v"
+}
+
+Paste(keyname) {
+	if (ActiveTest()) {
+		WinPaste(keyname)
+	} else if (MagellanTest()) {
+		MagellanPaste(keyname)
+	} else {
+		Send("{" keyname "}")
+	}
+}
+
+LodeMacro(keyname) {
+		Send("0..1{ENTER}{ENTER}")
+		; Send("{" keyname "}")
+}
+
 ; Here are the keys that are always active.
-; Hotkey "XButton1", WinCopy
-; Hotkey "XButton2", WinPaste
 Hotkey "F1", WinCut
 Hotkey "F3", Allocations
 Hotkey "F8", MuxDetail
 Hotkey "F4", RenameZip
 Hotkey "+F4", RenameRevisedZip
-Hotkey "F5", PortPkg
-Hotkey "+F5", RevisedPortPkg
-Hotkey "F6", BulkRename
 Hotkey "F7", RenameAndOpenTP
 ; Hotkey "SC029", LodeMacro
 
-; Only activate this hotkeys if I'm in Magellan.
-HotIfWinActive MagellanTest
-
-Hotkey "p", MagellanPaste
-; Hotkey "XButton2", MagellanPaste
-
-; This helps my mouse buttons copy/paste in neovim
-HotIfWinActive NeovimTest
-; Hotkey "XButton1", VimCopy
-; Hotkey "XButton2", VimPaste
-
-; Only activate hotkeys if I'm not already in vim.
-HotIfWinNotActive NeovimTest
-
 ; And finally the hotkeys I want to replace
+
+Hotif ActiveTest
+Hotkey "y", Copy
+Hotkey "p", Paste
+
+Hotif MagellanTest
 Hotkey "y", Copy
 Hotkey "p", Paste
