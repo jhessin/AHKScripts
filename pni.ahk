@@ -178,8 +178,8 @@ Hotkey "F3", PlaceText
 Hotkey "F4", PlaceOne
 Hotkey "F5", MoveByDragging
 Hotkey "F6", RotateByDragging
-; Hotkey "F7", PlaceCount
-Hotkey "F7", PlaceBorderAnnotation
+Hotkey "F7", PlaceCount
+; Hotkey "F7", PlaceBorderAnnotation
 Hotkey "F9", TrimDrop
 
 ; --- SPECIAL FUNCTIONS ---
