@@ -7,59 +7,70 @@ PNI_WINDOW := "ahk_class VMwareUnityHostWndClass"
 
 HotIfWinActive(PNI_WINDOW)
 
+; CONSTANTS
+; ANNOTATE_Y := 353
+; PLACE_Y := 328
+; SELECT_Y := 325
+; CLEAR_Y := 382
+
+ANNOTATE_Y := 120
+PLACE_Y := 93
+SELECT_Y := 91
+CLEAR_Y := 148
+
 
 ;;;; - UTILITY FUNCTIONS ---
 ClickClearTrail() {
 	if (ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "clear_trail.png")) {
 		click(x, y)
 	} else {
-		click(528, 382)
+		click(165, CLEAR_Y)
 	}
 }
 
 ClickSelectTool() {
-	click(585, 325)
+	click(220, SELECT_Y)
 }
 
 ClickMoveByDragging() {
-	click(742, 322)
+	click(377, SELECT_Y)
 }
 
 ClickRotate() {
-	click(777, 322)
+	click(415, SELECT_Y)
 }
 
 ClickPlaceOne() {
-	click(1344, 328)
+	click(1327, PLACE_Y)
 }
 
 ClickPlaceText() {
-	click(820, 385)
+	click(456, CLEAR_Y)
 }
 
 ClickOffset() {
-	click(594, 382)
+	click(228, CLEAR_Y)
 	click(230, 40) ; Confirm
 }
 
 ClickReverseTrail() {
-	click(481, 382)
+	click(118, CLEAR_Y)
 }
 
 ClickAutoAssociate() {
 	Send("c")
-	click(1512, 353)
-	click(1512, 500)
+	click(1493, ANNOTATE_Y)
+	click(1493, 270)
 }
 
 ClickAssociateTap() {
-	click(1512, 353)
-	click(1512, 428)
+	click(1493, ANNOTATE_Y)
+	click(1493, 193)
 }
 
 ClickCableAssociation() {
-	click(1573, 354)
-	click(1573, 378)
+	click(1553, ANNOTATE_Y)
+	click(1553, 144)
 	Sleep(500)
 	if (ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "finish.png")) {
 		click(x, y)
@@ -67,7 +78,7 @@ ClickCableAssociation() {
 }
 
 ClickTrailSize() {
-	click(408, 1005)
+	click(54, 1005)
 }
 
 ;;; --- KEYBIND FUNTIONS ---
@@ -101,7 +112,7 @@ PlaceBorderAnnotation(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	ClickOffset()
 	; Annotate
-	click(1435, 353)
+	click(1435, ANNOTATE_Y)
 	; Place Border Annotation
 	click(1435, 377)
 	MouseMove(StartX, StartY)
@@ -178,8 +189,8 @@ Hotkey "F3", PlaceText
 Hotkey "F4", PlaceOne
 Hotkey "F5", MoveByDragging
 Hotkey "F6", RotateByDragging
-Hotkey "F7", PlaceCount
-; Hotkey "F7", PlaceBorderAnnotation
+; Hotkey "F7", PlaceCount
+Hotkey "F7", PlaceBorderAnnotation
 Hotkey "F9", TrimDrop
 
 ; --- SPECIAL FUNCTIONS ---
@@ -217,7 +228,7 @@ PasteProp(keyname) {
 Update(keyname) {
 	MouseGetPos(&StartX, &StartY)
 ;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
-	click(1395, 326)
+	click(1350, 91)
 ;	click(x, y)
 	MouseMove(StartX, StartY)
 }
