@@ -81,6 +81,10 @@ ClickTrailSize() {
 	click(54, 1005)
 }
 
+ClickBuildingOutline() {
+	click(1519, ANNOTATE_Y)
+}
+
 ;;; --- KEYBIND FUNTIONS ---
 AssociateCable(keyname) {
 	MouseGetPos(&StartX, &StartY)
@@ -176,30 +180,17 @@ Paste(keyname) {
 	Send('^k')
 }
 
-Hotkey "XButton1", Copy
+; Hotkey "XButton1", Copy
 ; Hotkey "XButton2", Paste
-Hotkey "XButton2", TrimDrop
-
-Hotkey "SC002", SelectTool
-Hotkey "SC029", ClearTrail
-Hotkey "SC003", AutoAssociate
-Hotkey "SC004", AssociateTap
-Hotkey "SC005", AssociateCable
-Hotkey "F3", PlaceText
-Hotkey "F4", PlaceOne
-Hotkey "F5", MoveByDragging
-Hotkey "F6", RotateByDragging
-; Hotkey "F7", PlaceCount
-Hotkey "F7", PlaceBorderAnnotation
-Hotkey "F9", TrimDrop
+; Hotkey "XButton2", TrimDrop
 
 ; --- SPECIAL FUNCTIONS ---
 
 MacroTask(keyname) {
 	MouseGetPos(&StartX, &StartY)
-	click(1631, 447) ; Address
-	Send('5023')
-	click(1621, 307) ; Update
+	click(1450, 292) ; Field
+	Send('p')
+	click(1353, 90) ; Update
 	MouseMove(StartX, StartY)
 }
 
@@ -210,7 +201,7 @@ EditProp(keyname) {
 	; Underground Route
 	; click(1445, 488)
 	; Underground Cable
-	click(1445, 505)
+	click(1470, 252)
 	; Send("mmmmmmmmmmmmmm")
 ;	click(x, y)
 	MouseMove(StartX, StartY)
@@ -246,10 +237,36 @@ ReversePlaceOne(keyname) {
 	PlaceOne(keyname)
 }
 
+OutlineBuilding(*) {
+	MouseGetPos(&StartX, &StartY)
+	Send('c')
+	ClickBuildingOutline()
+	MouseMove(StartX, StartY)
+}
+
+Hotkey "SC002", SelectTool
+Hotkey "SC029", ClearTrail
+Hotkey "SC003", AutoAssociate
+; Hotkey "SC003", OutlineBuilding
+Hotkey "SC004", AssociateTap
+Hotkey "SC005", AssociateCable
+Hotkey "F3", PlaceText
+Hotkey "F4", PlaceOne
+Hotkey "F5", MoveByDragging
+Hotkey "F6", RotateByDragging
+Hotkey "F7", PlaceCount
+; Hotkey "F7", PlaceBorderAnnotation
+Hotkey "F9", TrimDrop
+
+; Keypad Plus
 ; Hotkey "SC04E", EditProp
 ; Hotkey "SC04E", EditTrail
+
+; Keypad ENTER
+; Hotkey "SC11C", MacroTask
 ; Hotkey "SC11C", Update
 ; Hotkey "SC11C", ReversePlaceOne
 ; Hotkey "SC11C", PlaceOne
+; Hotkey "SC11C", OutlineBuilding
 ; Hotkey "SC11C", PasteProp
 
