@@ -60,7 +60,7 @@ ClickReverseTrail() {
 ClickAutoAssociate() {
 	Send("c")
 	click(1493, ANNOTATE_Y)
-	click(1493, 270)
+	click(1493, 261)
 }
 
 ClickAssociateTap() {
@@ -188,9 +188,9 @@ Paste(keyname) {
 
 MacroTask(keyname) {
 	MouseGetPos(&StartX, &StartY)
-	click(1450, 292) ; Field
-	Send('p')
-	click(1353, 90) ; Update
+	click(1431, 391) ; Field
+	Send('m')
+	click(1375, 93) ; Update
 	MouseMove(StartX, StartY)
 }
 
