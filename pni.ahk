@@ -201,7 +201,7 @@ EditProp(keyname) {
 	; Underground Route
 	; click(1445, 488)
 	; Underground Cable
-	click(1470, 252)
+	click(1452, 234)
 	; Send("mmmmmmmmmmmmmm")
 ;	click(x, y)
 	MouseMove(StartX, StartY)
