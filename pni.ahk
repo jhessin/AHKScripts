@@ -63,6 +63,12 @@ ClickAutoAssociate() {
 	click(1493, 261)
 }
 
+ClickAutoAssociateUG() {
+	Send("c")
+	click(1493, ANNOTATE_Y)
+	click(1493, 271)
+}
+
 ClickAssociateTap() {
 	click(1493, ANNOTATE_Y)
 	click(1493, 193)
@@ -101,6 +107,12 @@ AssociateTap(keyname) {
 AutoAssociate(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	ClickAutoAssociate()
+	MouseMove(StartX, StartY)
+}
+
+AutoAssociateUG(keyname) {
+	MouseGetPos(&StartX, &StartY)
+	ClickAutoAssociateUG()
 	MouseMove(StartX, StartY)
 }
 
@@ -246,7 +258,8 @@ OutlineBuilding(*) {
 
 Hotkey "SC002", SelectTool
 Hotkey "SC029", ClearTrail
-Hotkey "SC003", AutoAssociate
+; Hotkey "SC003", AutoAssociate
+Hotkey "SC003", AutoAssociateUG
 ; Hotkey "SC003", OutlineBuilding
 Hotkey "SC004", AssociateTap
 Hotkey "SC005", AssociateCable
