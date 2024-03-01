@@ -134,6 +134,14 @@ PlaceBorderAnnotation(keyname) {
 	MouseMove(StartX, StartY)
 }
 
+OffsetTrail(*) {
+	MouseGetPos(&StartX, &StartY)
+	ClickOffset()
+	; Place drafting line
+	click(409, 149)
+	MouseMove(StartX, StartY)
+}
+
 SelectTool(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	ClickSelectTool()
@@ -263,7 +271,8 @@ Hotkey "SC003", AutoAssociateUG
 ; Hotkey "SC003", OutlineBuilding
 Hotkey "SC004", AssociateTap
 Hotkey "SC005", AssociateCable
-Hotkey "F3", PlaceText
+; Hotkey "F3", PlaceText
+Hotkey "F3", OffsetTrail
 Hotkey "F4", PlaceOne
 Hotkey "F5", MoveByDragging
 Hotkey "F6", RotateByDragging
