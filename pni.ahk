@@ -128,9 +128,9 @@ PlaceBorderAnnotation(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	ClickOffset()
 	; Annotate
-	click(1435, ANNOTATE_Y)
+	click(1417, ANNOTATE_Y)
 	; Place Border Annotation
-	click(1435, 377)
+	click(1417, 144)
 	MouseMove(StartX, StartY)
 }
 
@@ -214,6 +214,11 @@ MacroTask(keyname) {
 	MouseMove(StartX, StartY)
 }
 
+GrabTarget(*) {
+	global
+	MouseGetPos(&TargetX, &TargetY)
+}
+
 EditProp(keyname) {
 	MouseGetPos(&StartX, &StartY)
 ;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
@@ -221,7 +226,9 @@ EditProp(keyname) {
 	; Underground Route
 	; click(1445, 488)
 	; Underground Cable
-	click(1452, 234)
+	; click(1426, 209)
+	; click(1426, 431)
+	click(TargetX, TargetY)
 	; Send("mmmmmmmmmmmmmm")
 ;	click(x, y)
 	MouseMove(StartX, StartY)
@@ -230,9 +237,9 @@ EditProp(keyname) {
 PasteProp(keyname) {
 	MouseGetPos(&StartX, &StartY)
 ;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
-	click(1623, 506)
+	click(1423, 210)
 	send('^k')
-	click(1620, 305)
+	click(1376, 92)
 	MouseMove(StartX, StartY)
 }
 
@@ -276,12 +283,15 @@ Hotkey "F3", OffsetTrail
 Hotkey "F4", PlaceOne
 Hotkey "F5", MoveByDragging
 Hotkey "F6", RotateByDragging
-Hotkey "F7", PlaceCount
-; Hotkey "F7", PlaceBorderAnnotation
+; Hotkey "F7", PlaceCount
+Hotkey "F7", PlaceBorderAnnotation
 Hotkey "F9", TrimDrop
 
+; Keypad Minus
+Hotkey "SC04A", GrabTarget
+
 ; Keypad Plus
-; Hotkey "SC04E", EditProp
+Hotkey "SC04E", EditProp
 ; Hotkey "SC04E", EditTrail
 
 ; Keypad ENTER
