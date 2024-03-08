@@ -13,18 +13,50 @@ HotIfWinActive(PNI_WINDOW)
 ; SELECT_Y := 325
 ; CLEAR_Y := 382
 
+EnableEnter := False
+
+EnterEnabled(*) {
+	return EnableEnter
+}
+
 ANNOTATE_Y := 120
 PLACE_Y := 93
 SELECT_Y := 91
 CLEAR_Y := 148
 
+; Target points
+TargetX := 1143
+TargetY := 58
+ClearTrailX := 165
+ClearTrailY := 148
+PlaceOneX := 1327
+PlaceOneY := 93
+
 
 ;;;; - UTILITY FUNCTIONS ---
+
+ToggleEnter(*) {
+	global
+	EnableEnter := !EnableEnter
+	if (EnableEnter) {
+		Tooltip "Enter Overide Enabled"
+	} else {
+		Tooltip "Enter Overide Disabled"
+	}
+	sleep 500
+	Tooltip
+}
+
+SetClearTrail(*) {
+	global
+	MouseGetPos(&ClearTrailX, &ClearTrailY)
+}
+
 ClickClearTrail() {
 	if (ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "clear_trail.png")) {
 		click(x, y)
 	} else {
-		click(165, CLEAR_Y)
+		click(ClearTrailX, ClearTrailY)
 	}
 }
 
@@ -40,8 +72,13 @@ ClickRotate() {
 	click(415, SELECT_Y)
 }
 
+SetPlaceOne(*) {
+	global
+	MouseGetPos(&PlaceOneX, &PlaceOneY)
+}
+
 ClickPlaceOne() {
-	click(1327, PLACE_Y)
+	click(PlaceOneX, PlaceOneY)
 }
 
 ClickPlaceText() {
@@ -283,22 +320,25 @@ Hotkey "F3", OffsetTrail
 Hotkey "F4", PlaceOne
 Hotkey "F5", MoveByDragging
 Hotkey "F6", RotateByDragging
-; Hotkey "F7", PlaceCount
-Hotkey "F7", PlaceBorderAnnotation
+Hotkey "F7", PlaceCount
+; Hotkey "F7", PlaceBorderAnnotation
 Hotkey "F9", TrimDrop
 
-; Keypad Minus
-Hotkey "SC04A", GrabTarget
-
 ; Keypad Plus
+Hotkey "^SC04E", GrabTarget
 Hotkey "SC04E", EditProp
 ; Hotkey "SC04E", EditTrail
 
+; Keypad *
+Hotkey "SC037", ToggleEnter
+
+HotIf EnterEnabled
 ; Keypad ENTER
 ; Hotkey "SC11C", MacroTask
 ; Hotkey "SC11C", Update
 ; Hotkey "SC11C", ReversePlaceOne
-; Hotkey "SC11C", PlaceOne
+Hotkey "^SC11C", SetPlaceOne
+Hotkey "SC11C", PlaceOne
 ; Hotkey "SC11C", OutlineBuilding
 ; Hotkey "SC11C", PasteProp
 
