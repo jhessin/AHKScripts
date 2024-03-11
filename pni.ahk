@@ -27,6 +27,8 @@ CLEAR_Y := 148
 ; Target points
 TargetX := 1143
 TargetY := 58
+PreTapX := TargetX
+PreTapY := TargetY
 ClearTrailX := 165
 ClearTrailY := 148
 PlaceOneX := 1327
@@ -156,6 +158,9 @@ AutoAssociateUG(keyname) {
 PlaceCount(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	ClickOffset()
+	Sleep 50
+	Send("{BS}")
+	Sleep 50
 	ClickPlaceOne()
 	MouseMove(StartX, StartY)
 }
@@ -208,6 +213,10 @@ RotateByDragging(keyname) {
 PlaceText(keyname) {
 	MouseGetPos(&StartX, &StartY)
 ;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 move.png")
+	ClickOffset()
+	sleep 50
+	Send("{BS}")
+	sleep 50
 	ClickPlaceText()
 ;	click(x, y)
 	MouseMove(StartX, StartY)
@@ -245,15 +254,20 @@ Paste(keyname) {
 
 MacroTask(keyname) {
 	MouseGetPos(&StartX, &StartY)
-	click(1431, 391) ; Field
-	Send('m')
-	click(1375, 93) ; Update
+	click(TargetX, TargetY)
+	Send('u')
+	ClickPlaceOne()
 	MouseMove(StartX, StartY)
 }
 
 GrabTarget(*) {
 	global
 	MouseGetPos(&TargetX, &TargetY)
+}
+
+GrabPretap(*) {
+	global
+	MouseGetPos(&PreTapX, &PreTapY)
 }
 
 EditProp(keyname) {
@@ -265,6 +279,7 @@ EditProp(keyname) {
 	; Underground Cable
 	; click(1426, 209)
 	; click(1426, 431)
+	click(PreTapX, PreTapY)
 	click(TargetX, TargetY)
 	; Send("mmmmmmmmmmmmmm")
 ;	click(x, y)
@@ -315,14 +330,17 @@ Hotkey "SC003", AutoAssociateUG
 ; Hotkey "SC003", OutlineBuilding
 Hotkey "SC004", AssociateTap
 Hotkey "SC005", AssociateCable
-; Hotkey "F3", PlaceText
-Hotkey "F3", OffsetTrail
+Hotkey "F3", PlaceText
+; Hotkey "F3", OffsetTrail
 Hotkey "F4", PlaceOne
 Hotkey "F5", MoveByDragging
 Hotkey "F6", RotateByDragging
 Hotkey "F7", PlaceCount
 ; Hotkey "F7", PlaceBorderAnnotation
 Hotkey "F9", TrimDrop
+
+; Keypad Minus
+Hotkey "SC04A", GrabPretap
 
 ; Keypad Plus
 Hotkey "^SC04E", GrabTarget
@@ -332,13 +350,13 @@ Hotkey "SC04E", EditProp
 ; Keypad *
 Hotkey "SC037", ToggleEnter
 
-HotIf EnterEnabled
 ; Keypad ENTER
+Hotkey "^SC11C", SetPlaceOne
+HotIf EnterEnabled
+Hotkey "SC11C", PlaceOne
 ; Hotkey "SC11C", MacroTask
 ; Hotkey "SC11C", Update
 ; Hotkey "SC11C", ReversePlaceOne
-Hotkey "^SC11C", SetPlaceOne
-Hotkey "SC11C", PlaceOne
 ; Hotkey "SC11C", OutlineBuilding
 ; Hotkey "SC11C", PasteProp
 
