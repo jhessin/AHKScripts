@@ -176,6 +176,12 @@ PlaceBorderAnnotation(keyname) {
 	MouseMove(StartX, StartY)
 }
 
+Offset(*) {
+	MouseGetPos(&StartX, &StartY)
+	ClickOffset()
+	MouseMove(StartX, StartY)
+}
+
 OffsetTrail(*) {
 	MouseGetPos(&StartX, &StartY)
 	ClickOffset()
@@ -330,8 +336,9 @@ Hotkey "SC003", AutoAssociateUG
 ; Hotkey "SC003", OutlineBuilding
 Hotkey "SC004", AssociateTap
 Hotkey "SC005", AssociateCable
-Hotkey "F3", PlaceText
+; Hotkey "F3", PlaceText
 ; Hotkey "F3", OffsetTrail
+Hotkey "F3", Offset
 Hotkey "F4", PlaceOne
 Hotkey "F5", MoveByDragging
 Hotkey "F6", RotateByDragging
@@ -340,7 +347,7 @@ Hotkey "F7", PlaceCount
 Hotkey "F9", TrimDrop
 
 ; Keypad Minus
-Hotkey "SC04A", GrabPretap
+Hotkey "^SC04A", GrabPretap
 
 ; Keypad Plus
 Hotkey "^SC04E", GrabTarget
