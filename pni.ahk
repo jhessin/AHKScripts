@@ -352,6 +352,7 @@ Hotkey "^SC04A", GrabPretap
 ; Keypad Plus
 Hotkey "^SC04E", GrabTarget
 Hotkey "SC04E", EditProp
+Hotkey "+SC02B", EditProp
 ; Hotkey "SC04E", EditTrail
 
 ; Keypad *
@@ -359,6 +360,8 @@ Hotkey "SC037", ToggleEnter
 
 ; Keypad ENTER
 Hotkey "^SC11C", SetPlaceOne
+Hotkey "+SC11C", PlaceOne
+Hotkey "+SC01C", PlaceOne
 HotIf EnterEnabled
 Hotkey "SC11C", PlaceOne
 ; Hotkey "SC11C", MacroTask
