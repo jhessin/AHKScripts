@@ -260,8 +260,14 @@ Paste(keyname) {
 
 MacroTask(keyname) {
 	MouseGetPos(&StartX, &StartY)
+	Send('{SC11C}')
+	sleep(500)
+	Send('r')
+	sleep(500)
 	click(TargetX, TargetY)
-	Send('u')
+	sleep(500)
+	Send('^k')
+	sleep(500)
 	ClickPlaceOne()
 	MouseMove(StartX, StartY)
 }
