@@ -282,6 +282,22 @@ GrabPretap(*) {
 	MouseGetPos(&PreTapX, &PreTapY)
 }
 
+NoAddress(*) {
+	MouseGetPos(&StartX, &StartY)
+;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
+	; click(1445, 467)
+	; Underground Route
+	; click(1445, 488)
+	; Underground Cable
+	; click(1426, 209)
+	; click(1426, 431)
+	click(TargetX, TargetY)
+	Send("NA")
+	; Send("mmmmmmmmmmmmmm")
+;	click(x, y)
+	MouseMove(StartX, StartY)
+}
+
 EditProp(keyname) {
 	MouseGetPos(&StartX, &StartY)
 ;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
@@ -348,8 +364,8 @@ Hotkey "F3", Offset
 Hotkey "F4", PlaceOne
 Hotkey "F5", MoveByDragging
 Hotkey "F6", RotateByDragging
-; Hotkey "F7", PlaceCount
-Hotkey "F7", PlaceBorderAnnotation
+Hotkey "F7", PlaceCount
+; Hotkey "F7", PlaceBorderAnnotation
 Hotkey "F9", TrimDrop
 
 ; Keypad Minus
@@ -376,3 +392,5 @@ Hotkey "SC11C", PlaceOne
 ; Hotkey "SC11C", OutlineBuilding
 ; Hotkey "SC11C", PasteProp
 
+; Keypad dot
+Hotkey "SC053", NoAddress
