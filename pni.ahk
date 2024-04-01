@@ -384,6 +384,8 @@ Hotkey "SC037", ToggleEnter
 Hotkey "^SC11C", SetPlaceOne
 Hotkey "+SC11C", PlaceOne
 Hotkey "+SC01C", PlaceOne
+
+; ------ ACTIVATION KEYS ------
 HotIf EnterEnabled
 Hotkey "SC11C", PlaceOne
 ; Hotkey "SC11C", MacroTask
@@ -394,3 +396,6 @@ Hotkey "SC11C", PlaceOne
 
 ; Keypad dot
 Hotkey "SC053", NoAddress
+
+; Vim-paste
+Hotkey "SC013", Paste
