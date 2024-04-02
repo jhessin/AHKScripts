@@ -382,8 +382,12 @@ Hotkey "SC037", ToggleEnter
 
 ; Keypad ENTER
 Hotkey "^SC11C", SetPlaceOne
+
+; Shift+Keys
 Hotkey "+SC11C", PlaceOne
 Hotkey "+SC01C", PlaceOne
+Hotkey "^SC053", NoAddress
+
 
 ; ------ ACTIVATION KEYS ------
 HotIf EnterEnabled
