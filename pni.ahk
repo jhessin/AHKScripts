@@ -291,7 +291,7 @@ NoAddress(*) {
 	; Underground Cable
 	; click(1426, 209)
 	; click(1426, 431)
-	click(TargetX, TargetY)
+	click(1451, 231)
 	Send("NA")
 	; Send("mmmmmmmmmmmmmm")
 ;	click(x, y)
