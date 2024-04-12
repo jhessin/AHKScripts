@@ -168,9 +168,21 @@ PlaceCount(keyname) {
 
 PlaceBorderAnnotation(keyname) {
 	MouseGetPos(&StartX, &StartY)
-	ClickOffset()
 	; Annotate
 	click(1417, ANNOTATE_Y)
+	sleep 50
+	; Place Border Annotation
+	click(1417, 144)
+	MouseMove(StartX, StartY)
+}
+
+OffsetPlusBorderAnnotation(*) {
+	MouseGetPos(&StartX, &StartY)
+	ClickOffset()
+	sleep 50
+	; Annotate
+	click(1417, ANNOTATE_Y)
+	sleep 50
 	; Place Border Annotation
 	click(1417, 144)
 	MouseMove(StartX, StartY)
@@ -365,7 +377,8 @@ Hotkey "F4", PlaceOne
 Hotkey "F5", MoveByDragging
 Hotkey "F6", RotateByDragging
 Hotkey "F7", PlaceCount
-; Hotkey "F7", PlaceBorderAnnotation
+; Hotkey "F7", OffsetPlusBorderAnnotation
+Hotkey "F8", PlaceBorderAnnotation
 Hotkey "F9", TrimDrop
 
 ; Keypad Minus
