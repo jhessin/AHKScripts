@@ -16,7 +16,7 @@ CapsLock::Esc
 ; This is the RegEx I use to test if Neovim or Neovide are active
 DisableTest() {
 	return (WinActive("ahk_exe Gw2-64.exe")
-		or ("ahk_exe GeForceNOW.exe")
+		or WinActive("ahk_exe GeForceNOW.exe")
 	)
 }
 
