@@ -1,0 +1,96 @@
+﻿[PMC Globals]|WinActive|ahk_exe vmware-view.exe|
+[PMC Code v5.4.1]|F3||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Offset
+Context=None|
+Groups=Start:1
+1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
+2|Left Move & Click|231, 148 Left, 1|1|10|Click|||||2|
+3|Left Move & Click|229, 38 Left, 1|1|10|Click|||||4|
+4|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||6|
+
+[PMC Code v5.4.1]|F4||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|PlaceOne
+Context=None|
+Groups=Start:1
+1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
+2|Left Move & Click|1330, 92 Left, 1|1|10|Click|||||2|
+3|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||4|
+
+[PMC Code v5.4.1]|F5||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|ClickMove
+Context=None|
+Groups=Start:1
+1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
+2|Left Move & Click|377, 90 Left, 1|1|10|Click|||||2|
+3|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||6|
+
+[PMC Code v5.4.1]|F6||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|ClickRotate
+Context=None|
+Groups=Start:1
+1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
+2|Left Move & Click|412, 91 Left, 1|1|10|Click|||||2|
+3|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||4|
+
+[PMC Code v5.4.1]|$||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|ClearTrail
+Context=None|
+Groups=Start:1
+1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
+2|Left Move & Click|163, 148 Left, 1|1|10|Click|||||2|
+3|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||4|
+
+[PMC Code v5.4.1]|&||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SelectTool
+Context=None|
+Groups=Start:1
+1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
+2|Left Move & Click|219, 92 Left, 1|1|10|Click|||||2|
+3|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||4|
+
+[PMC Code v5.4.1]|[||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|AutoAssociate
+Context=None|
+Groups=Start:1
+1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||2|
+2|[Text]|c|1|0|SendRaw|||||1|
+3|Left Move & Click|1495, 119 Left, 1|1|10|Click|||||3|
+4|Left Move & Click|1491, 272 Left, 1|1|10|Click|||||5|
+5|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||7|
+
+[PMC Code v5.4.1]|{||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|AssociateDropAndAddress
+Context=None|
+Groups=Start:1,Associate Drop And Address:2,Associate to Amp (Update Daily):4,End:6
+1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
+2|Left Move & Click|1495, 119 Left, 1|1|10|Click|||||2|
+3|Left Move & Click|1509, 193 Left, 1|1|10|Click|||||4|
+04|Left Move & Click|1718, 768 Left, 1|1|10|Click|||||6|
+05|Left Move & Click|1755, 827 Left, 1|1|10|Click|||||9|
+6|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||11|
+
+[PMC Code v5.4.1]|(||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|CableAssociation
+Context=None|
+Groups=Start:1
+1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
+2|Left Move & Click|1555, 122 Left, 1|1|10|Click|||||2|
+3|Left Move & Click|1550, 142 Left, 1|1|10|Click|||||4|
+4|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||6|
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|TODOTrimDrop
+Context=None|
+Groups=Start:1
+1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
+2|Left Move & Click|1555, 119 Left, 1|1|10|Click|||||2|
+3|Left Move & Click|1585, 143 Left, 1|1|10|Click|||||4|
+4|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||6|
+5|WinActivate||1|333|WinActivate||CSC PNI User Application (Project 23181683_ADV1 - ENID OK (ENID14, EN092A, EN092B), Design Layout, Writable) ahk_class VMwareUnityHostWndClass||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Underground
+Context=Expression|False
+Groups=Start:1
+1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
+2|Left Move & Click|1471, 211 Left, 1|1|10|Click|||||2|
+3|u|{u}|1|0|Send|||||4|
+4|Left Move & Click|1353, 93 Left, 1|1|10|Click|||||5|
+5|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||9|
+
+[PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|EditProp
+Context=None|
+Groups=Start:1
+1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
+2|Left Move & Click|1453, 273 Left, 1|1|10|Click|||||2|
+3|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||4|
+
