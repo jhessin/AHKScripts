@@ -1,4 +1,4 @@
-﻿[PMC Globals]|None|ahk_exe vmware-view.exe|
+﻿[PMC Globals]|WinActive|ahk_exe vmware-view.exe|
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SaveMouse()
 Context=None|
 Groups=Start:1
@@ -29,27 +29,27 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|PlaceOne|1|0|UserFunction|Local| / |||1|
-2|Left Move & Click|1330, 92 Left, 1|1|10|Click|||||2|
+2|Left Move & Click|1330, 92 Left, 1|1|10|Click|||||3|
 
 [PMC Code v5.4.1]|F4||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|PlaceOne
 Context=None|
 Groups=Start:1
-1|SaveMouse|_null := |1|0|Function|||||3|
-2|PlaceOne|_null := |1|0|Function|||||1|
-3|LoadMouse|_null := |1|0|Function|||||2|
+1|SaveMouse|_null := |1|0|Function|||||1|
+2|PlaceOne|_null := |1|0|Function|||||2|
+3|LoadMouse|_null := |1|0|Function|||||3|
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|ClickMove()
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|ClickMove|1|0|UserFunction|Local| / |||1|
-2|Left Move & Click|377, 90 Left, 1|1|10|Click|||||2|
+2|Left Move & Click|377, 90 Left, 1|1|10|Click|||||3|
 
 [PMC Code v5.4.1]|F5||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|ClickMove
 Context=None|
 Groups=Start:1
 1|SaveMouse|_null := |1|0|Function|||||1|
-2|ClickMove|_null := |1|0|Function|||||4|
-3|LoadMouse|_null := |1|0|Function|||||5|
+2|ClickMove|_null := |1|0|Function|||||2|
+3|LoadMouse|_null := |1|0|Function|||||3|
 
 [PMC Code v5.4.1]|F6||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|ClickRotate
 Context=None|
