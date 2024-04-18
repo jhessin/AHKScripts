@@ -5,6 +5,8 @@ CoordMode "Mouse", "Screen"
 
 PNI_WINDOW := "ahk_class VMwareUnityHostWndClass"
 
+SleepTime := 10
+
 HotIfWinActive(PNI_WINDOW)
 
 ; CONSTANTS
@@ -57,21 +59,26 @@ SetClearTrail(*) {
 ClickClearTrail() {
 	if (ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "clear_trail.png")) {
 		click(x, y)
+		sleep(SleepTime)
 	} else {
 		click(ClearTrailX, ClearTrailY)
+		sleep(SleepTime)
 	}
 }
 
 ClickSelectTool() {
 	click(220, SELECT_Y)
+	sleep(SleepTime)
 }
 
 ClickMoveByDragging() {
 	click(377, SELECT_Y)
+	sleep(SleepTime)
 }
 
 ClickRotate() {
 	click(415, SELECT_Y)
+	sleep(SleepTime)
 }
 
 SetPlaceOne(*) {
@@ -81,53 +88,70 @@ SetPlaceOne(*) {
 
 ClickPlaceOne() {
 	click(PlaceOneX, PlaceOneY)
+	sleep(SleepTime)
 }
 
 ClickPlaceText() {
 	click(456, CLEAR_Y)
+	sleep(SleepTime)
 }
 
 ClickOffset() {
 	click(228, CLEAR_Y)
+	sleep(SleepTime)
 	click(230, 40) ; Confirm
+	sleep(SleepTime)
 }
 
 ClickReverseTrail() {
 	click(118, CLEAR_Y)
+	sleep(SleepTime)
 }
 
 ClickAutoAssociate() {
 	Send("c")
+	sleep(SleepTime)
 	click(1493, ANNOTATE_Y)
+	sleep(SleepTime)
 	click(1493, 261)
+	sleep(SleepTime)
 }
 
 ClickAutoAssociateUG() {
 	Send("c")
+	sleep(SleepTime)
 	click(1493, ANNOTATE_Y)
+	sleep(SleepTime)
 	click(1493, 271)
+	sleep(SleepTime)
 }
 
 ClickAssociateTap() {
 	click(1493, ANNOTATE_Y)
+	sleep(SleepTime)
 	click(1493, 193)
+	sleep(SleepTime)
 }
 
 ClickCableAssociation() {
 	click(1553, ANNOTATE_Y)
+	sleep(SleepTime)
 	click(1553, 144)
-	Sleep(500)
+	Sleep(SleepTime)
 	if (ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "finish.png")) {
 		click(x, y)
+		sleep(SleepTime)
 	}
 }
 
 ClickTrailSize() {
 	click(54, 1005)
+	Sleep(SleepTime)
 }
 
 ClickBuildingOutline() {
 	click(1519, ANNOTATE_Y)
+	Sleep(SleepTime)
 }
 
 ;;; --- KEYBIND FUNTIONS ---
@@ -158,9 +182,9 @@ AutoAssociateUG(keyname) {
 PlaceCount(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	ClickOffset()
-	Sleep 50
+	Sleep(SleepTime)
 	Send("{BS}")
-	Sleep 50
+	Sleep(SleepTime)
 	ClickPlaceOne()
 	MouseMove(StartX, StartY)
 }
@@ -170,21 +194,23 @@ PlaceBorderAnnotation(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	; Annotate
 	click(1417, ANNOTATE_Y)
-	sleep 50
+	Sleep(SleepTime)
 	; Place Border Annotation
 	click(1417, 144)
+	Sleep(SleepTime)
 	MouseMove(StartX, StartY)
 }
 
 OffsetPlusBorderAnnotation(*) {
 	MouseGetPos(&StartX, &StartY)
 	ClickOffset()
-	sleep 50
+	Sleep(SleepTime)
 	; Annotate
 	click(1417, ANNOTATE_Y)
-	sleep 50
+	Sleep(SleepTime)
 	; Place Border Annotation
 	click(1417, 144)
+	Sleep(SleepTime)
 	MouseMove(StartX, StartY)
 }
 
@@ -199,6 +225,7 @@ OffsetTrail(*) {
 	ClickOffset()
 	; Place drafting line
 	click(409, 149)
+	Sleep(SleepTime)
 	MouseMove(StartX, StartY)
 }
 
@@ -273,13 +300,13 @@ Paste(keyname) {
 MacroTask(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	Send('{SC11C}')
-	sleep(500)
+	Sleep(SleepTime)
 	Send('r')
-	sleep(500)
+	Sleep(SleepTime)
 	click(TargetX, TargetY)
-	sleep(500)
+	Sleep(SleepTime)
 	Send('^k')
-	sleep(500)
+	Sleep(SleepTime)
 	ClickPlaceOne()
 	MouseMove(StartX, StartY)
 }
@@ -304,6 +331,7 @@ NoAddress(*) {
 	; click(1426, 209)
 	; click(1426, 431)
 	click(1451, 231)
+	sleep(SleepTime)
 	Send("NA")
 	; Send("mmmmmmmmmmmmmm")
 ;	click(x, y)
@@ -320,7 +348,9 @@ EditProp(keyname) {
 	; click(1426, 209)
 	; click(1426, 431)
 	click(PreTapX, PreTapY)
+	sleep(SleepTime)
 	click(TargetX, TargetY)
+	sleep(SleepTime)
 	; Send("mmmmmmmmmmmmmm")
 ;	click(x, y)
 	MouseMove(StartX, StartY)
@@ -330,8 +360,11 @@ PasteProp(keyname) {
 	MouseGetPos(&StartX, &StartY)
 ;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
 	click(1423, 210)
+	sleep(SleepTime)
 	send('^k')
+	sleep(SleepTime)
 	click(1376, 92)
+	sleep(SleepTime)
 	MouseMove(StartX, StartY)
 }
 
@@ -339,6 +372,7 @@ Update(keyname) {
 	MouseGetPos(&StartX, &StartY)
 ;	ImageSearch(&x,&y, 0, 0, A_ScreenWidth, A_ScreenHeight, "*50 place_one.png")
 	click(1350, 91)
+	sleep(SleepTime)
 ;	click(x, y)
 	MouseMove(StartX, StartY)
 }
