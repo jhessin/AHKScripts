@@ -1,53 +1,36 @@
 ﻿[PMC Globals]|WinActive|ahk_exe vmware-view.exe|
 [PMC Code v5.4.1]|Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceMacro
 Context=None|
-Groups=Start:1,Repeat Offset:2,Other:4,End:5
+Groups=Start:1,Repeat Offset:2,Other:2,End:2
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
-02|Left Move & Click|228, 147 Left, 1|1|10|Click|||Offset||2|
-03|Left Move & Click|217, 39 Left, 1|1|10|Click|||Confirm||5|
-04|BorderAnnotation|_null := |1|0|Function|||||12|
-05|[Pause]|NoRandom|1|500|Sleep|||||14|
-06|Left Move & Click|1430, 232 Left, 1|1|10|Click|||||15|
-7|Left Move & Click|1523, 332 Left, 1|1|500|Click||||||
-8|Left Move & Click|1523, 332 Left, 1|1|10|Click||||||
-9|Left Move & Click|1527, 330 Left, Down|1|10|Click||||||
-10|Left Move & Click|1411, 332 Left, Up|1|10|Click||||||
-11|[Text]|^k{ENTER}{BS}|1|0|Send||||||
-12|Left Click, Continue, FoundX, FoundY|1249, 53, 1468, 112, 0xAFFFFF, 0, Fast RGB|1|0|PixelSearch||Screen|Update/AddOne||7|
-13|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||17|
+02|Left Move & Click|89, 435 Left, 1|1|500|Click|||Open Amp|||
+3|RepeatOffset|_null := |1|0|Function||||||
+4|BorderAnnotation|_null := |1|0|Function||||||
+5|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||17|
+
+[PMC Code v5.4.1]|^Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|CtrlSpace
+Context=None|
+Groups=Start:1,Repeat Offset:2,Other:2,End:2
+1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
+02|Left Move & Click|89, 435 Left, 1|1|500|Click|||Open Amp|||
+3|BorderAnnotation|_null := |1|0|Function||||||
+4|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||17|
 
 [PMC Code v5.4.1]|^Up||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|UpMacro
 Context=None|
 Groups=Start:1
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
-2|Left Move & Click|229, 149 Left, 1|1|10|Click|||Offset||2|
-3|Left Move & Click|170, 94 Left, 1|1|10|Click|||Offset-Direction||4|
-4|Left Move & Click|130, 111 Left, 1|1|10|Click|||Left||6|
-5|Left Move & Click|121, 40 Left, 2|1|10|Click|||Select distance||8|
-6|[Pause]|NoRandom|1|500|Sleep|||||10|
-7|[Text]|15|1|0|SendRaw|||||11|
-8|Left Move & Click|217, 39 Left, 1|1|10|Click|||Confirm||12|
-9|[Pause]|NoRandom|1|500|Sleep|||||14|
-10|Left Move & Click|217, 39 Left, 1|1|10|Click|||Confirm||15|
-11|[Pause]|NoRandom|1|500|Sleep|||||17|
-12|BorderAnnotation|_null := |1|0|Function|||||18|
-13|BorderAnnotation|_null := |1|0|Function|||||19|
-14|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||20|
+2|OffsetAbove|_null := |1|0|Function|||||18|
+3|BorderAnnotation|_null := |1|0|Function|||||19|
+4|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||20|
 
 [PMC Code v5.4.1]|^Down||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|DownMacro
 Context=None|
 Groups=Start:1
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
-2|Left Move & Click|229, 149 Left, 1|1|10|Click|||Offset||2|
-3|Left Move & Click|170, 94 Left, 1|1|10|Click|||Offset-Direction||4|
-4|Left Move & Click|127, 123 Left, 1|1|10|Click|||Right||6|
-5|Left Move & Click|121, 40 Left, 2|1|10|Click|||Select distance||8|
-6|[Pause]|NoRandom|1|500|Sleep|||||10|
-7|[Text]|1|1|0|SendRaw|||||11|
-8|Left Move & Click|217, 39 Left, 1|1|10|Click|||Confirm||12|
-9|[Pause]|NoRandom|1|500|Sleep|||||14|
-10|BorderAnnotation|_null := |1|0|Function|||||15|
-11|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||16|
+2|OffsetBelow|_null := |1|0|Function||||||
+3|BorderAnnotation|_null := |1|0|Function|||||15|
+4|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||16|
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|BorderAnnotation()
 Context=None|
@@ -57,7 +40,7 @@ Groups=Start:1
 3|Left Click, Continue, FoundX, FoundY|1294, 53, 1479, 120, 0x6CD5D1, 0, Fast RGB|1|0|PixelSearch||Screen||||
 4|Left Move & Click|1419, 142 Left, 1|1|10|Click|||Place Border Annotation||6|
 
-[PMC Code v5.4.1]|F3||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|AmpRename()
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|AmpRename()
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|AmpRename|1|0|UserFunction|Global| / ||||
@@ -66,4 +49,60 @@ Groups=Start:1
 4|Left Move & Click|1527, 330 Left, Down|1|10|Click||||||
 5|Left Move & Click|1411, 332 Left, Up|1|10|Click||||||
 6|[Text]|^k{ENTER}{BS}|1|0|Send||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|AddressToAmp()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|AddressToAmp|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|1628, 614 Left, 1|1|10|Click||||||
+3|Left Move & Click|1628, 671 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|PastePS()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|PastePS|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|89, 435 Left, 1|1|500|Click|||Open Amp|||
+3|Left Move & Click|1269, 211 Left, 1|1|500|Click|||Expand Data Block|||
+4|Left Move & Click|1361, 231 Left, 2|1|500|Click|||Open Data Block|||
+5|Left Move & Click|1581, 655 Left, 1|1|10|Click|||UPDATE! Select Node Name|||
+6|[Text]|^k{END}{BS}{BS}|1|20|SendEvent||||||
+7|Left Move & Click|1532, 610 Left, 1|1|20|Click|||UPDATE! Select PS Name|||
+8|[Text]|^k|1|10|Send||||||
+9|Left Move & Click|1538, 475 Left, 1|1|10|Click|||UPDATE! Update|||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|RemoveBorderAnnotations()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|RemoveBorderAnnotations|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|1418, 121 Left, 1|1|500|Click|||Annotations|||
+3|Left Move & Click|1415, 161 Left, 1|1|500|Click|||Remove|||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|OffsetAbove()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|OffsetAbove|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|229, 149 Left, 1|1|10|Click|||Offset||2|
+3|Left Move & Click|170, 94 Left, 1|1|10|Click|||Offset-Direction||4|
+4|Left Move & Click|130, 111 Left, 1|1|10|Click|||Left||6|
+5|Left Move & Click|121, 40 Left, 2|1|500|Click|||Select distance||8|
+6|[Text]|15|1|20|SendRaw|||||11|
+7|Left Move & Click|217, 39 Left, 1|1|500|Click|||Confirm||12|
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|OffsetBelow()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|OffsetBelow|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|229, 149 Left, 1|1|10|Click|||Offset||2|
+3|Left Move & Click|170, 94 Left, 1|1|10|Click|||Offset-Direction||4|
+4|Left Move & Click|127, 123 Left, 1|1|10|Click|||Right||6|
+5|Left Move & Click|121, 40 Left, 2|1|500|Click|||Select distance||8|
+6|[Text]|1|1|20|SendRaw|||||11|
+7|Left Move & Click|217, 39 Left, 1|1|500|Click|||Confirm||12|
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|RepeatOffset()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|RepeatOffset|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|229, 149 Left, 1|1|100|Click|||Offset||2|
+3|Left Move & Click|217, 39 Left, 1|1|500|Click|||Confirm||12|
 
