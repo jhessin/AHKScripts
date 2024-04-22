@@ -416,19 +416,19 @@ Hotkey "F8", PlaceBorderAnnotation
 Hotkey "F9", TrimDrop
 
 ; Keypad Minus
-Hotkey "^SC04A", GrabPretap
+; Hotkey "^SC04A", GrabPretap
 
 ; Keypad Plus
-Hotkey "^SC04E", GrabTarget
-Hotkey "SC04E", EditProp
-Hotkey "+SC02B", EditProp
+; Hotkey "^SC04E", GrabTarget
+; Hotkey "SC04E", EditProp
+; Hotkey "+SC02B", EditProp
 ; Hotkey "SC04E", EditTrail
 
 ; Keypad *
 Hotkey "SC037", ToggleEnter
 
 ; Keypad ENTER
-Hotkey "^SC11C", SetPlaceOne
+; Hotkey "^SC11C", SetPlaceOne
 
 ; Shift+Keys
 Hotkey "+SC11C", PlaceOne
@@ -438,7 +438,7 @@ Hotkey "^SC053", NoAddress
 
 ; ------ ACTIVATION KEYS ------
 HotIf EnterEnabled
-Hotkey "SC11C", PlaceOne
+; Hotkey "SC11C", PlaceOne
 ; Hotkey "SC11C", MacroTask
 ; Hotkey "SC11C", Update
 ; Hotkey "SC11C", ReversePlaceOne
@@ -446,7 +446,7 @@ Hotkey "SC11C", PlaceOne
 ; Hotkey "SC11C", PasteProp
 
 ; Keypad dot
-Hotkey "SC053", NoAddress
+; Hotkey "SC053", NoAddress
 
 ; Vim-paste
 Hotkey "SC013", Paste
