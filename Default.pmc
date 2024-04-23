@@ -1,13 +1,16 @@
 ﻿[PMC Globals]|WinActive|ahk_exe vmware-view.exe|
 [PMC Code v5.4.1]|Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceMacro
 Context=None|
-Groups=Start:1,Repeat Offset:3,Other:3,End:3
-01|[Text]| |1|0|SendRaw|||Send Space|||
-2|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||Save Mouse||1|
-03|[Pause]||1|10|Sleep||||||
-04|Left Move & Click|1380, 91 Left, 1|1|10|Click||||||
-5|PowerPole|_null := |1|0|Function||||||
-6|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||17|
+Groups=Start:1,Repeat Offset:2,Other:2,End:2
+1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||Save Mouse||1|
+2|[Pause]||1|10|Sleep||||||
+03|Left Move & Click|1465, 252 Left, 1|1|10|Click||||||
+04|[Pause]||1|300|Sleep||||||
+05|[Text]|250|1|0|SendRaw||||||
+06|[Pause]||1|300|Sleep||||||
+7|PowerPole|_null := |1|0|Function||||||
+8|PlaceOne|_null := |1|0|Function||||||
+9|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||17|
 
 [PMC Code v5.4.1]|^Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|CtrlSpace
 Context=None|
@@ -15,8 +18,10 @@ Groups=Start:1,Repeat Offset:2,Other:2,End:2
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
 2|[Pause]||1|10|Sleep|||||2|
 03|Left Move & Click|89, 435 Left, 1|1|500|Click|||Open Amp||3|
-4|[Text]|{DELETE}|1|30|Send|||||6|
-5|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||8|
+04|[Text]|{DELETE}|1|30|Send|||||6|
+5|NoAddress|_null := |1|0|Function||||||
+6|PlaceOne|_null := |1|0|Function||||||
+7|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||8|
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
@@ -24,7 +29,7 @@ Groups=Start:1,Repeat Offset:2,Other:2,End:2
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
 2|[Pause]||1|10|Sleep||||||
 03|RepeatOffset|_null := |1|0|Function||||||
-4|Left Move & Click|69, 1003 Left, 1|1|10|Click||||||
+4|Left Move & Click|1405, 209 Left, 1|1|10|Click||||||
 5|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||17|
 
 [PMC Code v5.4.1]|NumpadEnter||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumEnterMacro
@@ -32,8 +37,8 @@ Context=None|
 Groups=Start:1,Repeat Offset:2,Other:2,End:2
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
 2|[Pause]||1|10|Sleep||||||
-3|CircleUp|_null := |1|0|Function||||||
-04|Left Move & Click|1330, 92 Left, 1|1|10|Click||||||
+03|CircleUp|_null := |1|0|Function||||||
+4|Left Move & Click|1328, 96 Left, 1|1|10|Click||||||
 5|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||17|
 
 [PMC Code v5.4.1]|^Up||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|UpMacro
@@ -140,7 +145,66 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|PowerPole|1|0|UserFunction|Local| / ||||
-2|Left Move & Click|1438, 436 Left, 1|1|10|Click||||||
-3|[Text]|NT|1|0|SendRaw||||||
-4|Left Move & Click|1330, 93 Left, 1|1|10|Click||||||
+2|Left Move & Click|1438, 436 Left, 1|1|250|Click||||||
+3|[Text]|NT|1|60|SendEvent||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|TrimDrop()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|TrimDrop|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|118, 149 Left, 1|1|10|Click||||||
+3|[Pause]||1|300|Sleep||||||
+4|Left Move & Click|61, 1004 Left, 1|1|10|Click||||||
+5|[Pause]||1|300|Sleep||||||
+6|[Text]|30|1|70|SendEvent||||||
+7|[Pause]||1|300|Sleep||||||
+8|[Text]|{Enter}|1|70|SendEvent||||||
+9|[Pause]||1|300|Sleep||||||
+10|Left Move & Click|118, 149 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|PlaceOne()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|PlaceOne|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|1327, 93 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|UpdateGeometry()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|UpdateGeometry|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|344, 94 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|UpdateObject()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|UpdateObject|1|0|UserFunction|Global| / ||||
+2|Left Click, Continue, FoundX, FoundY|1255, 54, 1858, 179, 0x6CD4D4, 0, Fast RGB|1|0|PixelSearch|UntilFound|Screen||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|OffsetCount()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|OffsetCount|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|229, 149 Left, 1|1|10|Click|||Offset||2|
+3|Left Move & Click|170, 94 Left, 1|1|10|Click|||Offset-Direction||4|
+4|Left Move & Click|130, 111 Left, 1|1|10|Click|||Left||6|
+5|Left Move & Click|121, 40 Left, 2|1|500|Click|||Select distance||8|
+6|[Text]|15|1|20|SendRaw|||||11|
+7|Left Move & Click|217, 39 Left, 1|1|500|Click|||Confirm||12|
+8|[Text]|{BS}|1|250|Send||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|ResetZoom()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|ResetZoom|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|582, 1004 Left, 1|1|10|Click||||||
+3|[Text]|1000{ENTER}|1|60|SendEvent||||||
+4|[Pause]||1|300|Sleep||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NoAddress()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|NoAddress|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|1435, 233 Left, 1|1|10|Click||||||
+3|[Pause]||1|300|Sleep||||||
+4|[Text]|NA|1|0|SendRaw||||||
 
