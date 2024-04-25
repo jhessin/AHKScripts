@@ -8,8 +8,8 @@ Groups=Start:1,Repeat Offset:2,Other:2,End:2
 04|[Pause]||1|300|Sleep||||||
 05|[Text]|250|1|0|SendRaw||||||
 06|[Pause]||1|300|Sleep||||||
-7|DropAndAddress|_null := |1|0|Function||||||
-8|AddressToAmp|_null := |1|0|Function||||||
+7|OffsetCount|_null := |1|0|Function||||||
+8|PlaceOne|_null := |1|0|Function||||||
 9|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||17|
 
 [PMC Code v5.4.1]|^Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|CtrlSpace
@@ -29,7 +29,7 @@ Groups=Start:1,Repeat Offset:2,Other:2,End:2
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
 2|[Pause]||1|10|Sleep||||||
 03|RepeatOffset|_null := |1|0|Function||||||
-4|Left Move & Click|1427, 273 Left, 1|1|10|Click||||||
+4|Left Move & Click|1386, 432 Left, 1|1|10|Click||||||
 5|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||17|
 
 [PMC Code v5.4.1]|NumpadEnter||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumEnterMacro
@@ -38,7 +38,7 @@ Groups=Start:1,Repeat Offset:2,Other:2,End:2
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
 2|[Pause]||1|10|Sleep||||||
 03|CircleUp|_null := |1|0|Function||||||
-4|Left Move & Click|1329, 90 Left, 1|1|10|Click||||||
+4|Left Move & Click|1331, 89 Left, 1|1|10|Click||||||
 5|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||17|
 
 [PMC Code v5.4.1]|^Up||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|UpMacro
