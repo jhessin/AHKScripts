@@ -36,7 +36,7 @@ Groups=Start:1,Repeat Offset:2,Other:2,End:2
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
 2|[Pause]||1|10|Sleep||||||
 03|RepeatOffset|_null := |1|0|Function||||||
-4|Left Move & Click|1404, 273 Left, 1|1|10|Click||||||
+4|Left Move & Click|1454, 275 Left, 1|1|10|Click||||||
 5|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||17|
 
 [PMC Code v5.4.1]|^NumpadEnter||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumEnterMacro
@@ -88,8 +88,9 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|AddressToAmp|1|0|UserFunction|Global| / ||||
-2|Left Move & Click|1618, 644 Left, 1|1|10|Click||||||
-3|Left Move & Click|1626, 703 Left, 1|1|10|Click||||||
+2|Left Move & Click|1644, 648 Left, 1|1|500|Click||||||
+3|[Pause]||1|300|Sleep||||||
+4|Left Move & Click|1662, 704 Left, 1|1|10|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|PastePS()
 Context=None|
