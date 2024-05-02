@@ -4,21 +4,21 @@ Context=None|
 Groups=Start:1,Repeat Offset:2,Other:2,End:2
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||Save Mouse||1|
 2|[Pause]||1|10|Sleep||||||
-03|Left Move & Click|1465, 252 Left, 1|1|10|Click||||||
+03|Left Move & Click|1376, 291 Left, 1|1|10|Click||||||
 04|[Pause]||1|300|Sleep||||||
-05|[Text]|250|1|0|SendRaw||||||
+05|[Text]|95501|1|0|SendRaw||||||
 06|[Pause]||1|300|Sleep||||||
-7|DropAndAddress|_null := |1|0|Function||||||
-8|AddressToAmp|_null := |1|0|Function||||||
+07|DropAndAddress|_null := |1|0|Function||||||
+08|AddressToAmp|_null := |1|0|Function||||||
 09|RepeatOffset|_null := |1|0|Function||||||
 010|PowerPole|_null := |1|0|Function||||||
 011|RepeatOffset|_null := |1|0|Function||||||
-012|OffsetCount|_null := |1|0|Function||||||
+12|OffsetCount|_null := |1|0|Function||||||
 013|BorderAnnotation|_null := |1|0|Function||||||
 014|TrimDrop|_null := |1|0|Function||||||
 015|UpdateObject|_null := |1|0|Function||||||
 016|UpdateGeometry|_null := |1|0|Function||||||
-017|PlaceOne|_null := |1|0|Function||||||
+17|PlaceOne|_null := |1|0|Function||||||
 18|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||17|
 
 [PMC Code v5.4.1]|^Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|CtrlSpace
@@ -38,7 +38,7 @@ Groups=Start:1,Repeat Offset:2,Other:2,End:2
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
 2|[Pause]||1|10|Sleep||||||
 03|RepeatOffset|_null := |1|0|Function||||||
-4|Left Move & Click|1453, 274 Left, 1|1|10|Click||||||
+4|Left Move & Click|1463, 233 Left, 1|1|10|Click||||||
 5|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||17|
 
 [PMC Code v5.4.1]|^NumpadEnter||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumEnterMacro
@@ -90,9 +90,9 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|AddressToAmp|1|0|UserFunction|Global| / ||||
-2|Left Move & Click|1625, 650 Left, 1|1|500|Click||||||
+2|Left Move & Click|1613, 646 Left, 1|1|500|Click||||||
 3|[Pause]||1|300|Sleep||||||
-4|Left Move & Click|1621, 673 Left, 1|1|10|Click||||||
+4|Left Move & Click|1560, 701 Left, 1|1|10|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|PastePS()
 Context=None|
