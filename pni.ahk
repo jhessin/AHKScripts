@@ -277,7 +277,15 @@ PlaceOne(keyname) {
 
 TrimDrop(keyname) {
 	MouseGetPos(&StartX, &StartY)
-	Send("{LBUTTON}r{BS}")
+	click(118, 149)
+	sleep 300
+	click(61, 1004)
+	sleep 300
+	SetKeyDelay(70)
+	Send("15{Enter}")
+	sleep 300
+	click(118, 149)
+	sleep 300
 	ClickPlaceOne()
 	MouseMove(StartX, StartY)
 }
