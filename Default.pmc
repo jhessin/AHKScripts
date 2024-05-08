@@ -4,19 +4,20 @@ Context=None|
 Groups=Start:1,Repeat Offset:2,Other:2,End:2
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||Save Mouse||1|
 2|[Pause]||1|10|Sleep||||||
-3|ResizeCable|_null := |1|0|Function||||||
-04|DropAndAddress|_null := |1|0|Function||||||
-05|AddressToAmp|_null := |1|0|Function||||||
-06|RepeatOffset|_null := |1|0|Function||||||
-07|PowerPole|_null := |1|0|Function||||||
-08|RepeatOffset|_null := |1|0|Function||||||
-09|OffsetCount|_null := |1|0|Function||||||
-010|BorderAnnotation|_null := |1|0|Function||||||
-011|TrimDrop|_null := |1|0|Function||||||
-12|UpdateObject|_null := |1|0|Function||||||
-013|UpdateGeometry|_null := |1|0|Function||||||
-014|PlaceOne|_null := |1|0|Function||||||
-15|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||17|
+03|Left Move & Click|91, 431 Left, 1|1|10|Click||||||
+04|ResizeCable|_null := |1|0|Function||||||
+05|DropAndAddress|_null := |1|0|Function||||||
+06|AddressToAmp|_null := |1|0|Function||||||
+07|RepeatOffset|_null := |1|0|Function||||||
+08|PowerPole|_null := |1|0|Function||||||
+9|RepeatOffset|_null := |1|0|Function||||||
+010|OffsetCount|_null := |1|0|Function||||||
+11|BorderAnnotation|_null := |1|0|Function||||||
+012|TrimDrop|_null := |1|0|Function||||||
+013|UpdateObject|_null := |1|0|Function||||||
+014|UpdateGeometry|_null := |1|0|Function||||||
+015|PlaceOne|_null := |1|0|Function||||||
+16|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||17|
 
 [PMC Code v5.4.1]|^Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|CtrlSpace
 Context=None|
