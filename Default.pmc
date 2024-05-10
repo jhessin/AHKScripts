@@ -6,18 +6,18 @@ Groups=Start:1,Repeat Offset:2,Other:2,End:2
 2|[Pause]||1|10|Sleep||||||
 03|Left Move & Click|91, 431 Left, 1|1|10|Click||||||
 04|ResizeCable|_null := |1|0|Function||||||
-5|DropAndAddress|_null := |1|0|Function||||||
-6|AddressToAmp|_null := |1|0|Function||||||
+05|DropAndAddress|_null := |1|0|Function||||||
+06|AddressToAmp|_null := |1|0|Function||||||
 07|RepeatOffset|_null := |1|0|Function||||||
 08|PowerPole|_null := |1|0|Function||||||
 09|RepeatOffset|_null := |1|0|Function||||||
 010|OffsetCount|_null := |1|0|Function||||||
 011|BorderAnnotation|_null := |1|0|Function||||||
 012|NoAddress|_null := |1|0|Function||||||
-013|TrimDrop|_null := |1|0|Function||||||
+13|TrimDrop|_null := |1|0|Function||||||
 014|UpdateObject|_null := |1|0|Function||||||
 015|UpdateGeometry|_null := |1|0|Function||||||
-016|PlaceOne|_null := |1|0|Function||||||
+16|PlaceOne|_null := |1|0|Function||||||
 17|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||17|
 
 [PMC Code v5.4.1]|^Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|CtrlSpace
