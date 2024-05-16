@@ -11,10 +11,10 @@ Groups=Start:1,Repeat Offset:2,Other:2,End:2
 07|RepeatOffset|_null := |1|0|Function||||||
 08|PowerPole|_null := |1|0|Function||||||
 09|RepeatOffset|_null := |1|0|Function||||||
-10|OffsetCount|_null := |1|0|Function||||||
+010|OffsetCount|_null := |1|0|Function||||||
 011|BorderAnnotation|_null := |1|0|Function||||||
 012|NoAddress|_null := |1|0|Function||||||
-013|TrimDrop|_null := |1|0|Function||||||
+13|TrimDrop|_null := |1|0|Function||||||
 014|UpdateObject|_null := |1|0|Function||||||
 015|UpdateGeometry|_null := |1|0|Function||||||
 16|PlaceOne|_null := |1|0|Function||||||
@@ -37,7 +37,7 @@ Groups=Start:1,Repeat Offset:2,Other:2,End:2
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
 2|[Pause]||1|10|Sleep||||||
 03|RepeatOffset|_null := |1|0|Function||||||
-4|Left Move & Click|1472, 212 Left, 1|1|10|Click||||||
+4|Left Move & Click|1455, 211 Left, 1|1|10|Click||||||
 5|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||17|
 
 [PMC Code v5.4.1]|^NumpadEnter||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumEnterMacro
