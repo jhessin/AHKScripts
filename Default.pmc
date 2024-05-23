@@ -6,18 +6,18 @@ Groups=Start:1,Other:2,End:2,New group:17
 2|[Pause]||1|10|Sleep||||0x000000|2|
 03|Left Move & Click|91, 431 Left, 1|1|10|Click|||||3|
 04|ResizeCable|_null := |1|0|Function|||||6|
-5|DropAndAddress|_null := |1|0|Function|||||7|
-6|AddressToAmp|_null := |1|0|Function|||||8|
+05|DropAndAddress|_null := |1|0|Function|||||7|
+06|AddressToAmp|_null := |1|0|Function|||||8|
 07|RepeatOffset|_null := |1|0|Function|||||9|
 08|PowerPole|_null := |1|0|Function|||||10|
 09|RepeatOffset|_null := |1|0|Function|||||11|
-010|OffsetCount|_null := |1|0|Function|||||12|
+10|OffsetCount|_null := |1|0|Function|||||12|
 011|BorderAnnotation|_null := |1|0|Function|||||13|
 012|NoAddress|_null := |1|0|Function|||||14|
 013|TrimDrop|_null := |1|0|Function|||||15|
 014|UpdateObject|_null := |1|0|Function|||||17|
 015|UpdateGeometry|_null := |1|0|Function|||||19|
-016|PlaceOne|_null := |1|0|Function|||||20|
+16|PlaceOne|_null := |1|0|Function|||||20|
 17|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||21|
 
 [PMC Code v5.4.1]|^Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|CtrlSpace
@@ -73,10 +73,11 @@ Groups=Start:1
 1|[FunctionStart]|ResizeCable|1|0|UserFunction|Global| / ||||
 2|Left Move & Click|1470, 234 Left, 1|1|10|Click||||||
 3|[Pause]||1|300|Sleep||||||
-4|[Text]|p|22|30|SendRaw|||P3-625-Aerial|||
+04|[Text]|p|22|30|SendRaw|||P3-625-Aerial|||
 05|[Text]|p|26|30|SendRaw|||P3-625-UG|||
 06|[Text]|p|11|30|SendRaw|||P3-500-A|||
 07|[Text]|p|15|30|SendRaw|||P3-500-UG|||
+8|[Text]|m|10|30|SendRaw|||MC.540|||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|BorderAnnotation()
 Context=None|
@@ -240,4 +241,5 @@ Groups=Start:1
 2|Left Move & Click|1494, 120 Left, 1|1|10|Click||||||
 3|Left Move & Click|1488, 192 Left, 1|1|10|Click||||||
 4|[Pause]||1|2000|Sleep||||||
+05|[Text]|p|15|30|SendRaw|||P3-500-UG|||
 
