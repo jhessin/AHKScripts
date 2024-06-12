@@ -1,24 +1,25 @@
 ﻿[PMC Globals]|WinActive|ahk_exe vmware-view.exe|
 [PMC Code v5.4.1]|Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceMacro
 Context=None|
-Groups=Start:1,Other:2,End:2,New group:17
+Groups=Start:1,Other:2,End:2,New group:18
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||Save Mouse||1|
 2|[Pause]||1|10|Sleep||||0x000000|2|
-03|Left Move & Click|91, 431 Left, 1|1|10|Click|||||3|
-4|DropAndAddress|_null := |1|0|Function|||||7|
-5|AddressToAmp|_null := |1|0|Function|||||8|
+03|Left Move & Click|961, 222 Left, 1|1|10|Click|||||3|
+04|DropAndAddress|_null := |1|0|Function|||||7|
+05|AddressToAmp|_null := |1|0|Function|||||8|
 06|ResizeCable|_null := |1|0|Function|||||6|
 07|RepeatOffset|_null := |1|0|Function|||||9|
 08|PowerPole|_null := |1|0|Function|||||10|
 09|RepeatOffset|_null := |1|0|Function|||||11|
-010|OffsetCount|_null := |1|0|Function|||||12|
-011|BorderAnnotation|_null := |1|0|Function|||||13|
-012|NoAddress|_null := |1|0|Function|||||14|
-013|TrimDrop|_null := |1|0|Function|||||15|
-014|UpdateObject|_null := |1|0|Function|||||17|
-015|UpdateGeometry|_null := |1|0|Function|||||19|
-016|PlaceOne|_null := |1|0|Function|||||20|
-17|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||21|
+010|ReTag|_null := |1|0|Function||||||
+011|OffsetCount|_null := |1|0|Function|||||12|
+012|BorderAnnotation|_null := |1|0|Function|||||13|
+013|NoAddress|_null := |1|0|Function|||||14|
+14|TrimDrop|_null := |1|0|Function|||||15|
+015|UpdateObject|_null := |1|0|Function|||||17|
+16|UpdateGeometry|_null := |1|0|Function|||||19|
+017|PlaceOne|_null := |1|0|Function|||||20|
+18|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||21|
 
 [PMC Code v5.4.1]|^Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|CtrlSpace
 Context=None|
@@ -37,7 +38,7 @@ Groups=Start:1,Repeat Offset:2,Other:2,End:2
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
 2|[Pause]||1|10|Sleep||||||
 03|RepeatOffset|_null := |1|0|Function||||||
-4|Left Move & Click|1459, 233 Left, 1|1|10|Click||||||
+4|Left Move & Click|1437, 276 Left, 1|1|10|Click||||||
 5|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||17|
 
 [PMC Code v5.4.1]|^NumpadEnter||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumEnterMacro
@@ -280,4 +281,17 @@ Groups=Start:1
 3|Left Move & Click|1488, 192 Left, 1|1|10|Click||||||
 4|[Pause]||1|2000|Sleep||||||
 05|[Text]|p|15|30|SendRaw|||P3-500-UG|||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|ReTag()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|ReTag|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|1427, 431 Left, 1|1|10|Click||||||
+3|[Text]|NT|1|10|SendRaw||||||
+4|Left Move & Click|1454, 251 Left, 1|1|10|Click||||||
+5|[Text]|j|1|10|SendRaw||||||
+6|Left Move & Click|1378, 90 Left, 1|1|10|Click||||||
+7|Left Move & Click|1456, 251 Left, 1|1|10|Click||||||
+8|[Text]|p|1|10|SendRaw||||||
+9|Left Move & Click|1376, 91 Left, 1|1|10|Click||||||
 
