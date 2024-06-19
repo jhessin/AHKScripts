@@ -1,0 +1,88 @@
+﻿[PMC Globals]|WinActive|ahk_exe vmware-view.exe|
+[PMC Code v5.4.1]|^Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceMacro
+Context=None|
+Groups=Start:1
+01|Ped|_null := |1|0|Function||||||
+02|PowerPole|_null := |1|0|Function||||||
+03|Conduit|_null := |1|0|Function||||||
+4|Residential|_null := |1|0|Function||||||
+
+[PMC Code v5.4.1]|$||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|DollarMacro
+Context=None|
+Groups=Start:1
+1|Ped|_null := |1|0|Function||||||
+02|PowerPole|_null := |1|0|Function||||||
+03|Conduit|_null := |1|0|Function||||||
+
+[PMC Code v5.4.1]|&||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|AmperMacro
+Context=None|
+Groups=Start:1
+01|Ped|_null := |1|0|Function||||||
+02|PowerPole|_null := |1|0|Function||||||
+3|Conduit|_null := |1|0|Function||||||
+4|Left Move & Click|1800, 981 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlus
+Context=None|
+Groups=Start:1
+1|Left Move & Click|386, 334 Left, 3|1|10|Click||||||
+
+[PMC Code v5.4.1]|F2||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|F2
+Context=None|
+Groups=Start:1
+1|Left Move & Click|352, 974 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|F3||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|F3
+Context=None|
+Groups=Start:1
+01|Left Move & Click|103, 336 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|F4||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|F4
+Context=None|
+Groups=Start:1
+1|Left Move & Click|1800, 981 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|PowerPole()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|PowerPole|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|127, 246 Left, 2|1|10|Click||||||
+3|[Text]|NT|1|0|SendRaw||||||
+4|Left Move & Click|613, 468 Left, 1|1|10|Click||||||
+5|Left Move & Click|433, 599 Left, 1|1|10|Click||||||
+6|Left Move & Click|1680, 368 Left, 1|1|10|Click||||||
+7|Left Move & Click|1668, 465 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Conduit()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|Conduit|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|987, 305 Left, 1|1|50|Click||||||
+3|Left Move & Click|945, 384 Left, 1|1|50|Click||||||
+4|Left Move & Click|1548, 334 Left, 1|1|50|Click||||||
+5|Left Move & Click|1542, 408 Left, 1|1|50|Click||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Ped()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|Ped|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|1881, 358 Left, 1|1|10|Click||||||
+3|Left Move & Click|1657, 468 Left, 1|1|10|Click||||||
+4|Left Move & Click|1637, 204 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Residential()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|Residential|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|461, 471 Left, 1|1|10|Click||||||
+3|Numpad1 Down|{Numpad1 Down}|1|0|Send||||||
+4|Numpad1 Up|{Numpad1 Up}|1|0|Send||||||
+5|Left Move & Click|984, 433 Left, 1|1|10|Click||||||
+6|Numpad0 Down|{Numpad0 Down}|1|0|Send||||||
+7|Numpad0 Up|{Numpad0 Up}|1|0|Send||||||
+8|Left Move & Click|994, 478 Left, 1|1|10|Click||||||
+9|Numpad0 Down|{Numpad0 Down}|1|0|Send||||||
+10|Numpad0 Up|{Numpad0 Up}|1|0|Send||||||
+11|Left Move & Click|1772, 359 Left, 1|1|10|Click||||||
+12|Left Move & Click|1652, 463 Left, 1|1|10|Click||||||
+
