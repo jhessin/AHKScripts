@@ -1,18 +1,18 @@
 ﻿[PMC Globals]|WinActive|ahk_exe vmware-view.exe|
-[PMC Code v5.4.1]|^Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceMacro
+[PMC Code v5.4.1]|Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceMacro
 Context=None|
 Groups=Start:1
 01|Ped|_null := |1|0|Function||||||
 02|PowerPole|_null := |1|0|Function||||||
 03|Conduit|_null := |1|0|Function||||||
-4|Residential|_null := |1|0|Function||||||
+4|Lockbox|_null := |1|0|Function||||||
+05|[Text]| |1|0|SendRaw||||||
 
 [PMC Code v5.4.1]|$||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|DollarMacro
 Context=None|
 Groups=Start:1
-1|Ped|_null := |1|0|Function||||||
-02|PowerPole|_null := |1|0|Function||||||
-03|Conduit|_null := |1|0|Function||||||
+01|Ped|_null := |1|0|Function||||||
+2|PowerPole|_null := |1|0|Function||||||
 
 [PMC Code v5.4.1]|&||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|AmperMacro
 Context=None|
@@ -47,11 +47,12 @@ Context=None|
 Groups=Start:1
 1|[FunctionStart]|PowerPole|1|0|UserFunction|Global| / ||||
 2|Left Move & Click|127, 246 Left, 2|1|10|Click||||||
-3|[Text]|NT|1|0|SendRaw||||||
+3|[Text]|NA|1|0|SendRaw||||||
 4|Left Move & Click|613, 468 Left, 1|1|10|Click||||||
 5|Left Move & Click|433, 599 Left, 1|1|10|Click||||||
 6|Left Move & Click|1680, 368 Left, 1|1|10|Click||||||
 7|Left Move & Click|1668, 465 Left, 1|1|10|Click||||||
+8|Left Move & Click|1637, 204 Left, 1|1|10|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Conduit()
 Context=None|
@@ -69,6 +70,16 @@ Groups=Start:1
 2|Left Move & Click|1881, 358 Left, 1|1|10|Click||||||
 3|Left Move & Click|1657, 468 Left, 1|1|10|Click||||||
 4|Left Move & Click|1637, 204 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Lockbox()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|Lockbox|1|0|UserFunction|Local| / ||||
+2|Left Move & Click|1881, 358 Left, 1|1|10|Click||||||
+3|Left Move & Click|1657, 468 Left, 1|1|10|Click||||||
+4|Left Move & Click|616, 431 Left, 1|1|10|Click||||||
+5|Left Move & Click|537, 500 Left, 1|1|10|Click||||||
+6|Left Move & Click|1637, 204 Left, 1|1|10|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Residential()
 Context=None|
