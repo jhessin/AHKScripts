@@ -11,8 +11,8 @@ Groups=Start:1
 [PMC Code v5.4.1]|$||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|DollarMacro
 Context=None|
 Groups=Start:1
-01|Ped|_null := |1|0|Function||||||
-2|PowerPole|_null := |1|0|Function||||||
+1|Ped|_null := |1|0|Function||||||
+02|PowerPole|_null := |1|0|Function||||||
 
 [PMC Code v5.4.1]|&||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|AmperMacro
 Context=None|
