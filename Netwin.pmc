@@ -5,8 +5,11 @@ Groups=Start:1
 01|Ped|_null := |1|0|Function||||||
 02|PowerPole|_null := |1|0|Function||||||
 03|Conduit|_null := |1|0|Function||||||
-4|Lockbox|_null := |1|0|Function||||||
-05|[Text]| |1|0|SendRaw||||||
+04|Lockbox|_null := |1|0|Function||||||
+05|AddressSplit|_null := |1|0|Function||||||
+6|[Text]| |1|0|SendRaw||||||
+07|Commercial|_null := |1|0|Function||||||
+08|Residential|_null := |1|0|Function||||||
 
 [PMC Code v5.4.1]|$||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|DollarMacro
 Context=None|
@@ -95,5 +98,40 @@ Groups=Start:1
 9|Numpad0 Down|{Numpad0 Down}|1|0|Send||||||
 10|Numpad0 Up|{Numpad0 Up}|1|0|Send||||||
 11|Left Move & Click|1772, 359 Left, 1|1|10|Click||||||
-12|Left Move & Click|1652, 463 Left, 1|1|10|Click||||||
+12|Left Move & Click|1647, 491 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Commercial()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|Commercial|1|0|UserFunction|Local| / ||||
+2|Left Move & Click|456, 469 Left, 1|1|10|Click||||||
+3|Left Move & Click|456, 469 Left, 1|1|10|Click||||||
+4|Numpad0 Down|{Numpad0 Down}|1|0|Send||||||
+5|Numpad0 Up|{Numpad0 Up}|1|0|Send||||||
+6|Left Move & Click|1030, 436 Left, 1|1|10|Click||||||
+7|Left Move & Click|1030, 436 Left, 1|1|10|Click||||||
+8|Numpad1 Down|{Numpad1 Down}|1|0|Send||||||
+9|Numpad1 Up|{Numpad1 Up}|1|0|Send||||||
+10|Left Move & Click|1640, 196 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|AddressSplit()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|AddressSplit|1|500|UserFunction|Local| / ||||
+2|Left Move & Click|179, 283 Left, 1|1|500|Click||||||
+3|Left Move & Click|37, 630 Left, 1|1|500|Click||||||
+4|Left Move & Click|98, 596 Left, 1|1|500|Click||||||
+5|[Pause]||1|2000|Sleep||||||
+6|Left Move & Click|817, 484 Left, 2|1|500|Click||||||
+7|Delete Down|{Delete Down}|1|500|Send||||||
+8|Delete Up|{Delete Up}|1|500|Send||||||
+9|Left Move & Click|1193, 779 Left, 1|1|500|Click||||||
+10|[Pause]||1|2000|Sleep||||||
+11|Left Move & Click|46, 590 Left, 1|1|500|Click||||||
+12|Left Move & Click|848, 486 Left, 1|1|500|Click||||||
+13|Left Move & Click|848, 486 Left, Down|1|500|Click||||||
+14|Left Move & Click|971, 484 Left, Up|1|500|Click||||||
+15|Delete Down|{Delete Down}|1|500|Send||||||
+16|Delete Up|{Delete Up}|1|500|Send||||||
+17|Left Move & Click|1192, 784 Left, 1|1|500|Click||||||
 
