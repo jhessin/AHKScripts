@@ -7,9 +7,10 @@ Groups=Start:1
 03|Conduit|_null := |1|0|Function||||||
 04|Lockbox|_null := |1|0|Function||||||
 05|AddressSplit|_null := |1|0|Function||||||
-6|[Text]| |1|0|SendRaw||||||
+06|[Text]| |1|0|SendRaw||||||
 07|Commercial|_null := |1|0|Function||||||
-08|Residential|_null := |1|0|Function||||||
+8|Residential|_null := |1|0|Function||||||
+09|MidspanConversion|_null := |1|0|Function||||||
 
 [PMC Code v5.4.1]|$||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|DollarMacro
 Context=None|
@@ -88,17 +89,11 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|Residential|1|0|UserFunction|Global| / ||||
-2|Left Move & Click|461, 471 Left, 1|1|10|Click||||||
+2|Left Move & Click|461, 471 Left, 2|1|10|Click||||||
 3|Numpad1 Down|{Numpad1 Down}|1|0|Send||||||
 4|Numpad1 Up|{Numpad1 Up}|1|0|Send||||||
-5|Left Move & Click|984, 433 Left, 1|1|10|Click||||||
-6|Numpad0 Down|{Numpad0 Down}|1|0|Send||||||
-7|Numpad0 Up|{Numpad0 Up}|1|0|Send||||||
-8|Left Move & Click|994, 478 Left, 1|1|10|Click||||||
-9|Numpad0 Down|{Numpad0 Down}|1|0|Send||||||
-10|Numpad0 Up|{Numpad0 Up}|1|0|Send||||||
-11|Left Move & Click|1772, 359 Left, 1|1|10|Click||||||
-12|Left Move & Click|1647, 491 Left, 1|1|10|Click||||||
+5|Left Move & Click|1772, 359 Left, 1|1|10|Click||||||
+6|Left Move & Click|1647, 491 Left, 1|1|10|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Commercial()
 Context=None|
@@ -134,4 +129,17 @@ Groups=Start:1
 15|Delete Down|{Delete Down}|1|500|Send||||||
 16|Delete Up|{Delete Up}|1|500|Send||||||
 17|Left Move & Click|1192, 784 Left, 1|1|500|Click||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|MidspanConversion()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|MidspanConversion|1|500|UserFunction|Local| / ||||
+2|Left Move & Click|354, 208 Left, 1|1|500|Click||||||
+3|Left Move & Click|193, 545 Left, 1|1|500|Click||||||
+4|Left Move & Click|1083, 302 Left, 1|1|500|Click||||||
+5|[Pause]||1|5000|Sleep||||||
+6|Left Move & Click|387, 249 Left, 1|1|500|Click||||||
+7|Left Move & Click|600, 262 Left, 1|1|500|Click||||||
+8|[Pause]||1|2000|Sleep||||||
+09|Left Move & Click|1636, 202 Left, 1|1|500|Click||||||
 
