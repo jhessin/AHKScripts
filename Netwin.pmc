@@ -45,6 +45,7 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|Left Move & Click|1800, 981 Left, 1|1|10|Click||||||
+2|Left Move & Click|1632, 200 Left, 1|1|10|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|PowerPole()
 Context=None|
