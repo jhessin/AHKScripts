@@ -9,8 +9,8 @@ Groups=Start:1
 05|AddressSplit|_null := |1|0|Function||||||
 06|[Text]| |1|0|SendRaw||||||
 07|Commercial|_null := |1|0|Function||||||
-08|Residential|_null := |1|0|Function||||||
-9|MidspanConversion|_null := |1|0|Function||||||
+8|Residential|_null := |1|0|Function||||||
+09|MidspanConversion|_null := |1|0|Function||||||
 
 [PMC Code v5.4.1]|$||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|DollarMacro
 Context=None|
@@ -31,7 +31,7 @@ Groups=Start:1
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlus
 Context=None|
 Groups=Start:1
-1|Left Move & Click|386, 334 Left, 3|1|10|Click||||||
+1|Left Move & Click|977, 565 Left, 2|1|10|Click||||||
 
 [PMC Code v5.4.1]|F2||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|F2
 Context=None|
@@ -46,8 +46,17 @@ Groups=Start:1
 [PMC Code v5.4.1]|F4||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|F4
 Context=None|
 Groups=Start:1
-1|Left Move & Click|1800, 981 Left, 1|1|10|Click||||||
-02|Left Move & Click|1632, 200 Left, 1|1|10|Click||||||
+01|Left Move & Click|1800, 981 Left, 1|1|10|Click||||||
+2|Left Move & Click|1253, 915 Left, 1|1|20|Click||||||
+3|Left Move & Click|1580, 227 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|F5||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|F5
+Context=None|
+Groups=Start:1
+1|Left Move & Click|225, 324 Left, 1|1|20|Click||||||
+2|[KeyWait]|F5|1|0|KeyWait||||||
+3|Left Move & Click|42, 731 Left, 1|1|20|Click||||||
+4|Left Move & Click|58, 689 Left, 1|1|20|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|PowerPole()
 Context=None|
@@ -92,12 +101,12 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|Residential|1|50|UserFunction|Global| / ||||
-2|Left Move & Click|469, 469 Left, 2|1|50|Click||||||
-3|[Text]|1|1|50|SendRaw||||||
-4|Left Move & Click|406, 613 Left, 2|1|50|Click||||||
+02|Left Move & Click|469, 469 Left, 2|1|50|Click||||||
+03|[Text]|1|1|50|SendRaw||||||
+4|Left Move & Click|441, 721 Left, 2|1|50|Click||||||
 5|[Text]|0|1|50|SendRaw||||||
-6|Left Move & Click|1857, 361 Left, 1|1|50|Click||||||
-7|Left Move & Click|1654, 494 Left, 1|1|50|Click||||||
+06|Left Move & Click|1857, 361 Left, 1|1|50|Click||||||
+07|Left Move & Click|1654, 494 Left, 1|1|50|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Commercial()
 Context=None|
