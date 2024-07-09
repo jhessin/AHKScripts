@@ -9,8 +9,9 @@ Groups=Start:1
 05|AddressSplit|_null := |1|0|Function||||||
 06|[Text]| |1|0|SendRaw||||||
 07|Commercial|_null := |1|0|Function||||||
-8|Residential|_null := |1|0|Function||||||
+08|Residential|_null := |1|0|Function||||||
 09|MidspanConversion|_null := |1|0|Function||||||
+10|Riser|_null := |1|0|Function||||||
 
 [PMC Code v5.4.1]|$||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|DollarMacro
 Context=None|
@@ -31,7 +32,7 @@ Groups=Start:1
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlus
 Context=None|
 Groups=Start:1
-1|Left Move & Click|977, 565 Left, 2|1|10|Click||||||
+1|Left Move & Click|345, 329 Left, 3|1|10|Click||||||
 
 [PMC Code v5.4.1]|F2||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|F2
 Context=None|
@@ -46,17 +47,17 @@ Groups=Start:1
 [PMC Code v5.4.1]|F4||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|F4
 Context=None|
 Groups=Start:1
-01|Left Move & Click|1800, 981 Left, 1|1|10|Click||||||
-2|Left Move & Click|1253, 915 Left, 1|1|20|Click||||||
-3|Left Move & Click|1580, 227 Left, 1|1|10|Click||||||
+1|Left Move & Click|1800, 981 Left, 1|1|10|Click||||||
+2|Left Move & Click|1195, 781 Left, 1|1|20|Click||||||
+3|Left Move & Click|1641, 197 Left, 1|1|10|Click||||||
 
 [PMC Code v5.4.1]|F5||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|F5
 Context=None|
 Groups=Start:1
-1|Left Move & Click|225, 324 Left, 1|1|20|Click||||||
+1|Left Move & Click|188, 282 Left, 1|1|20|Click||||||
 2|[KeyWait]|F5|1|0|KeyWait||||||
-3|Left Move & Click|42, 731 Left, 1|1|20|Click||||||
-4|Left Move & Click|58, 689 Left, 1|1|20|Click||||||
+3|Left Move & Click|34, 628 Left, 1|1|20|Click||||||
+4|Left Move & Click|52, 588 Left, 1|1|20|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|PowerPole()
 Context=None|
@@ -74,18 +75,19 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|Conduit|1|0|UserFunction|Global| / ||||
-2|Left Move & Click|987, 305 Left, 1|1|50|Click||||||
-3|Left Move & Click|945, 384 Left, 1|1|50|Click||||||
-4|Left Move & Click|1548, 334 Left, 1|1|50|Click||||||
-5|Left Move & Click|1542, 408 Left, 1|1|50|Click||||||
+2|Left Move & Click|1182, 307 Left, 1|1|50|Click||||||
+3|Left Move & Click|922, 382 Left, 1|1|50|Click||||||
+4|Left Move & Click|1663, 334 Left, 1|1|50|Click||||||
+5|Left Move & Click|1542, 407 Left, 1|1|50|Click||||||
+6|Left Move & Click|1809, 981 Left, 1|1|20|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Ped()
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|Ped|1|0|UserFunction|Global| / ||||
-2|Left Move & Click|1881, 358 Left, 1|1|10|Click||||||
-3|Left Move & Click|1657, 468 Left, 1|1|10|Click||||||
-4|Left Move & Click|1637, 204 Left, 1|1|10|Click||||||
+2|Left Move & Click|1751, 359 Left, 1|1|10|Click||||||
+3|Left Move & Click|1669, 465 Left, 1|1|10|Click||||||
+4|Left Move & Click|1650, 205 Left, 1|1|10|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Lockbox()
 Context=None|
@@ -103,7 +105,7 @@ Groups=Start:1
 1|[FunctionStart]|Residential|1|50|UserFunction|Global| / ||||
 02|Left Move & Click|469, 469 Left, 2|1|50|Click||||||
 03|[Text]|1|1|50|SendRaw||||||
-4|Left Move & Click|441, 721 Left, 2|1|50|Click||||||
+4|Left Move & Click|388, 616 Left, 2|1|50|Click||||||
 5|[Text]|0|1|50|SendRaw||||||
 06|Left Move & Click|1857, 361 Left, 1|1|50|Click||||||
 07|Left Move & Click|1654, 494 Left, 1|1|50|Click||||||
@@ -152,4 +154,18 @@ Groups=Start:1
 7|Left Move & Click|602, 261 Left, 1|1|500|Click||||||
 8|[Pause]||1|2000|Sleep||||||
 9|Left Move & Click|1638, 202 Left, 1|1|500|Click||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Riser()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|Riser|1|0|UserFunction|Local| / ||||
+2|Left Move & Click|275, 285 Left, 1|1|20|Click||||||
+3|Left Move & Click|1867, 392 Left, 1|1|20|Click||||||
+4|Left Move & Click|776, 470 Left, 1|1|20|Click||||||
+5|[Pause]||1|300|Sleep||||||
+6|[Text]|riser|1|50|SendRaw||||||
+7|[Pause]||1|300|Sleep||||||
+8|Enter Down|{Enter Down}|1|0|Send||||||
+9|Enter Up|{Enter Up}|1|0|Send||||||
+10|Left Move & Click|1835, 467 Left, 1|1|20|Click||||||
 
