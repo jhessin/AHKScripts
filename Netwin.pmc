@@ -9,8 +9,8 @@ Groups=Start:1
 05|AddressSplit|_null := |1|0|Function||||||
 06|[Text]| |1|0|SendRaw||||||
 07|Commercial|_null := |1|0|Function||||||
-08|Residential|_null := |1|0|Function||||||
-9|MidspanConversion|_null := |1|0|Function||||||
+8|Residential|_null := |1|0|Function||||||
+09|MidspanConversion|_null := |1|0|Function||||||
 010|Riser|_null := |1|0|Function||||||
 
 [PMC Code v5.4.1]|$||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|DollarMacro
@@ -32,7 +32,7 @@ Groups=Start:1
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlus
 Context=None|
 Groups=Start:1
-1|Left Move & Click|393, 332 Left, 3|1|10|Click||||||
+1|Left Move & Click|942, 483 Left, 3|1|10|Click||||||
 
 [PMC Code v5.4.1]|F2||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|F2
 Context=None|
