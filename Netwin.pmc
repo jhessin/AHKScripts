@@ -32,7 +32,9 @@ Groups=Start:1
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlus
 Context=None|
 Groups=Start:1
-1|Left Move & Click|942, 483 Left, 3|1|10|Click||||||
+1|Left Move & Click|178, 248 Left, 3|1|10|Click||||||
+02|Left Move & Click|374, 362 Left, 3|1|10|Click||||||
+03|Left Move & Click|942, 483 Left, 3|1|10|Click||||||
 
 [PMC Code v5.4.1]|F2||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|F2
 Context=None|
@@ -105,7 +107,7 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|Residential|1|50|UserFunction|Global| / ||||
-2|Left Move & Click|469, 469 Left, 2|1|50|Click||||||
+2|Left Move & Click|215, 239 Left, 3|1|10|Click||||||
 3|[Text]|1|1|50|SendRaw||||||
 4|Left Move & Click|388, 616 Left, 2|1|50|Click||||||
 5|[Text]|0|1|50|SendRaw||||||
@@ -161,7 +163,7 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|Riser|1|0|UserFunction|Local| / ||||
-2|Left Move & Click|275, 285 Left, 1|1|20|Click||||||
+2|Left Move & Click|215, 239 Left, 3|1|10|Click||||||
 3|Left Move & Click|1867, 392 Left, 1|1|20|Click||||||
 4|Left Move & Click|776, 470 Left, 1|1|20|Click||||||
 5|[Pause]||1|300|Sleep||||||
