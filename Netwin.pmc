@@ -16,9 +16,10 @@ Groups=Start:1
 [PMC Code v5.4.1]|$||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|DollarMacro
 Context=None|
 Groups=Start:1
-1|Ped|_null := |1|0|Function||||||
-02|PowerPole|_null := |1|0|Function||||||
+01|Ped|_null := |1|0|Function||||||
+2|PowerPole|_null := |1|0|Function||||||
 03|Residential|_null := |1|0|Function||||||
+04|DropPole|_null := |1|0|Function||||||
 
 [PMC Code v5.4.1]|&||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|AmperMacro
 Context=None|
@@ -32,8 +33,8 @@ Groups=Start:1
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlus
 Context=None|
 Groups=Start:1
-1|Left Move & Click|178, 248 Left, 3|1|10|Click||||||
-02|Left Move & Click|374, 362 Left, 3|1|10|Click||||||
+01|Left Move & Click|178, 248 Left, 3|1|10|Click||||||
+2|Left Move & Click|441, 333 Left, 3|1|10|Click||||||
 03|Left Move & Click|942, 483 Left, 3|1|10|Click||||||
 
 [PMC Code v5.4.1]|F2||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|F2
@@ -67,13 +68,13 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|PowerPole|1|0|UserFunction|Global| / ||||
-2|Left Move & Click|127, 246 Left, 2|1|10|Click||||||
-3|[Text]|NA|1|0|SendRaw||||||
-4|Left Move & Click|613, 468 Left, 1|1|10|Click||||||
-5|Left Move & Click|433, 599 Left, 1|1|10|Click||||||
-6|Left Move & Click|1680, 368 Left, 1|1|10|Click||||||
-7|Left Move & Click|1668, 465 Left, 1|1|10|Click||||||
-8|Left Move & Click|1637, 204 Left, 1|1|10|Click||||||
+2|Left Move & Click|127, 246 Left, 3|1|20|Click||||||
+3|[Text]|NA|1|20|SendRaw||||||
+4|Left Move & Click|613, 468 Left, 1|1|20|Click||||||
+5|Left Move & Click|433, 599 Left, 1|1|20|Click||||||
+6|Left Move & Click|1680, 368 Left, 1|1|20|Click||||||
+7|Left Move & Click|1668, 465 Left, 1|1|20|Click||||||
+8|Left Move & Click|1637, 204 Left, 1|1|20|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Conduit()
 Context=None|
@@ -107,7 +108,7 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|Residential|1|50|UserFunction|Global| / ||||
-2|Left Move & Click|215, 239 Left, 3|1|10|Click||||||
+2|Left Move & Click|394, 472 Left, 3|1|10|Click||||||
 3|[Text]|1|1|50|SendRaw||||||
 4|Left Move & Click|388, 616 Left, 2|1|50|Click||||||
 5|[Text]|0|1|50|SendRaw||||||
@@ -172,4 +173,16 @@ Groups=Start:1
 8|Enter Down|{Enter Down}|1|0|Send||||||
 9|Enter Up|{Enter Up}|1|0|Send||||||
 10|Left Move & Click|1835, 467 Left, 1|1|20|Click||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|DropPole()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|DropPole|1|0|UserFunction|Local| / ||||
+2|Left Move & Click|127, 246 Left, 2|1|10|Click||||||
+3|[Text]|DP|1|0|SendRaw||||||
+4|Left Move & Click|613, 468 Left, 1|1|10|Click||||||
+5|Left Move & Click|433, 599 Left, 1|1|10|Click||||||
+6|Left Move & Click|1680, 368 Left, 1|1|10|Click||||||
+7|Left Move & Click|1668, 465 Left, 1|1|10|Click||||||
+8|Left Move & Click|1637, 204 Left, 1|1|10|Click||||||
 
