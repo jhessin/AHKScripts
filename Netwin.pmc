@@ -68,75 +68,75 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|PowerPole|1|0|UserFunction|Global| / ||||
-2|Left Move & Click|127, 246 Left, 3|1|20|Click||||||
-3|[Text]|NA|1|20|SendRaw||||||
-4|Left Move & Click|613, 468 Left, 1|1|20|Click||||||
-5|Left Move & Click|433, 599 Left, 1|1|20|Click||||||
-6|Left Move & Click|1680, 368 Left, 1|1|20|Click||||||
-7|Left Move & Click|1668, 465 Left, 1|1|20|Click||||||
-8|Left Move & Click|1637, 204 Left, 1|1|20|Click||||||
+2|Left Move & Click|127, 246 Left, 3|1|200|Click||||||
+3|[Text]|NA|1|200|SendRaw||||||
+4|Left Move & Click|613, 468 Left, 1|1|200|Click||||||
+5|Left Move & Click|433, 599 Left, 1|1|200|Click||||||
+6|Left Move & Click|1680, 368 Left, 1|1|200|Click||||||
+7|Left Move & Click|1668, 465 Left, 1|1|200|Click||||||
+8|Left Move & Click|1637, 204 Left, 1|1|200|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|DropPole()
 Context=None|
 Groups=Start:1
-1|[FunctionStart]|DropPole|1|100|UserFunction|Local| / ||||
-2|Left Move & Click|127, 246 Left, 2|1|100|Click||||||
-3|[Text]|DP|1|100|SendRaw||||||
-4|Left Move & Click|613, 468 Left, 1|1|20|Click||||||
-5|Left Move & Click|433, 599 Left, 1|1|20|Click||||||
-6|Left Move & Click|1680, 368 Left, 1|1|20|Click||||||
-7|Left Move & Click|1668, 465 Left, 1|1|20|Click||||||
-8|Left Move & Click|1637, 204 Left, 1|1|20|Click||||||
+1|[FunctionStart]|DropPole|1|200|UserFunction|Local| / ||||
+2|Left Move & Click|127, 246 Left, 2|1|200|Click||||||
+3|[Text]|DP|1|200|SendRaw||||||
+4|Left Move & Click|613, 468 Left, 1|1|200|Click||||||
+5|Left Move & Click|433, 599 Left, 1|1|200|Click||||||
+6|Left Move & Click|1680, 368 Left, 1|1|200|Click||||||
+7|Left Move & Click|1668, 465 Left, 1|1|200|Click||||||
+8|Left Move & Click|1637, 204 Left, 1|1|200|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Conduit()
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|Conduit|1|0|UserFunction|Global| / ||||
-2|Left Move & Click|1182, 307 Left, 1|1|50|Click||||||
-3|Left Move & Click|922, 382 Left, 1|1|50|Click||||||
-4|Left Move & Click|1663, 334 Left, 1|1|50|Click||||||
-5|Left Move & Click|1542, 407 Left, 1|1|50|Click||||||
-6|Left Move & Click|1809, 981 Left, 1|1|20|Click||||||
+2|Left Move & Click|1182, 307 Left, 1|1|200|Click||||||
+3|Left Move & Click|922, 382 Left, 1|1|200|Click||||||
+4|Left Move & Click|1663, 334 Left, 1|1|200|Click||||||
+5|Left Move & Click|1542, 407 Left, 1|1|200|Click||||||
+6|Left Move & Click|1809, 981 Left, 1|1|200|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Ped()
 Context=None|
 Groups=Start:1
-1|[FunctionStart]|Ped|1|0|UserFunction|Global| / ||||
-2|Left Move & Click|1751, 359 Left, 1|1|10|Click||||||
-3|Left Move & Click|1669, 465 Left, 1|1|10|Click||||||
-4|Left Move & Click|1650, 205 Left, 1|1|10|Click||||||
+1|[FunctionStart]|Ped|1|200|UserFunction|Global| / ||||
+2|Left Move & Click|1751, 359 Left, 1|1|200|Click||||||
+3|Left Move & Click|1669, 465 Left, 1|1|200|Click||||||
+4|Left Move & Click|1650, 205 Left, 1|1|200|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Lockbox()
 Context=None|
 Groups=Start:1
-1|[FunctionStart]|Lockbox|1|0|UserFunction|Local| / ||||
-2|Left Move & Click|1881, 358 Left, 1|1|10|Click||||||
-3|Left Move & Click|1657, 468 Left, 1|1|10|Click||||||
-4|Left Move & Click|616, 431 Left, 1|1|10|Click||||||
-5|Left Move & Click|537, 500 Left, 1|1|10|Click||||||
-6|Left Move & Click|1637, 204 Left, 1|1|10|Click||||||
+1|[FunctionStart]|Lockbox|1|200|UserFunction|Local| / ||||
+2|Left Move & Click|1881, 358 Left, 1|1|200|Click||||||
+3|Left Move & Click|1657, 468 Left, 1|1|200|Click||||||
+4|Left Move & Click|616, 431 Left, 1|1|200|Click||||||
+5|Left Move & Click|537, 500 Left, 1|1|200|Click||||||
+6|Left Move & Click|1637, 204 Left, 1|1|200|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Residential()
 Context=None|
 Groups=Start:1
-1|[FunctionStart]|Residential|1|50|UserFunction|Global| / ||||
-2|Left Move & Click|394, 472 Left, 3|1|10|Click||||||
-3|[Text]|1|1|50|SendRaw||||||
-4|Left Move & Click|388, 616 Left, 2|1|50|Click||||||
-5|[Text]|0|1|50|SendRaw||||||
-6|Left Move & Click|1857, 361 Left, 1|1|50|Click||||||
-7|Left Move & Click|1654, 494 Left, 1|1|50|Click||||||
+1|[FunctionStart]|Residential|1|200|UserFunction|Global| / ||||
+2|Left Move & Click|394, 472 Left, 3|1|200|Click||||||
+3|[Text]|1|1|200|SendRaw||||||
+4|Left Move & Click|388, 616 Left, 2|1|200|Click||||||
+5|[Text]|0|1|200|SendRaw||||||
+6|Left Move & Click|1857, 361 Left, 1|1|200|Click||||||
+7|Left Move & Click|1654, 494 Left, 1|1|200|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Commercial()
 Context=None|
 Groups=Start:1
-1|[FunctionStart]|Commercial|1|0|UserFunction|Local| / ||||
-2|Left Move & Click|1030, 436 Left, 2|1|10|Click||||||
-3|[Text]|1|1|0|SendRaw||||||
-4|Left Move & Click|459, 615 Left, 2|1|10|Click||||||
-5|[Text]|0|1|0|SendRaw||||||
-6|Left Move & Click|1772, 359 Left, 1|1|10|Click||||||
-7|Left Move & Click|1647, 491 Left, 1|1|10|Click||||||
+1|[FunctionStart]|Commercial|1|200|UserFunction|Local| / ||||
+2|Left Move & Click|1030, 436 Left, 2|1|200|Click||||||
+3|[Text]|1|1|200|SendRaw||||||
+4|Left Move & Click|459, 615 Left, 2|1|200|Click||||||
+5|[Text]|0|1|200|SendRaw||||||
+6|Left Move & Click|1772, 359 Left, 1|1|200|Click||||||
+7|Left Move & Click|1647, 491 Left, 1|1|200|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|AddressSplit()
 Context=None|
@@ -175,14 +175,14 @@ Groups=Start:1
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Riser()
 Context=None|
 Groups=Start:1
-1|[FunctionStart]|Riser|1|0|UserFunction|Local| / ||||
-2|Left Move & Click|215, 239 Left, 3|1|10|Click||||||
-3|Left Move & Click|1867, 392 Left, 1|1|20|Click||||||
-4|Left Move & Click|776, 470 Left, 1|1|20|Click||||||
-5|[Pause]||1|300|Sleep||||||
-6|[Text]|riser|1|50|SendRaw||||||
-7|[Pause]||1|300|Sleep||||||
-8|Enter Down|{Enter Down}|1|0|Send||||||
-9|Enter Up|{Enter Up}|1|0|Send||||||
-10|Left Move & Click|1835, 467 Left, 1|1|20|Click||||||
+1|[FunctionStart]|Riser|1|200|UserFunction|Local| / ||||
+2|Left Move & Click|215, 239 Left, 3|1|200|Click||||||
+3|Left Move & Click|1867, 392 Left, 1|1|200|Click||||||
+4|Left Move & Click|776, 470 Left, 1|1|200|Click||||||
+5|[Pause]||1|200|Sleep||||||
+6|[Text]|riser|1|200|SendRaw||||||
+7|[Pause]||1|200|Sleep||||||
+8|Enter Down|{Enter Down}|1|200|Send||||||
+9|Enter Up|{Enter Up}|1|200|Send||||||
+10|Left Move & Click|1835, 467 Left, 1|1|200|Click||||||
 
