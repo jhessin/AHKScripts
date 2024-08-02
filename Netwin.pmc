@@ -41,17 +41,18 @@ Groups=Start:1
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlus
 Context=None|
 Groups=Start:1
-01|Left Move & Click|178, 248 Left, 3|1|10|Click||||||
-2|Left Move & Click|441, 333 Left, 3|1|10|Click||||||
+01|Left Move & Click|178, 248 Left, 3|1|10|Click|||Name|||
+2|Left Move & Click|441, 333 Left, 3|1|10|Click|||Footage|||
 03|Left Move & Click|1012, 385 Left, 3|1|10|Click||||||
 04|Left Move & Click|929, 485 Left, 3|1|10|Click||||||
 
 [PMC Code v5.4.1]|^NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|CtrlNumPlus
 Context=None|
 Groups=Start:1
-1|Left Move & Click|178, 248 Left, 3|1|10|Click||||||
-02|Left Move & Click|441, 333 Left, 3|1|10|Click||||||
-03|Left Move & Click|929, 485 Left, 3|1|10|Click||||||
+1|Left Move & Click|178, 248 Left, 3|1|10|Click|||Name|||
+02|Left Move & Click|441, 333 Left, 3|1|10|Click|||Footage|||
+03|Left Move & Click|1012, 385 Left, 3|1|10|Click||||||
+04|Left Move & Click|929, 485 Left, 3|1|10|Click||||||
 
 [PMC Code v5.4.1]|F2||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|F2
 Context=None|
