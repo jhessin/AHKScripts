@@ -42,9 +42,9 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 01|Left Move & Click|178, 248 Left, 3|1|10|Click|||Name|||
-02|Left Move & Click|441, 333 Left, 3|1|10|Click|||Footage|||
+2|Left Move & Click|441, 333 Left, 3|1|10|Click|||Footage|||
 03|Left Move & Click|1012, 385 Left, 3|1|10|Click|||Base Address|||
-4|Left Move & Click|929, 485 Left, 3|1|10|Click|||Street Number|||
+04|Left Move & Click|929, 485 Left, 3|1|10|Click|||Street Number|||
 
 [PMC Code v5.4.1]|^NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|CtrlNumPlus
 Context=None|
@@ -76,8 +76,8 @@ Context=None|
 Groups=Start:1
 1|Left Move & Click|188, 282 Left, 1|1|20|Click||||||
 2|[KeyWait]|F5|1|0|KeyWait||||||
-3|Left Move & Click|34, 628 Left, 1|1|20|Click||||||
-4|Left Move & Click|52, 588 Left, 1|1|20|Click||||||
+3|Left Move & Click|38, 640 Left, 1|1|20|Click||||||
+4|Left Move & Click|51, 602 Left, 1|1|20|Click||||||
 5|[KeyWait]|F5|1|0|KeyWait||||||
 6|Left Move & Click|1869, 595 Left, 1|1|20|Click||||||
 
