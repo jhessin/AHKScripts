@@ -45,7 +45,7 @@ Groups=Start:1
 2|Left Move & Click|441, 333 Left, 3|1|10|Click|||Footage||1|
 03|Left Move & Click|1012, 385 Left, 3|1|10|Click|||Base Address||1|
 04|[Pause]||1|300|Sleep|||||3|
-05|[Text]|BAINBRIDGE CV ROU|1|300|Clipboard|||||4|
+05|[Text]|OLD STERLING RD|1|300|Clipboard|||||4|
 06|[Text]|^k|1|0|Send||||||
 07|Left Move & Click|929, 485 Left, 3|1|10|Click|||Street Number||9|
 
