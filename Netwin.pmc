@@ -45,9 +45,12 @@ Groups=Start:1
 02|Left Move & Click|441, 333 Left, 3|1|10|Click|||Footage||1|
 3|Left Move & Click|1012, 385 Left, 3|1|10|Click|||Base Address||1|
 4|[Pause]||1|300|Sleep|||||3|
-5|[Text]|ROBIN TRL ROU|1|300|Clipboard|||||4|
+5|[Text]|JOHNSON WAY ROU|1|300|Clipboard|||||4|
 6|[Text]|^k|1|0|Send||||||
 07|Left Move & Click|929, 485 Left, 3|1|10|Click|||Street Number||9|
+08|[Pause]||1|300|Sleep|||||3|
+09|[Text]|7220-|1|300|Clipboard|||||4|
+010|[Text]|^k|1|0|Send||||||
 
 [PMC Code v5.4.1]|^NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|CtrlNumPlus
 Context=None|
@@ -199,7 +202,7 @@ Groups=Start:1
 2|Left Move & Click|215, 239 Left, 3|1|200|Click||||||
 3|Left Move & Click|1867, 392 Left, 1|1|200|Click||||||
 4|Left Move & Click|776, 470 Left, 1|1|200|Click||||||
-5|[Text]|BAINBRIDGE CV ROU|1|300|Clipboard||||||
+5|[Text]|CARDINAL LN ROU|1|300|Clipboard||||||
 6|[Text]|riser|1|200|SendRaw||||||
 7|[Pause]||1|200|Sleep||||||
 8|Enter Down|{Enter Down}|1|200|Send||||||
