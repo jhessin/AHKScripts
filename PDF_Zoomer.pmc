@@ -1,0 +1,15 @@
+﻿[PMC Globals]|WinActive|ahk_class PXE:{C5309AD3-73E4-4707-B1E1-2940D8AF3B9D}|
+[PMC Code v5.4.1]|WheelUp||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|ZoomIn
+Context=None|
+Groups=Start:1
+1|LControl Down|{LControl Down}|1|0|Send||||||
+2|Mouse Wheel Up|WheelUp, 1|1|10|Click||||||
+3|LControl Up|{LControl Up}|1|0|Send||||||
+
+[PMC Code v5.4.1]|WheelDown||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|ZoomOut
+Context=None|
+Groups=Start:1
+1|LControl Down|{LControl Down}|1|0|Send||||||
+2|Mouse Wheel Down|WheelDown, 1|1|10|Click||||||
+3|LControl Up|{LControl Up}|1|0|Send||||||
+
