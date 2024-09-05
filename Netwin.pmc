@@ -1,4 +1,4 @@
-﻿[PMC Globals]|WinActive|ahk_exe msedge.exe|
+﻿[PMC Globals]|WinActive|ahk_exe vmware-view.exe|
 [PMC Code v5.4.1]|Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceMacro
 Context=None|
 Groups=Start:1
@@ -42,7 +42,7 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 01|Left Move & Click|178, 248 Left, 3|1|10|Click|||Name||1|
-2|Left Move & Click|441, 333 Left, 3|1|10|Click|||Footage||1|
+2|Left Move & Click|301, 247 Left, 3|1|10|Click|||Footage||1|
 03|Left Move & Click|1012, 385 Left, 3|1|10|Click|||Base Address||1|
 04|[Pause]||1|300|Sleep|||||3|
 05|[Text]|JOHNSON WAY ROU|1|300|Clipboard|||||4|
@@ -73,9 +73,9 @@ Groups=Start:1
 [PMC Code v5.4.1]|F4||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|F4
 Context=None|
 Groups=Start:1
-1|Left Move & Click|1800, 981 Left, 1|1|10|Click||||||
-2|Left Move & Click|1195, 781 Left, 1|1|20|Click||||||
-3|Left Move & Click|1641, 197 Left, 1|1|10|Click||||||
+1|Left Move & Click|1799, 1019 Left, 1|1|10|Click|||Bottom Right Confirm|||
+2|Left Move & Click|1195, 781 Left, 1|1|20|Click|||Dialog Confirm|||
+3|Left Move & Click|1641, 197 Left, 1|1|10|Click|||Top Right Confirm|||
 
 [PMC Code v5.4.1]|F5||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|F5
 Context=None|
