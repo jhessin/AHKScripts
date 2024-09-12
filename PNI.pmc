@@ -11,15 +11,15 @@ Groups=Start:1,Other:2,End:2,New group:20
 07|AddressToAmp|_null := |1|0|Function|||||8|
 08|ResizeCable|_null := |1|0|Function|||||6|
 09|RepeatOffset|_null := |1|0|Function|||||9|
-010|PowerPole|_null := |1|0|Function|||||10|
+10|PowerPole|_null := |1|0|Function|||||10|
 011|RepeatOffset|_null := |1|0|Function|||||11|
 012|ReTag|_null := |1|0|Function||||||
 013|OffsetCount|_null := |1|0|Function|||||12|
 014|BorderAnnotation|_null := |1|0|Function|||||13|
 015|NoAddress|_null := |1|0|Function|||||14|
-16|TrimDrop|_null := |1|0|Function|||||15|
-017|Left Move & Click|1377, 92 Left, 1|1|200|Click|||Update Object|||
-18|UpdateGeometry|_null := |1|0|Function|||||19|
+016|TrimDrop|_null := |1|0|Function|||||15|
+17|Left Move & Click|1375, 91 Left, 1|1|200|Click|||Update Object|||
+018|UpdateGeometry|_null := |1|0|Function|||||19|
 019|PlaceOne|_null := |1|0|Function|||||20|
 20|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||21|
 
@@ -40,7 +40,7 @@ Groups=Start:1,Repeat Offset:2,Other:2,End:2
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 2|[Pause]||1|30|Sleep||||||
 03|RepeatOffset|_null := |1|30|Function||||||
-4|Left Move & Click|1420, 208 Left, 1|1|30|Click|||Target|||
+4|Left Move & Click|1445, 210 Left, 1|1|30|Click|||Target|||
 5|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||17|
 
 [PMC Code v5.4.1]|^NumpadEnter||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumEnterMacro
@@ -257,17 +257,16 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|OffsetCount|1|0|UserFunction|Global| / ||||
-2|Left Move & Click|229, 149 Left, 1|1|10|Click|||Offset||2|
-3|[Pause]||1|300|Sleep||||||
-4|Left Move & Click|146, 95 Left, 1|1|10|Click|||Offset-Direction||4|
-5|Left Move & Click|123, 111 Left, 1|1|10|Click|||Left||6|
-6|Left Move & Click|135, 38 Left, 2|1|500|Click|||Select distance||8|
-7|[Text]|15|1|20|Clipboard|||||11|
+2|[Text]|15|1|20|Clipboard|||||11|
+3|Left Move & Click|229, 149 Left, 1|1|10|Click|||Offset||2|
+4|[Pause]||1|300|Sleep||||||
+5|Left Move & Click|146, 95 Left, 1|1|10|Click|||Offset-Direction||4|
+6|Left Move & Click|123, 111 Left, 1|1|10|Click|||Left||6|
+7|Left Move & Click|135, 38 Left, 2|1|500|Click|||Select distance||8|
 8|[Text]|15|1|20|Clipboard|||||11|
-9|[Text]|15|1|20|Clipboard|||||11|
-10|[Text]|^k|1|0|Send||||||
-11|Left Move & Click|222, 38 Left, 1|1|500|Click|||Confirm||12|
-12|[Text]|{BS}|1|250|Send||||||
+9|[Text]|^k|1|0|Send||||||
+10|Left Move & Click|222, 38 Left, 1|1|500|Click|||Confirm||12|
+11|[Text]|{BS}|1|250|Send||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|ResetZoom()
 Context=None|
