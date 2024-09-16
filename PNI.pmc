@@ -1,30 +1,31 @@
 ﻿[PMC Globals]|WinActive|ahk_exe vmware-view.exe|
 [PMC Code v5.4.1]|Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceMacro
 Context=None|
-Groups=Start:1,Other:2,End:2,New group:23
+Groups=Start:1,Other:2,End:2,New group:24
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||Save Mouse||1|
-2|Left Move & Click|117, 148 Left, 1|1|10|Click|||Reverse Trail|0x000000|2|
+02|Left Move & Click|117, 148 Left, 1|1|10|Click|||Reverse Trail|0x000000|2|
 03|[Text]|^k|1|0|Send||||||
-04|Left Move & Click|1434, 233 Left, 1|1|200|Click|||Target|||
+04|Left Move & Click|1469, 213 Left, 1|1|200|Click|||Target|||
 05|[Text]|p|11|20|SendRaw|||Cable Type|||
-06|CircleUp|_null := |1|0|Function||||||
-07|DropAndAddress|_null := |1|0|Function|||||7|
-08|AddressToAmp|_null := |1|0|Function|||||8|
-09|ResizeCable|_null := |1|0|Function|||||6|
-010|RepeatOffset|_null := |1|0|Function|||||9|
-11|PowerPole|_null := |1|0|Function|||||10|
-012|RepeatOffset|_null := |1|0|Function|||||11|
-013|ReTag|_null := |1|0|Function||||||
-014|OffsetCount|_null := |1|0|Function|||||12|
-015|OffsetAbove|_null := |1|0|Function||||||
-016|OffsetBelow|_null := |1|0|Function||||||
-017|BorderAnnotation|_null := |1|0|Function|||||13|
-018|NoAddress|_null := |1|0|Function|||||14|
-019|TrimDrop|_null := |1|0|Function|||||15|
-20|Left Move & Click|1378, 96 Left, 1|1|200|Click|||Update Object|||
-021|UpdateGeometry|_null := |1|0|Function|||||19|
-022|PlaceOne|_null := |1|0|Function|||||20|
-23|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||21|
+06|[Text]|u|1|0|SendRaw|||Drop Type|||
+07|CircleUp|_null := |1|0|Function||||||
+08|DropAndAddress|_null := |1|0|Function|||||7|
+09|AddressToAmp|_null := |1|0|Function|||||8|
+010|ResizeCable|_null := |1|0|Function|||||6|
+011|RepeatOffset|_null := |1|0|Function|||||9|
+012|PowerPole|_null := |1|0|Function|||||10|
+013|RepeatOffset|_null := |1|0|Function|||||11|
+014|ReTag|_null := |1|0|Function||||||
+015|OffsetCount|_null := |1|0|Function|||||12|
+016|OffsetAbove|_null := |1|0|Function||||||
+017|OffsetBelow|_null := |1|0|Function||||||
+018|BorderAnnotation|_null := |1|0|Function|||||13|
+019|NoAddress|_null := |1|0|Function|||||14|
+020|TrimDrop|_null := |1|0|Function|||||15|
+21|Left Move & Click|1372, 92 Left, 1|1|200|Click|||Update Object|||
+022|UpdateGeometry|_null := |1|0|Function|||||19|
+023|PlaceOne|_null := |1|0|Function|||||20|
+24|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||21|
 
 [PMC Code v5.4.1]|^Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|CtrlSpace
 Context=None|
@@ -43,7 +44,7 @@ Groups=Start:1,Repeat Offset:2,Other:2,End:2
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 2|[Pause]||1|30|Sleep||||||
 03|RepeatOffset|_null := |1|30|Function||||||
-4|Left Move & Click|1472, 251 Left, 1|1|30|Click|||Target|||
+4|Left Move & Click|1455, 232 Left, 1|1|30|Click|||Target|||
 5|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||17|
 
 [PMC Code v5.4.1]|^NumpadEnter||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumEnterMacro
@@ -218,7 +219,7 @@ Context=None|
 Groups=Start:1
 1|[FunctionStart]|PowerPole|1|0|UserFunction|Local| / ||||
 2|[Text]|NT|1|0|Clipboard||||||
-3|Left Move & Click|1438, 436 Left, 1|1|250|Click||||||
+3|Left Move & Click|1360, 431 Left, 1|1|250|Click||||||
 4|[Text]|^k|1|0|Send||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|TrimDrop()
@@ -302,12 +303,13 @@ Groups=Start:1
 1|[FunctionStart]|ReTag|1|0|UserFunction|Global| / ||||
 2|Left Move & Click|1427, 431 Left, 1|1|10|Click||||||
 3|Left Move & Click|1375, 95 Left, 1|1|10|Click|||Drafting Line|||
-4|Left Move & Click|1434, 270 Left, 1|1|30|Click|||Trail Length|||
+4|Left Move & Click|47, 1005 Left, 1|1|30|Click|||Trail Length|||
 5|[Text]|j|1|10|SendRaw||||||
-6|Left Move & Click|1378, 90 Left, 1|1|10|Click||||||
+6|Left Move & Click|1378, 90 Left, 1|1|10|Click|||Drop Type|||
 7|Left Move & Click|1456, 251 Left, 1|1|10|Click||||||
 8|[Text]|p|1|10|SendRaw||||||
 9|Left Move & Click|1376, 91 Left, 1|1|10|Click||||||
 10|[Text]|^k|1|0|Send||||||
 11|[Text]|^k|1|0|Send||||||
+12|[Text]|u|2|0|SendRaw||||||
 
