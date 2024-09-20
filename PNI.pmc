@@ -1,32 +1,36 @@
 ﻿[PMC Globals]|WinActive|ahk_exe vmware-view.exe|
 [PMC Code v5.4.1]|Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceMacro
 Context=None|
-Groups=Start:1,Other:2,End:2,New group:25
+Groups=Start:1,Other:2,End:2,New group:29
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||Save Mouse||1|
-02|Left Move & Click|117, 148 Left, 1|1|10|Click|||Reverse Trail|0x000000|2|
-03|[Text]|^k|1|0|Send||||||
-04|Left Move & Click|1411, 250 Left, 1|1|200|Click|||Target|||
-05|[Text]|j|1|0|SendRaw|||Typing|||
-06|Left Move & Click|1389, 234 Left, 1|1|200|Click|||Target|||
-07|[Text]|0|1|0|SendRaw|||Typing|||
-08|CircleUp|_null := |1|0|Function||||||
-09|DropAndAddress|_null := |1|0|Function|||||7|
-010|AddressToAmp|_null := |1|0|Function|||||8|
-011|ResizeCable|_null := |1|0|Function|||||6|
-012|RepeatOffset|_null := |1|0|Function|||||9|
-013|PowerPole|_null := |1|0|Function|||||10|
-014|ReTag|_null := |1|0|Function||||||
-015|OffsetCount|_null := |1|0|Function|||||12|
-016|RepeatOffset|_null := |1|0|Function|||||11|
-017|OffsetAbove|_null := |1|0|Function||||||
-018|OffsetBelow|_null := |1|0|Function||||||
-019|BorderAnnotation|_null := |1|0|Function|||||13|
-020|NoAddress|_null := |1|0|Function|||||14|
-21|TrimDrop|_null := |1|0|Function|||||15|
-022|Left Move & Click|1374, 90 Left, 1|1|200|Click|||Update Object|||
-023|UpdateGeometry|_null := |1|0|Function|||||19|
-24|PlaceOne|_null := |1|0|Function|||||20|
-25|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||21|
+2|[Text]| |1|0|SendRaw|||Passthrough|||
+03|Left Move & Click|117, 148 Left, 1|1|10|Click|||Reverse Trail|0x000000|2|
+04|Left Move & Click|189, 148 Left, 1|1|200|Click|||Slack-Span|||
+05|[Text]|^k|1|0|Send|||Paste|||
+06|Left Move & Click|1446, 250 Left, 1|1|200|Click|||Pole-Type|||
+07|[Text]|p|22|0|SendRaw|||Typing|||
+08|Left Move & Click|75, 91 Left, 1|1|200|Click|||Target|||
+09|[Text]|0|1|0|SendRaw|||Typing|||
+010|Left Move & Click|165, 148 Left, 1|1|200|Click|||Target|||
+011|MoveAndReturn|_null := |1|0|Function||||||
+012|CircleUp|_null := |1|0|Function||||||
+013|DropAndAddress|_null := |1|0|Function|||||7|
+014|AddressToAmp|_null := |1|0|Function|||||8|
+015|ResizeCable|_null := |1|0|Function|||||6|
+016|RepeatOffset|_null := |1|0|Function|||||9|
+017|PowerPole|_null := |1|0|Function|||||10|
+018|ReTag|_null := |1|0|Function||||||
+019|OffsetCount|_null := |1|0|Function|||||12|
+020|RepeatOffset|_null := |1|0|Function|||||11|
+021|OffsetAbove|_null := |1|0|Function||||||
+022|OffsetBelow|_null := |1|0|Function||||||
+023|BorderAnnotation|_null := |1|0|Function|||||13|
+024|NoAddress|_null := |1|0|Function|||||14|
+025|TrimDrop|_null := |1|0|Function|||||15|
+026|Left Move & Click|1376, 92 Left, 1|1|200|Click|||Update Object|||
+027|UpdateGeometry|_null := |1|0|Function|||||19|
+028|PlaceOne|_null := |1|0|Function|||||20|
+29|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||21|
 
 [PMC Code v5.4.1]|^Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|CtrlSpace
 Context=None|
@@ -45,7 +49,7 @@ Groups=Start:1,Repeat Offset:2,Other:2,End:2
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 2|[Pause]||1|30|Sleep||||||
 03|RepeatOffset|_null := |1|30|Function||||||
-4|Left Move & Click|1406, 211 Left, 1|1|30|Click|||Target|||
+4|Left Move & Click|1426, 253 Left, 1|1|30|Click|||Target|||
 5|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||17|
 
 [PMC Code v5.4.1]|^NumpadEnter||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumEnterMacro
@@ -313,4 +317,15 @@ Groups=Start:1
 10|[Text]|^k|1|0|Send||||||
 11|[Text]|^k|1|0|Send||||||
 12|[Text]|u|2|0|SendRaw||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|MoveAndReturn()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|MoveAndReturn|1|0|UserFunction|Local| / ||||
+2|Left Move & Click|394, 93 Left, 1|1|200|Click|||Move-drop|||
+3|Left Move & Click|392, 135 Left, 1|1|200|Click|||Move-by-trial|||
+4|Left Move & Click|75, 91 Left, 1|1|200|Click|||Previous View|||
+5|Left Move & Click|394, 93 Left, 1|1|200|Click|||Move-drop|||
+6|Left Move & Click|390, 115 Left, 1|1|200|Click|||Standard-Move|||
+7|Left Move & Click|165, 148 Left, 1|1|200|Click|||Clear-Trail|||
 
