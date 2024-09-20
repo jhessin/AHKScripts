@@ -1,30 +1,32 @@
 ﻿[PMC Globals]|WinActive|ahk_exe vmware-view.exe|
 [PMC Code v5.4.1]|Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceMacro
 Context=None|
-Groups=Start:1,Other:2,End:2,New group:23
+Groups=Start:1,Other:2,End:2,New group:25
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||Save Mouse||1|
 02|Left Move & Click|117, 148 Left, 1|1|10|Click|||Reverse Trail|0x000000|2|
 03|[Text]|^k|1|0|Send||||||
-04|Left Move & Click|1457, 251 Left, 1|1|200|Click|||Target|||
-05|[Text]|p|1|0|SendRaw|||Typing|||
-06|CircleUp|_null := |1|0|Function||||||
-07|DropAndAddress|_null := |1|0|Function|||||7|
-08|AddressToAmp|_null := |1|0|Function|||||8|
-09|ResizeCable|_null := |1|0|Function|||||6|
-010|RepeatOffset|_null := |1|0|Function|||||9|
-011|PowerPole|_null := |1|0|Function|||||10|
-012|ReTag|_null := |1|0|Function||||||
-13|OffsetCount|_null := |1|0|Function|||||12|
-014|RepeatOffset|_null := |1|0|Function|||||11|
-015|OffsetAbove|_null := |1|0|Function||||||
-016|OffsetBelow|_null := |1|0|Function||||||
-017|BorderAnnotation|_null := |1|0|Function|||||13|
-018|NoAddress|_null := |1|0|Function|||||14|
-019|TrimDrop|_null := |1|0|Function|||||15|
-020|Left Move & Click|1380, 96 Left, 1|1|200|Click|||Update Object|||
-021|UpdateGeometry|_null := |1|0|Function|||||19|
-22|PlaceOne|_null := |1|0|Function|||||20|
-23|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||21|
+04|Left Move & Click|1411, 250 Left, 1|1|200|Click|||Target|||
+05|[Text]|j|1|0|SendRaw|||Typing|||
+06|Left Move & Click|1389, 234 Left, 1|1|200|Click|||Target|||
+07|[Text]|0|1|0|SendRaw|||Typing|||
+08|CircleUp|_null := |1|0|Function||||||
+09|DropAndAddress|_null := |1|0|Function|||||7|
+010|AddressToAmp|_null := |1|0|Function|||||8|
+011|ResizeCable|_null := |1|0|Function|||||6|
+012|RepeatOffset|_null := |1|0|Function|||||9|
+013|PowerPole|_null := |1|0|Function|||||10|
+014|ReTag|_null := |1|0|Function||||||
+015|OffsetCount|_null := |1|0|Function|||||12|
+016|RepeatOffset|_null := |1|0|Function|||||11|
+017|OffsetAbove|_null := |1|0|Function||||||
+018|OffsetBelow|_null := |1|0|Function||||||
+019|BorderAnnotation|_null := |1|0|Function|||||13|
+020|NoAddress|_null := |1|0|Function|||||14|
+21|TrimDrop|_null := |1|0|Function|||||15|
+022|Left Move & Click|1374, 90 Left, 1|1|200|Click|||Update Object|||
+023|UpdateGeometry|_null := |1|0|Function|||||19|
+24|PlaceOne|_null := |1|0|Function|||||20|
+25|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||21|
 
 [PMC Code v5.4.1]|^Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|CtrlSpace
 Context=None|
@@ -43,7 +45,7 @@ Groups=Start:1,Repeat Offset:2,Other:2,End:2
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 2|[Pause]||1|30|Sleep||||||
 03|RepeatOffset|_null := |1|30|Function||||||
-4|Left Move & Click|1408, 235 Left, 1|1|30|Click|||Target|||
+4|Left Move & Click|1406, 211 Left, 1|1|30|Click|||Target|||
 5|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||17|
 
 [PMC Code v5.4.1]|^NumpadEnter||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumEnterMacro
