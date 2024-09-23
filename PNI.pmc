@@ -5,12 +5,12 @@ Groups=Start:1,Other:2,End:2,New group:29
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||Save Mouse||1|
 2|[Text]| |1|0|SendRaw|||Passthrough|||
 03|Left Move & Click|117, 148 Left, 1|1|10|Click|||Reverse Trail|0x000000|2|
-04|Left Move & Click|189, 148 Left, 1|1|200|Click|||Slack-Span|||
+4|Left Move & Click|189, 148 Left, 1|1|200|Click|||Slack-Span|||
 05|[Text]|^k|1|0|Send|||Paste|||
 06|Left Move & Click|1446, 250 Left, 1|1|200|Click|||Pole-Type|||
 07|[Text]|p|22|0|SendRaw|||Typing|||
-08|Left Move & Click|75, 91 Left, 1|1|200|Click|||Target|||
-09|[Text]|0|1|0|SendRaw|||Typing|||
+08|Left Move & Click|1465, 392 Left, 1|1|200|Click|||Address-Type|||
+09|[Text]|c|1|0|SendRaw|||Typing|||
 010|Left Move & Click|165, 148 Left, 1|1|200|Click|||Target|||
 011|MoveAndReturn|_null := |1|0|Function||||||
 012|CircleUp|_null := |1|0|Function||||||
@@ -27,7 +27,7 @@ Groups=Start:1,Other:2,End:2,New group:29
 023|BorderAnnotation|_null := |1|0|Function|||||13|
 024|NoAddress|_null := |1|0|Function|||||14|
 025|TrimDrop|_null := |1|0|Function|||||15|
-026|Left Move & Click|1376, 92 Left, 1|1|200|Click|||Update Object|||
+026|Left Move & Click|1374, 92 Left, 1|1|200|Click|||Update Object|||
 027|UpdateGeometry|_null := |1|0|Function|||||19|
 028|PlaceOne|_null := |1|0|Function|||||20|
 29|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||21|
@@ -49,7 +49,7 @@ Groups=Start:1,Repeat Offset:2,Other:2,End:2
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 2|[Pause]||1|30|Sleep||||||
 03|RepeatOffset|_null := |1|30|Function||||||
-4|Left Move & Click|1426, 253 Left, 1|1|30|Click|||Target|||
+4|Left Move & Click|1418, 274 Left, 1|1|30|Click|||Target|||
 5|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||17|
 
 [PMC Code v5.4.1]|^NumpadEnter||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumEnterMacro
