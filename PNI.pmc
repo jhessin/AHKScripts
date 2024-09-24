@@ -3,9 +3,9 @@
 Context=None|
 Groups=Start:1,Other:2,End:2,New group:29
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||Save Mouse||1|
-2|[Text]| |1|0|SendRaw|||Passthrough|||
+02|[Text]| |1|0|SendRaw|||Passthrough|||
 03|Left Move & Click|117, 148 Left, 1|1|10|Click|||Reverse Trail|0x000000|2|
-4|Left Move & Click|189, 148 Left, 1|1|200|Click|||Slack-Span|||
+04|Left Move & Click|189, 148 Left, 1|1|200|Click|||Slack-Span|||
 05|[Text]|^k|1|0|Send|||Paste|||
 06|Left Move & Click|1446, 250 Left, 1|1|200|Click|||Pole-Type|||
 07|[Text]|p|22|0|SendRaw|||Typing|||
@@ -27,7 +27,7 @@ Groups=Start:1,Other:2,End:2,New group:29
 023|BorderAnnotation|_null := |1|0|Function|||||13|
 024|NoAddress|_null := |1|0|Function|||||14|
 025|TrimDrop|_null := |1|0|Function|||||15|
-026|Left Move & Click|1374, 92 Left, 1|1|200|Click|||Update Object|||
+26|Left Move & Click|1400, 90 Left, 1|1|200|Click|||Update Object|||
 027|UpdateGeometry|_null := |1|0|Function|||||19|
 028|PlaceOne|_null := |1|0|Function|||||20|
 29|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||21|
