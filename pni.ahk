@@ -62,6 +62,7 @@ ClickClearTrail() {
 		sleep(SleepTime)
 	} else {
 		click(ClearTrailX, ClearTrailY)
+		send("^o")
 		sleep(SleepTime)
 	}
 }

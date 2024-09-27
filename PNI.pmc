@@ -1,10 +1,10 @@
 ﻿[PMC Globals]|WinActive|ahk_exe vmware-view.exe|
-[PMC Code v5.4.1]|Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceMacro
+[PMC Code v5.4.1]|Space|Space|1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceMacro
 Context=None|
 Groups=Start:1,Other:3,End:3,New group:29
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||Save Mouse||1|
-2|[Text]| |1|0|SendRaw|||Passthrough||2|
-03|SpaceFunc|_null := |1|0|Function|||||2|
+02|[Text]| |1|0|SendRaw|||Passthrough||2|
+3|SpaceFunc|_null := |1|0|Function|||||3|
 4|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||Load Mouse||3|
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceFunc()
@@ -12,19 +12,19 @@ Context=None|
 Groups=Start:1
 1|[FunctionStart]|SpaceFunc|1|0|UserFunction|Local| / |||1|
 02|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
-03|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||6|
-04|OffsetCount|_null := |1|0|Function|||||6|
-05|PlaceOne|_null := |1|0|Function|||||6|
-06|Left Move & Click|1376, 89 Left, 1|1|200|Click|||Update Object||6|
+03|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
+4|OffsetCount|_null := |1|0|Function|||||3|
+5|PlaceOne|_null := |1|0|Function|||||3|
+06|Left Move & Click|1374, 89 Left, 1|1|200|Click|||Update Object||3|
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
 Groups=Start:1,Repeat Offset:3,Other:3,End:3
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
-2|[Text]|+|1|0|SendRaw|||Passthrough||3|
-03|Left Move & Click|1418, 212 Left, 1|1|30|Click|||Target||3|
-04|Scratch|_null := |1|0|Function||||||
-5|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||5|
+02|[Text]|+|1|0|SendRaw|||Passthrough||3|
+3|Left Move & Click|1469, 215 Left, 1|1|30|Click|||Target||3|
+04|Scratch|_null := |1|0|Function|||||5|
+5|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||6|
 
 [PMC Code v5.4.1]|^Up||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|UpMacro
 Context=None|
@@ -187,8 +187,8 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|PowerPole|1|0|UserFunction|Local| / |||1|
-2|SetClipboard|_null := "NT"|1|0|Function||||||
-03|[Text]|NT|1|0|Clipboard|||||4|
+2|[Text]|NT|1|0|Clipboard|||||4|
+3|SetClipboard|_null := "NT"|1|0|Function||||||
 4|Left Move & Click|1360, 431 Left, 1|1|250|Click|||||4|
 5|[Text]|^k|1|0|Send|||||6|
 
@@ -292,21 +292,22 @@ Groups=Start:1
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SetClipboard()
 Context=None|
 Groups=Start:1
-1|[FuncParameter]|value := " "|1|0|FuncParameter||||||
-2|[FunctionStart]|SetClipboard|1|0|UserFunction|Global| / ||||
-3|[LoopStart]|Clipboard != value|1|0|While||||||
-4|[Expression]|Clipboard := %value%|1|0|Expression||||||
-5|[Pause]||1|300|Sleep||||||
-6|[LoopEnd]|LoopEnd|1|0|Loop||||||
+1|[FuncParameter]|value := " "|1|0|FuncParameter|||||1|
+2|[FunctionStart]|SetClipboard|1|0|UserFunction|Local|Clipboard / |||1|
+3|[LoopStart]|Clipboard != value|1|0|While|||||4|
+4|[Expression]|Clipboard := value|1|0|Expression|||||6|
+5|[Pause]||1|300|Sleep|||||7|
+6|[LoopEnd]|LoopEnd|1|0|Loop|||||8|
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Scratch()
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|Scratch|1|0|UserFunction|Global| / |||1|
-2|Left Move & Click|1424, 513 Left, 1|1|200|Click|||||4|
-3|SetClipboard|_null := "Y20C1-A"|1|0|Function|||||7|
-4|SlackSpan|_null := |1|0|Function|||||8|
-5|Left Move & Click|1374, 374 Left, 1|1|200|Click|||||9|
-06|[Text]|1{Enter}1|1|0|Send|||||11|
-07|Left Move & Click|1376, 91 Left, 1|1|200|Click|||||11|
+02|Left Move & Click|1424, 513 Left, 1|1|200|Click|||||4|
+03|SetClipboard|A_Clipboard != value|1|0|While|||||4|
+4|OffsetCount|_null := |1|0|Function|||||5|
+05|SlackSpan|_null := |1|0|Function|||||6|
+06|Left Move & Click|1374, 374 Left, 1|1|200|Click|||||6|
+07|[Text]|1{Enter}1|1|0|Send|||||6|
+08|Left Move & Click|1376, 91 Left, 1|1|200|Click|||||6|
 
