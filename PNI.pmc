@@ -1,5 +1,5 @@
 ﻿[PMC Globals]|WinActive|ahk_exe vmware-view.exe|
-[PMC Code v5.4.1]|Space|Space|1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceMacro
+[PMC Code v5.4.1]|Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceMacro
 Context=None|
 Groups=Start:1,Other:3,End:3,New group:29
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||Save Mouse||1|
@@ -13,16 +13,20 @@ Groups=Start:1
 1|[FunctionStart]|SpaceFunc|1|0|UserFunction|Local| / |||1|
 02|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
 03|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
-4|OffsetCount|_null := |1|0|Function|||||3|
-5|PlaceOne|_null := |1|0|Function|||||3|
-06|Left Move & Click|1374, 89 Left, 1|1|200|Click|||Update Object||3|
+4|OffsetCount|_null := |1|0|Function||||||
+05|SlackSpan|_null := |1|0|Function||||||
+06|CircleUp|_null := |1|0|Function||||||
+07|PowerPole|_null := |1|0|Function|||||3|
+08|UpdateGeometry|_null := |1|0|Function||||||
+9|PlaceOne|_null := |1|0|Function|||||3|
+010|Left Move & Click|1374, 89 Left, 1|1|200|Click|||Update Object||3|
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
 Groups=Start:1,Repeat Offset:3,Other:3,End:3
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 02|[Text]|+|1|0|SendRaw|||Passthrough||3|
-3|Left Move & Click|1469, 215 Left, 1|1|30|Click|||Target||3|
+3|Left Move & Click|1434, 212 Left, 1|1|30|Click|||Target||3|
 04|Scratch|_null := |1|0|Function|||||5|
 5|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||6|
 
