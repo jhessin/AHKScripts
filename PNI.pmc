@@ -13,22 +13,22 @@ Groups=Start:1
 1|[FunctionStart]|SpaceFunc|1|0|UserFunction|Local| / |||1|
 02|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
 03|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
-4|OffsetCount|_null := |1|0|Function||||||
-05|SlackSpan|_null := |1|0|Function||||||
-06|CircleUp|_null := |1|0|Function||||||
-07|PowerPole|_null := |1|0|Function|||||3|
-08|UpdateGeometry|_null := |1|0|Function||||||
-9|PlaceOne|_null := |1|0|Function|||||3|
-010|Left Move & Click|1374, 89 Left, 1|1|200|Click|||Update Object||3|
+04|TrimDrop|_null := |1|0|Function|||||5|
+5|OffsetCount|_null := |1|0|Function||||||
+06|SlackSpan|_null := |1|0|Function||||||
+07|CircleUp|_null := |1|0|Function||||||
+08|PowerPole|_null := |1|0|Function|||||3|
+09|UpdateGeometry|_null := |1|0|Function||||||
+10|PlaceOne|_null := |1|0|Function|||||3|
+011|Left Move & Click|1374, 89 Left, 1|1|200|Click|||Update Object||3|
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
 Groups=Start:1,Repeat Offset:3,Other:3,End:3
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 02|[Text]|+|1|0|SendRaw|||Passthrough||3|
-3|Left Move & Click|1434, 212 Left, 1|1|30|Click|||Target||3|
-04|Scratch|_null := |1|0|Function|||||5|
-5|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||6|
+3|Left Move & Click|1424, 231 Left, 1|1|30|Click|||Target||3|
+4|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||6|
 
 [PMC Code v5.4.1]|^Up||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|UpMacro
 Context=None|
@@ -269,10 +269,11 @@ Groups=Start:1
 1|[FunctionStart]|MoveByTrail|1|0|UserFunction|Local| / ||||
 2|Left Move & Click|394, 93 Left, 1|1|200|Click|||Move-drop|||
 3|Left Move & Click|392, 135 Left, 1|1|200|Click|||Move-by-trial|||
-04|Left Move & Click|75, 91 Left, 1|1|200|Click|||Previous View|||
+4|Left Move & Click|75, 91 Left, 1|1|200|Click|||Previous View|||
 5|Left Move & Click|394, 93 Left, 1|1|200|Click|||Move-drop|||
 6|Left Move & Click|390, 115 Left, 1|1|200|Click|||Standard-Move|||
 7|Left Move & Click|165, 148 Left, 1|1|200|Click|||Clear-Trail|||
+8|[Text]|u|1|0|SendRaw||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SlackSpan()
 Context=None|
@@ -307,11 +308,8 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|Scratch|1|0|UserFunction|Global| / |||1|
-02|Left Move & Click|1424, 513 Left, 1|1|200|Click|||||4|
-03|SetClipboard|A_Clipboard != value|1|0|While|||||4|
-4|OffsetCount|_null := |1|0|Function|||||5|
-05|SlackSpan|_null := |1|0|Function|||||6|
-06|Left Move & Click|1374, 374 Left, 1|1|200|Click|||||6|
-07|[Text]|1{Enter}1|1|0|Send|||||6|
-08|Left Move & Click|1376, 91 Left, 1|1|200|Click|||||6|
+2|Left Move & Click|1470, 251 Left, 1|1|200|Click||||||
+3|[Text]|p|1|0|SendRaw||||||
+4|Left Move & Click|1351, 90 Left, 1|1|200|Click||||||
+5|[Text]|u|1|0|SendRaw||||||
 
