@@ -9,26 +9,27 @@ Groups=Start:1,Other:3,End:3,New group:29
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceFunc()
 Context=None|
-Groups=Start:1
+Groups=Start:1,New group:9
 1|[FunctionStart]|SpaceFunc|1|0|UserFunction|Local| / |||1|
 02|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
 03|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
 04|TrimDrop|_null := |1|0|Function|||||5|
-05|OffsetCount|_null := |1|0|Function||||||
-06|SlackSpan|_null := |1|0|Function||||||
-07|CircleUp|_null := |1|0|Function||||||
-8|PowerPole|_null := |1|0|Function|||||3|
-09|UpdateGeometry|_null := |1|0|Function||||||
-010|PlaceOne|_null := |1|0|Function|||||3|
-011|Left Move & Click|1374, 89 Left, 1|1|200|Click|||Update Object||3|
+05|SlackSpan|_null := |1|0|Function||||||
+06|PowerPole|_null := |1|0|Function|||||3|
+07|UpdateGeometry|_null := |1|0|Function||||||
+08|PlaceOne|_null := |1|0|Function|||||3|
+09|CircleUp|_null := |1|0|Function||||||
+10|OffsetCount|_null := |1|0|Function||||||
+011|Left Move & Click|1353, 93 Left, 1|1|200|Click|||Update Object||3|
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
-Groups=Start:1,Repeat Offset:3,Other:3,End:3
+Groups=Start:1
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 02|[Text]|+|1|0|SendRaw|||Passthrough||3|
-3|Left Move & Click|1311, 212 Left, 1|1|30|Click|||Target||3|
-4|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||6|
+3|Left Move & Click|1435, 213 Left, 1|1|30|Click|||Measured Length||3|
+04|Left Move & Click|57, 1005 Left, 1|1|200|Click|||Trail Length|||
+5|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||6|
 
 [PMC Code v5.4.1]|^Up||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|UpMacro
 Context=None|
@@ -309,7 +310,7 @@ Context=None|
 Groups=Start:1
 1|[FunctionStart]|Scratch|1|0|UserFunction|Global| / |||1|
 2|Left Move & Click|1470, 251 Left, 1|1|200|Click||||||
-3|[Text]|p|1|0|SendRaw||||||
+3|[Text]|p|1|0|SendRaw|||Measured Length|||
 4|Left Move & Click|1351, 90 Left, 1|1|200|Click||||||
 5|[Text]|u|1|0|SendRaw||||||
 
