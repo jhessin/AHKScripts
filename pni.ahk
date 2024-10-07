@@ -162,6 +162,12 @@ AssociateCable(keyname) {
 	MouseMove(StartX, StartY)
 }
 
+ClearTrail(keyname) {
+	MouseGetPos(&StartX, &StartY)
+	ClickClearTrail()
+	MouseMove(StartX, StartY)
+}
+
 AssociateTap(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	ClickAssociateTap()
@@ -177,6 +183,7 @@ AutoAssociate(keyname) {
 AutoAssociateUG(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	ClickAutoAssociateUG()
+	ClickClearTrail()
 	MouseMove(StartX, StartY)
 }
 
@@ -236,12 +243,6 @@ SelectTool(keyname) {
 	MouseMove(StartX, StartY)
 }
 
-ClearTrail(keyname) {
-	MouseGetPos(&StartX, &StartY)
-	ClickClearTrail()
-	MouseMove(StartX, StartY)
-}
-
 MoveByDragging(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	ClickMoveByDragging()
@@ -287,7 +288,7 @@ TrimDrop(keyname) {
 	sleep 300
 	click(118, 149)
 	sleep 300
-	ClickPlaceOne()
+	; ClickPlaceOne()
 	MouseMove(StartX, StartY)
 }
 
