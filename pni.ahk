@@ -114,7 +114,8 @@ ClickAutoAssociate() {
 	sleep(SleepTime)
 	click(1493, ANNOTATE_Y)
 	sleep(SleepTime)
-	click(1493, 261)
+	click(1493, 268)
+	click(1493, 271)
 	sleep(SleepTime)
 }
 
@@ -177,6 +178,7 @@ AssociateTap(keyname) {
 AutoAssociate(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	ClickAutoAssociate()
+	ClickClearTrail()
 	MouseMove(StartX, StartY)
 }
 
@@ -409,8 +411,8 @@ OutlineBuilding(*) {
 
 Hotkey "SC002", SelectTool
 Hotkey "SC029", ClearTrail
-; Hotkey "SC003", AutoAssociate
-Hotkey "SC003", AutoAssociateUG
+Hotkey "SC003", AutoAssociate
+; Hotkey "SC003", AutoAssociateUG
 ; Hotkey "SC003", OutlineBuilding
 Hotkey "SC004", AssociateTap
 Hotkey "SC005", AssociateCable
