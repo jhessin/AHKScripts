@@ -9,29 +9,32 @@ Groups=Start:1,Other:3,End:3,New group:29
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceFunc()
 Context=None|
-Groups=Start:1,Common:8
+Groups=Start:1,Uncommon:2,Common:10
 1|[FunctionStart]|SpaceFunc|1|0|UserFunction|Local| / |||1|
 02|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
 03|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
 04|TrimDrop|_null := |1|0|Function|||||5|
-5|ResizeCable|_null := |1|0|Function||||||
-06|UpdateGeometry|_null := |1|0|Function||||||
-07|PlaceOne|_null := |1|0|Function|||||3|
-08|CircleUp|_null := |1|0|Function||||||
-09|SlackSpan|_null := |1|0|Function||||||
-010|PowerPole|_null := |1|0|Function|||||3|
-011|OffsetCount|_null := |1|0|Function||||||
-12|Left Move & Click|1377, 93 Left, 1|1|200|Click|||Update Object||3|
+05|ResizeCable|_null := |1|0|Function||||||
+06|RepeatOffset|_null := |1|0|Function||||||
+07|BorderAnnotation|_null := |1|0|Function||||||
+08|UpdateGeometry|_null := |1|0|Function||||||
+09|PlaceOne|_null := |1|0|Function|||||3|
+010|CircleUp|_null := |1|0|Function||||||
+011|SlackSpan|_null := |1|0|Function||||||
+012|PowerPole|_null := |1|0|Function|||||3|
+013|Left Move & Click|854, 107 Left, 1|1|200|Click|||Floating Clicker|||
+014|OffsetCount|_null := |1|0|Function||||||
+15|Left Move & Click|1374, 91 Left, 1|1|200|Click|||Update Object||3|
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
-Groups=Start:1,New group:3,New group:11
+Groups=Start:1,Actions:2,END:11
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 02|[Text]|+|1|0|SendRaw|||Passthrough||3|
 03|Left Move & Click|1435, 213 Left, 1|1|30|Click|||Aerial Length||3|
 04|Left Move & Click|1448, 254 Left, 1|1|200|Click|||Underground Length|||
-5|Left Move & Click|1469, 271 Left, 1|1|200|Click|||Cable Length|||
-06|Left Move & Click|1441, 231 Left, 1|1|200|Click|||Address Number|||
+05|Left Move & Click|1469, 271 Left, 1|1|200|Click|||Cable Length|||
+6|Left Move & Click|1441, 231 Left, 1|1|200|Click|||Address Number|||
 07|Left Move & Click|1425, 255 Left, 1|1|200|Click|||Drop Length|||
 08|Left Move & Click|1437, 251 Left, 1|1|200|Click|||Pole Usage|||
 09|[Text]|^k{END}|1|0|Send|||Paste|||
