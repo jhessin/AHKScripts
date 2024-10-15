@@ -13,7 +13,7 @@ Groups=Start:1,Uncommon:2,Common:9
 1|[FunctionStart]|SpaceFunc|1|0|UserFunction|Local| / |||1|
 02|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
 03|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
-4|Scratch|_null := |1|0|Function||||||
+04|Scratch|_null := |1|0|Function||||||
 05|ResizeCable|_null := |1|0|Function||||||
 06|RepeatOffset|_null := |1|0|Function||||||
 07|BorderAnnotation|_null := |1|0|Function||||||
@@ -23,16 +23,16 @@ Groups=Start:1,Uncommon:2,Common:9
 011|SlackSpan|_null := |1|0|Function||||||
 012|PowerPole|_null := |1|0|Function|||||3|
 013|Left Move & Click|854, 107 Left, 1|1|200|Click|||Floating Clicker|||
-014|OffsetCount|_null := |1|0|Function||||||
+14|OffsetCount|_null := |1|0|Function||||||
 015|PlaceOne|_null := |1|0|Function|||||3|
-16|Left Move & Click|1351, 91 Left, 1|1|200|Click|||Update Object||3|
+016|Left Move & Click|1350, 89 Left, 1|1|200|Click|||Update Object||3|
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
 Groups=Start:1,Actions:2,END:11
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 02|[Text]|+|1|0|SendRaw|||Passthrough||3|
-3|Left Move & Click|1435, 213 Left, 1|1|30|Click|||Aerial Length||3|
+03|Left Move & Click|1435, 213 Left, 1|1|30|Click|||Aerial Length||3|
 04|Left Move & Click|1448, 254 Left, 1|1|200|Click|||Underground Length|||
 05|Left Move & Click|1469, 271 Left, 1|1|200|Click|||Cable Length|||
 06|Left Move & Click|1441, 231 Left, 1|1|200|Click|||Address Number|||
