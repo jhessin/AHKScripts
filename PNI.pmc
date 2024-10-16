@@ -23,7 +23,7 @@ Groups=Start:1,Uncommon:2,Common:9
 011|SlackSpan|_null := |1|0|Function||||||
 012|PowerPole|_null := |1|0|Function|||||3|
 013|Left Move & Click|854, 107 Left, 1|1|200|Click|||Floating Clicker|||
-14|OffsetCount|_null := |1|0|Function||||||
+014|OffsetCount|_null := |1|0|Function||||||
 015|PlaceOne|_null := |1|0|Function|||||3|
 016|Left Move & Click|1350, 89 Left, 1|1|200|Click|||Update Object||3|
 
@@ -34,7 +34,7 @@ Groups=Start:1,Actions:2,END:11
 02|[Text]|+|1|0|SendRaw|||Passthrough||3|
 03|Left Move & Click|1435, 213 Left, 1|1|30|Click|||Aerial Length||3|
 04|Left Move & Click|1448, 254 Left, 1|1|200|Click|||Underground Length|||
-05|Left Move & Click|1469, 271 Left, 1|1|200|Click|||Cable Length|||
+5|Left Move & Click|1469, 271 Left, 1|1|200|Click|||Cable Length|||
 06|Left Move & Click|1441, 231 Left, 1|1|200|Click|||Address Number|||
 07|Left Move & Click|1425, 255 Left, 1|1|200|Click|||Drop Length|||
 08|Left Move & Click|1437, 251 Left, 1|1|200|Click|||Pole Usage|||
