@@ -20,9 +20,9 @@ Groups=Start:1,Uncommon:2,RepeatCount:8,Common:10
 08|RepeatOffset|_null := |1|0|Function||||||
 09|[Text]|{BACKSPACE}|1|0|Send||||||
 010|PowerPole|_null := |1|0|Function|||||3|
-011|TrimDrop|_null := |1|0|Function|||||5|
+11|TrimDrop|_null := |1|0|Function|||||5|
 012|SlackSpan|_null := |1|0|Function||||||
-013|Left Move & Click|86, 432 Left, 1|1|200|Click|||Floating Clicker|||
+013|Left Move & Click|89, 431 Left, 1|1|200|Click|||Floating Clicker|||
 014|CircleUp|_null := |1|0|Function||||||
 015|OffsetCount|_null := |1|0|Function||||||
 016|PlaceOne|_null := |1|0|Function|||||3|
@@ -30,19 +30,22 @@ Groups=Start:1,Uncommon:2,RepeatCount:8,Common:10
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
-Groups=Start:1,Actions:2,END:12
+Groups=Start:1,Actions:2,END:15
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 02|[Text]|+|1|0|SendRaw|||Passthrough||3|
-03|Left Move & Click|1435, 213 Left, 1|1|30|Click|||Aerial Length||3|
-04|Left Move & Click|1466, 311 Left, 1|1|200|Click|||Actual Count|||
-05|Left Move & Click|1448, 254 Left, 1|1|200|Click|||Underground Length|||
-06|Left Move & Click|1469, 271 Left, 1|1|200|Click|||Cable Length|||
-7|Left Move & Click|1441, 231 Left, 1|1|200|Click|||Address Number|||
-08|Left Move & Click|1425, 255 Left, 1|1|200|Click|||Drop Length|||
-09|Left Move & Click|1437, 251 Left, 1|1|200|Click|||Pole Usage|||
-010|[Text]|^k{END}|1|0|Send|||Paste|||
-011|Left Move & Click|57, 1005 Left, 1|1|200|Click|||Trail Length|||
-12|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||6|
+03|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
+04|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
+5|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
+06|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
+07|Left Move & Click|1335, 290 Left, 1|1|200|Click|||Row 5|||
+08|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
+09|Left Move & Click|1335, 330 Left, 1|1|200|Click|||Row 7|||
+010|Left Move & Click|1335, 390 Left, 1|1|200|Click|||Row 10|||
+011|[Text]|c|1|0|SendRaw||||||
+012|Left Move & Click|1379, 91 Left, 1|1|200|Click||||||
+013|[Text]|^k{END}|1|0|Send|||Paste|||
+014|Left Move & Click|57, 1005 Left, 1|1|200|Click|||Trail Length|||
+15|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||6|
 
 [PMC Code v5.4.1]|^Up||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|UpMacro
 Context=None|
@@ -75,7 +78,7 @@ Context=None|
 Groups=Start:1
 1|MouseGetPos|StartX, StartY|1|0|MouseGetPos|||||1|
 2|[Pause]||1|10|Sleep||||||
-3|OffsetRight|_null := |1|0|Function||||||
+3|OffsetRight|_null := |1|0|Function|||Row 1|||
 4|Move|{Click, %StartX%, %StartY%, 0}|1|10|SendEvent|||||16|
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|ResizeCable()
@@ -324,6 +327,6 @@ Context=None|
 Groups=Start:1
 1|[FunctionStart]|Scratch|1|0|UserFunction|Global| / |||1|
 2|Left Move & Click|1452, 250 Left, 1|1|200|Click||||||
-3|[Text]|i|2|0|SendRaw||||||
+3|Left Move & Click|1335, 210 Left, 1|1|200|Click||||||
 4|[Text]|{BACKSPACE}|1|0|Send||||||
 
