@@ -20,13 +20,14 @@ Groups=Start:1,Uncommon:2,RepeatCount:8,Common:10
 08|RepeatOffset|_null := |1|0|Function||||||
 09|[Text]|{BACKSPACE}|1|0|Send||||||
 010|PowerPole|_null := |1|0|Function|||||3|
-011|TrimDrop|_null := |1|0|Function|||||5|
+11|TrimDrop|_null := |1|0|Function|||||5|
 012|SlackSpan|_null := |1|0|Function||||||
-013|Left Move & Click|89, 431 Left, 1|1|200|Click|||Floating Clicker|||
-014|CircleUp|_null := |1|0|Function||||||
-015|OffsetCount|_null := |1|0|Function||||||
-016|PlaceOne|_null := |1|0|Function|||||3|
-017|Left Move & Click|1375, 93 Left, 1|1|200|Click|||Update Object||3|
+013|Left Move & Click|348, 92 Left, 1|1|200|Click|||Floating Clicker|||
+014|Left Move & Click|923, 546 Left, 1|1|5000|Click|||Floating Clicker|||
+015|CircleUp|_null := |1|0|Function||||||
+016|OffsetCount|_null := |1|0|Function||||||
+017|PlaceOne|_null := |1|0|Function|||||3|
+018|Left Move & Click|1375, 93 Left, 1|1|200|Click|||Update Object||3|
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
@@ -36,7 +37,7 @@ Groups=Start:1,Actions:2,END:16
 03|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
 04|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
 05|Left Move & Click|1560, 232 Left, 1|2|800|Click|||Row 2 END||3|
-6|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
+06|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
 07|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
 08|Left Move & Click|1335, 290 Left, 1|1|200|Click|||Row 5|||
 09|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
