@@ -20,14 +20,14 @@ Groups=Start:1,Uncommon:2,RepeatCount:8,Common:10
 08|RepeatOffset|_null := |1|0|Function||||||
 09|[Text]|{BACKSPACE}|1|0|Send||||||
 010|PowerPole|_null := |1|0|Function|||||3|
-11|TrimDrop|_null := |1|0|Function|||||5|
+011|TrimDrop|_null := |1|0|Function|||||5|
 012|SlackSpan|_null := |1|0|Function||||||
 013|Left Move & Click|348, 92 Left, 1|1|200|Click|||Floating Clicker|||
 014|Left Move & Click|923, 546 Left, 1|1|5000|Click|||Floating Clicker|||
 015|CircleUp|_null := |1|0|Function||||||
 016|OffsetCount|_null := |1|0|Function||||||
 017|PlaceOne|_null := |1|0|Function|||||3|
-018|Left Move & Click|1375, 93 Left, 1|1|200|Click|||Update Object||3|
+018|Left Move & Click|1354, 93 Left, 1|1|200|Click|||Update Object||3|
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
@@ -43,7 +43,7 @@ Groups=Start:1,Actions:2,END:16
 09|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
 010|Left Move & Click|1335, 330 Left, 1|1|200|Click|||Row 7|||
 011|Left Move & Click|1335, 390 Left, 1|1|200|Click|||Row 10|||
-012|[Text]|c|1|0|SendRaw||||||
+012|[Text]|u|1|0|SendRaw||||||
 013|Left Move & Click|1379, 91 Left, 1|1|200|Click||||||
 014|[Text]|^k{END}|1|0|Send|||Paste|||
 015|Left Move & Click|57, 1005 Left, 1|1|200|Click|||Trail Length|||
