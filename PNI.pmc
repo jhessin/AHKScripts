@@ -21,25 +21,26 @@ Groups=Start:1,Uncommon:2,RepeatCount:7,Common:9
 09|PowerPole|_null := |1|0|Function|||||3|
 010|SlackSpan|_null := |1|0|Function||||||
 11|TrimDrop|_null := |1|0|Function|||||5|
-012|UpdateGeometry|_null := |1|0|Function||||||
-013|Left Move & Click|348, 92 Left, 1|1|200|Click|||Floating Clicker|||
-014|Left Move & Click|923, 546 Left, 1|1|5000|Click|||Floating Clicker|||
-015|CircleUp|_null := |1|0|Function||||||
-016|OffsetCount|_null := |1|0|Function||||||
-017|PlaceOne|_null := |1|0|Function|||||3|
-018|Left Move & Click|1377, 92 Left, 1|1|200|Click|||Update Object||3|
-019|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
-020|[Text]|u|1|50|SendRaw||||||
+012|MoveByTrail|_null := |1|0|Function||||||
+013|UpdateGeometry|_null := |1|0|Function||||||
+014|Left Move & Click|348, 92 Left, 1|1|200|Click|||Floating Clicker|||
+015|Left Move & Click|923, 546 Left, 1|1|5000|Click|||Floating Clicker|||
+016|CircleUp|_null := |1|0|Function||||||
+017|OffsetCount|_null := |1|0|Function||||||
+018|PlaceLeader|_null := |1|0|Function|||||3|
+019|Left Move & Click|1377, 92 Left, 1|1|200|Click|||Update Object||3|
+020|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
+021|[Text]|u|1|50|Send||||||
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
 Groups=Start:1,Actions:2,END:19
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 02|[Text]|+|1|0|SendRaw|||Passthrough||3|
-3|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
+03|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
 04|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
 05|Left Move & Click|1560, 232 Left, 1|2|800|Click|||Row 2 END||3|
-06|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
+6|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
 07|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
 08|Left Move & Click|1335, 290 Left, 1|1|200|Click|||Row 5|||
 09|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
@@ -50,7 +51,7 @@ Groups=Start:1,Actions:2,END:19
 014|[Text]|10|1|50|SendRaw||||||
 015|StandardZoom|_null := 500|1|0|Function||||||
 016|Left Move & Click|1379, 91 Left, 1|1|200|Click||||||
-017|[Text]|^k{END}|1|0|Send|||Paste|||
+017|[Text]|u|1|0|Send|||Paste|||
 018|Left Move & Click|57, 1005 Left, 1|1|200|Click|||Trail Length|||
 19|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||6|
 
@@ -344,4 +345,11 @@ Groups=Start:1
 2|[FunctionStart]|StandardZoom|1|0|UserFunction|Local| / ||||
 3|Left Move & Click|557, 1002 Left, 1|1|200|Click||||||
 4|[Text]|%Value%{ENTER}|1|0|Send||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|PlaceLeader()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|PlaceLeader|1|0|UserFunction|Local| / ||||
+2|Left Move & Click|1416, 122 Left, 1|1|200|Click||||||
+3|Left Move & Click|1405, 185 Left, 1|1|200|Click||||||
 
