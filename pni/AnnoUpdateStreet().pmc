@@ -1,0 +1,8 @@
+﻿[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|AnnoUpdateStreet()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|AnnoUpdateStreet|1|0|UserFunction|Local| / ||||
+2|Left Move & Click|1397, 122 Left, 1|1|200|Click|||Annotate|||
+3|Left Move & Click|1392, 141 Left, 1|1|200|Click|||Place Street Annotation|||
+4|Left Move & Click|165, 148 Left, 1|1|200|Click|||Clear Trail|||
+

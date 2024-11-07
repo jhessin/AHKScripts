@@ -1,4 +1,4 @@
-﻿[PMC Globals]|WinActive|ahk_exe vmware-view.exe|
+﻿[PMC Globals]|None||
 [PMC Code v5.4.1]|Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceMacro
 Context=None|
 Groups=Start:1,Other:3,End:3,New group:29
@@ -9,51 +9,54 @@ Groups=Start:1,Other:3,End:3,New group:29
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceFunc()
 Context=None|
-Groups=Start:1,Uncommon:2,RepeatCount:7,Common:9
+Groups=Start:1,Uncommon:2,RepeatCount:9,Common:11
 1|[FunctionStart]|SpaceFunc|1|0|UserFunction|Local| / |||1|
 02|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
 03|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
 04|Scratch|_null := |1|0|Function||||||
 05|BorderAnnotation|_null := |1|0|Function||||||
 06|ResizeCable|_null := |1|0|Function||||||
-07|RepeatOffset|_null := |1|0|Function||||||
-08|[Text]|{BACKSPACE}|1|0|Send||||||
-09|PowerPole|_null := |1|0|Function|||||3|
-010|SlackSpan|_null := |1|0|Function||||||
-11|TrimDrop|_null := |1|0|Function|||||5|
-012|MoveByTrail|_null := |1|0|Function||||||
-013|UpdateGeometry|_null := |1|0|Function||||||
-014|Left Move & Click|348, 92 Left, 1|1|200|Click|||Floating Clicker|||
-015|Left Move & Click|923, 546 Left, 1|1|5000|Click|||Floating Clicker|||
-016|CircleUp|_null := |1|0|Function||||||
-017|OffsetCount|_null := |1|0|Function||||||
-018|PlaceLeader|_null := |1|0|Function|||||3|
-019|Left Move & Click|1377, 92 Left, 1|1|200|Click|||Update Object||3|
-020|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
-021|[Text]|u|1|50|Send||||||
+07|Left Move & Click|1414, 119 Left, 1|1|200|Click|||Floating Clicker|||
+08|AnnoUpdateStreet|_null := |1|0|Function||||||
+09|RepeatOffset|_null := |1|0|Function||||||
+010|[Text]|{BACKSPACE}|1|0|Send||||||
+011|OffsetCount|_null := |1|0|Function||||||
+012|PowerPole|_null := |1|0|Function|||||3|
+13|SlackSpan|_null := |1|0|Function||||||
+014|TrimDrop|_null := 70|1|0|Function|||||5|
+015|MoveByTrail|_null := |1|0|Function||||||
+016|UpdateGeometry|_null := |1|0|Function||||||
+017|Left Move & Click|1414, 119 Left, 1|1|200|Click|||Floating Clicker|||
+018|Left Move & Click|1413, 204 Left, 1|1|200|Click|||Floating Clicker|||
+019|CircleUp|_null := |1|0|Function||||||
+020|PlaceLeader|_null := |1|0|Function|||||3|
+021|Left Move & Click|1335, 430 Left, 1|1|200|Click|||Row 12|||
+022|[Text]|PNT|1|50|SendRaw||||||
+023|Left Move & Click|1377, 92 Left, 1|1|200|Click|||Update Object||3|
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
-Groups=Start:1,Actions:2,END:19
+Groups=Start:1,Actions:2,END:20
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 02|[Text]|+|1|0|SendRaw|||Passthrough||3|
 03|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
 04|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
 05|Left Move & Click|1560, 232 Left, 1|2|800|Click|||Row 2 END||3|
-6|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
+06|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
 07|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
 08|Left Move & Click|1335, 290 Left, 1|1|200|Click|||Row 5|||
-09|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
+9|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
 010|Left Move & Click|1335, 330 Left, 1|1|200|Click|||Row 7|||
 011|Left Move & Click|1335, 350 Left, 1|1|200|Click|||Row 8|||
 012|Left Move & Click|1335, 370 Left, 1|1|200|Click|||Row 9|||
 013|Left Move & Click|1335, 390 Left, 1|1|200|Click|||Row 10|||
-014|[Text]|10|1|50|SendRaw||||||
-015|StandardZoom|_null := 500|1|0|Function||||||
-016|Left Move & Click|1379, 91 Left, 1|1|200|Click||||||
-017|[Text]|u|1|0|Send|||Paste|||
-018|Left Move & Click|57, 1005 Left, 1|1|200|Click|||Trail Length|||
-19|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||6|
+014|Left Move & Click|1335, 430 Left, 1|1|200|Click|||Row 12|||
+15|[Text]|1{ENTER}1|1|50|Send||||||
+016|StandardZoom|_null := 500|1|0|Function||||||
+017|Left Move & Click|1379, 91 Left, 1|1|200|Click||||||
+018|[Text]|u|1|0|Send|||Paste|||
+019|Left Move & Click|57, 1005 Left, 1|1|200|Click|||Trail Length|||
+20|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||6|
 
 [PMC Code v5.4.1]|^Up||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|UpMacro
 Context=None|
@@ -224,17 +227,18 @@ Groups=Start:1
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|TrimDrop()
 Context=None|
 Groups=Start:1
-1|[FunctionStart]|TrimDrop|1|0|UserFunction|Global| / |||1|
-2|Left Move & Click|117, 149 Left, 1|1|10|Click|||Reverse||4|
-3|[Pause]||1|300|Sleep|||||6|
-4|Left Move & Click|44, 1002 Left, 1|1|10|Click|||Trail Length||7|
-5|[Pause]||1|300|Sleep|||||9|
-6|SetClipboard|_null := 15|1|0|Function||||||
-7|[Text]|^k|1|0|Send|||||10|
-8|[Pause]||1|300|Sleep|||||14|
-9|[Text]|{Enter}|1|70|SendEvent|||||15|
-10|[Pause]||1|300|Sleep|||||19|
-11|Left Move & Click|116, 148 Left, 1|1|10|Click|||Reverse||4|
+1|[FuncParameter]|Value := 15|1|0|FuncParameter||||||
+2|[FunctionStart]|TrimDrop|1|0|UserFunction|Global| / |||1|
+3|Left Move & Click|117, 149 Left, 1|1|10|Click|||Reverse||4|
+4|[Pause]||1|300|Sleep|||||6|
+5|Left Move & Click|44, 1002 Left, 1|1|10|Click|||Trail Length||7|
+6|[Pause]||1|300|Sleep|||||9|
+7|SetClipboard|_null := Value|1|0|Function||||||
+8|[Text]|^k|1|0|Send|||||10|
+9|[Pause]||1|300|Sleep|||||14|
+10|[Text]|{Enter}|1|70|SendEvent|||||15|
+11|[Pause]||1|300|Sleep|||||19|
+12|Left Move & Click|116, 148 Left, 1|1|10|Click|||Reverse||4|
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|PlaceOne()
 Context=None|
@@ -352,4 +356,12 @@ Groups=Start:1
 1|[FunctionStart]|PlaceLeader|1|0|UserFunction|Local| / ||||
 2|Left Move & Click|1416, 122 Left, 1|1|200|Click||||||
 3|Left Move & Click|1405, 185 Left, 1|1|200|Click||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|AnnoUpdateStreet()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|AnnoUpdateStreet|1|0|UserFunction|Local| / ||||
+2|Left Move & Click|1397, 122 Left, 1|1|200|Click|||Annotate|||
+3|Left Move & Click|1392, 141 Left, 1|1|200|Click|||Place Street Annotation|||
+4|Left Move & Click|165, 148 Left, 1|1|200|Click|||Clear Trail|||
 
