@@ -15,13 +15,13 @@ Groups=Start:1,Uncommon:2,RepeatCount:9,Common:12
 03|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
 04|Scratch|_null := |1|0|Function||||||
 05|BorderAnnotation|_null := |1|0|Function||||||
-06|ResizeCable|_null := |1|0|Function||||||
+6|ResizeCable|_null := |1|0|Function||||||
 07|Left Move & Click|1414, 119 Left, 1|1|200|Click|||Floating Clicker|||
 08|AnnoUpdateStreet|_null := |1|0|Function||||||
 09|RepeatOffset|_null := |1|0|Function||||||
 010|[Text]|{BACKSPACE}|1|0|Send||||||
 011|OffsetCount|_null := |1|0|Function||||||
-12|PowerPole|_null := |1|0|Function|||||3|
+012|PowerPole|_null := |1|0|Function|||||3|
 013|SlackSpan|_null := |1|0|Function||||||
 014|TrimDrop|_null := |1|0|Function|||||5|
 015|MoveByTrail|_null := |1|0|Function||||||
@@ -31,7 +31,7 @@ Groups=Start:1,Uncommon:2,RepeatCount:9,Common:12
 019|CircleUp|_null := |1|0|Function||||||
 020|PlaceLeader|_null := |1|0|Function|||||3|
 021|Left Move & Click|1335, 430 Left, 1|1|200|Click|||Row 12|||
-022|[Text]|PNT|1|50|SendRaw||||||
+022|[Text]|ANA|1|50|SendRaw||||||
 023|Left Move & Click|1377, 92 Left, 1|1|200|Click|||Update Object||3|
 024|Left Move & Click|1439, 756 Left, 2|1|200|Click||||||
 025|Left Move & Click|1503, 120 Left, 1|1|200|Click||||||
@@ -45,8 +45,8 @@ Groups=Start:1,Actions:2,END:21
 03|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
 04|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
 05|Left Move & Click|1560, 232 Left, 1|2|800|Click|||Row 2 END||3|
-6|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
-07|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
+06|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
+7|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
 08|Left Move & Click|1335, 290 Left, 1|1|200|Click|||Row 5|||
 09|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
 010|Left Move & Click|1335, 330 Left, 1|1|200|Click|||Row 7|||
@@ -109,15 +109,15 @@ Groups=Start:1
 08|[Text]|p|4|0|SendRaw|||P1-500-UG|||
 09|[Text]|p|5|0|SendRaw|||P1-750-UG|||
 010|[Text]|p|6|0|SendRaw|||P1-750-A|||
-11|[Text]|p|11|0|SendRaw|||P3-500-A|||
+011|[Text]|p|11|0|SendRaw|||P3-500-A|||
 012|[Text]|p|15|0|SendRaw|||P3-500-UG|||
-013|[Text]|p|22|0|SendRaw|||P3-625-Aerial|||
+13|[Text]|p|22|0|SendRaw|||P3-625-Aerial|||
 014|[Text]|p|26|0|SendRaw|||P3-625-UG|||
 015|[Text]|p|33|0|SendRaw|||P3-750-A|||
 016|[Text]|p|37|0|SendRaw|||P3-750-U|||
 017|[Text]|p|40|0|SendRaw|||P3-875-A|||
 018|[Text]|p|42|0|SendRaw|||P3-625-UG|||
-19|Left Move & Click|1501, 120 Left, 1|1|200|Click||||||
+19|Left Move & Click|1379, 91 Left, 1|1|200|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|BorderAnnotation()
 Context=None|
