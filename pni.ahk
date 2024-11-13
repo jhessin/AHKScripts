@@ -110,7 +110,8 @@ ClickReverseTrail() {
 }
 
 ClickAutoAssociate() {
-	Send("c")
+	; Send("c")
+	Send("j")
 	sleep(SleepTime)
 	click(1493, ANNOTATE_Y)
 	sleep(SleepTime)
