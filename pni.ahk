@@ -109,10 +109,13 @@ ClickReverseTrail() {
 	sleep(SleepTime)
 }
 
-ClickAutoAssociate() {
-	; Send("c")
-	Send("j")
+ClickCloseTrail() {
+	click(94, 148)
 	sleep(SleepTime)
+}
+
+ClickAutoAssociate() {
+	clickCloseTrail()
 	click(1493, ANNOTATE_Y)
 	sleep(SleepTime)
 	click(1493, 268)
@@ -121,8 +124,7 @@ ClickAutoAssociate() {
 }
 
 ClickAutoAssociateUG() {
-	Send("c")
-	sleep(SleepTime)
+	clickCloseTrail()
 	click(1493, ANNOTATE_Y)
 	sleep(SleepTime)
 	click(1493, 271)
@@ -399,13 +401,12 @@ EditTrail(keyname) {
 ReversePlaceOne(keyname) {
 	Send('{SC11C}')
 	sleep(500)
-	Send('r')
+	ClickReverseTrail()
 	PlaceOne(keyname)
 }
 
 OutlineBuilding(*) {
 	MouseGetPos(&StartX, &StartY)
-	Send('c')
 	ClickBuildingOutline()
 	MouseMove(StartX, StartY)
 }

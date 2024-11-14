@@ -1,4 +1,4 @@
-﻿[PMC Globals]|None||
+﻿[PMC Globals]|WinActive|ahk_exe vmware-view.exe|
 [PMC Code v5.4.1]|Space||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceMacro
 Context=None|
 Groups=Start:1,Other:3,End:3,New group:29
@@ -15,14 +15,14 @@ Groups=Start:1,Uncommon:2,RepeatCount:9,Common:12
 03|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
 04|Scratch|_null := |1|0|Function||||||
 05|BorderAnnotation|_null := |1|0|Function||||||
-6|ResizeCable|_null := |1|0|Function||||||
+06|ResizeCable|_null := |1|0|Function||||||
 07|Left Move & Click|1414, 119 Left, 1|1|200|Click|||Floating Clicker|||
 08|AnnoUpdateStreet|_null := |1|0|Function||||||
 09|RepeatOffset|_null := |1|0|Function||||||
 010|[Text]|{BACKSPACE}|1|0|Send||||||
 011|OffsetCount|_null := |1|0|Function||||||
 012|PowerPole|_null := |1|0|Function|||||3|
-013|SlackSpan|_null := |1|0|Function||||||
+13|SlackSpan|_null := |1|0|Function||||||
 014|TrimDrop|_null := |1|0|Function|||||5|
 015|MoveByTrail|_null := |1|0|Function||||||
 016|UpdateGeometry|_null := |1|0|Function||||||
@@ -111,7 +111,7 @@ Groups=Start:1
 010|[Text]|p|6|0|SendRaw|||P1-750-A|||
 011|[Text]|p|11|0|SendRaw|||P3-500-A|||
 012|[Text]|p|15|0|SendRaw|||P3-500-UG|||
-13|[Text]|p|22|0|SendRaw|||P3-625-Aerial|||
+13|[Text]|l|22|0|SendRaw|||P3-625-Aerial|||
 014|[Text]|p|26|0|SendRaw|||P3-625-UG|||
 015|[Text]|p|33|0|SendRaw|||P3-750-A|||
 016|[Text]|p|37|0|SendRaw|||P3-750-U|||
