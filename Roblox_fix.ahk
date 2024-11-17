@@ -1,6 +1,6 @@
 #Requires AutoHotkey v2.0
 
-#HotIf WinActive("ahk_exe RobloxPlayerBeta.exe")
+#HotIf WinActive("ahk_exe ApplicationFrameHost.exe")
 
 SC011::w
 SC01E::a
