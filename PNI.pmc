@@ -9,33 +9,34 @@ Groups=Start:1,Other:3,End:3,New group:29
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|SpaceFunc()
 Context=None|
-Groups=Start:1,Uncommon:2,RepeatCount:9,Common:12
+Groups=Start:1,Uncommon:2,RepeatCount:10,Common:13
 1|[FunctionStart]|SpaceFunc|1|0|UserFunction|Local| / |||1|
 02|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
 03|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
 04|Scratch|_null := |1|0|Function||||||
 05|BorderAnnotation|_null := |1|0|Function||||||
 06|ResizeCable|_null := |1|0|Function||||||
-07|Left Move & Click|1414, 119 Left, 1|1|200|Click|||Floating Clicker|||
-08|AnnoUpdateStreet|_null := |1|0|Function||||||
-09|RepeatOffset|_null := |1|0|Function||||||
-010|[Text]|{BACKSPACE}|1|0|Send||||||
-011|OffsetCount|_null := |1|0|Function||||||
-012|PowerPole|_null := |1|0|Function|||||3|
-013|SlackSpan|_null := |1|0|Function||||||
-14|TrimDrop|_null := |1|0|Function|||||5|
-015|MoveByTrail|_null := |1|0|Function||||||
-016|UpdateGeometry|_null := |1|0|Function||||||
-017|Left Move & Click|1414, 119 Left, 1|1|200|Click|||Floating Clicker|||
-018|Left Move & Click|1413, 204 Left, 1|1|200|Click|||Floating Clicker|||
-019|CircleUp|_null := |1|0|Function||||||
-020|PlaceLeader|_null := |1|0|Function|||||3|
-021|Left Move & Click|1357, 312 Left, 1|1|200|Click|||TARGET|||
-022|[Text]|2{ENTER}2|1|50|Send||||||
-023|Left Move & Click|1377, 92 Left, 1|1|200|Click|||Update Object||3|
-024|Left Move & Click|1439, 756 Left, 2|1|200|Click||||||
-025|Left Move & Click|1503, 120 Left, 1|1|200|Click||||||
-026|Left Move & Click|1502, 145 Left, 1|1|200|Click||||||
+7|AddressToAmp|_null := |1|0|Function||||||
+08|Left Move & Click|1414, 119 Left, 1|1|200|Click|||Floating Clicker|||
+09|AnnoUpdateStreet|_null := |1|0|Function||||||
+010|RepeatOffset|_null := |1|0|Function||||||
+011|[Text]|{BACKSPACE}|1|0|Send||||||
+012|OffsetCount|_null := |1|0|Function||||||
+013|PowerPole|_null := |1|0|Function|||||3|
+014|SlackSpan|_null := |1|0|Function||||||
+015|TrimDrop|_null := |1|0|Function|||||5|
+016|MoveByTrail|_null := |1|0|Function||||||
+017|UpdateGeometry|_null := |1|0|Function||||||
+018|Left Move & Click|1414, 119 Left, 1|1|200|Click|||Floating Clicker|||
+019|Left Move & Click|1413, 204 Left, 1|1|200|Click|||Floating Clicker|||
+020|CircleUp|_null := |1|0|Function||||||
+021|PlaceLeader|_null := |1|0|Function|||||3|
+022|Left Move & Click|1321, 391 Left, 1|1|500|Click|||TARGET|||
+023|[Text]|C|1|50|Send||||||
+024|Left Move & Click|1377, 92 Left, 1|1|200|Click|||Update Object||3|
+025|Left Move & Click|1439, 756 Left, 2|1|200|Click||||||
+026|Left Move & Click|1503, 120 Left, 1|1|200|Click||||||
+027|Left Move & Click|1502, 145 Left, 1|1|200|Click||||||
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
@@ -151,9 +152,9 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|AddressToAmp|1|0|UserFunction|Global| / ||||
-2|Left Move & Click|1643, 645 Left, 1|1|500|Click||||||
+2|Left Move & Click|1494, 122 Left, 1|1|500|Click||||||
 3|[Pause]||1|300|Sleep||||||
-4|Left Move & Click|1595, 703 Left, 1|1|10|Click|||Amplifier|||
+4|Left Move & Click|1494, 174 Left, 1|1|10|Click|||Amplifier|||
 05|Left Move & Click|1600, 672 Left, 1|1|10|Click|||Node|||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|RemoveBorderAnnotations()

@@ -181,7 +181,7 @@ AssociateTap(keyname) {
 AutoAssociate(keyname) {
 	MouseGetPos(&StartX, &StartY)
 	ClickAutoAssociate()
-	ClickClearTrail()
+	; ClickClearTrail()
 	MouseMove(StartX, StartY)
 }
 
@@ -439,7 +439,7 @@ Hotkey "F9", TrimDrop
 ; Hotkey "SC04E", EditTrail
 
 ; Keypad *
-Hotkey "SC037", ToggleEnter
+; Hotkey "SC037", ToggleEnter
 
 ; Keypad ENTER
 ; Hotkey "^SC11C", SetPlaceOne
