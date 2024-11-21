@@ -6,6 +6,9 @@ import wx
 
 
 class FancyFrame(wx.Frame):
+    """
+    This will be a simple hitbox. Using self.GetPosition() I can find the top left corder of the box. It can be positioned anywhere on screen and it can be hidden.
+    """
 
     _dragPos: wx.Point | None = None
 
@@ -20,6 +23,7 @@ class FancyFrame(wx.Frame):
         wx.Frame.__init__(self, None, title="Fancy", style=style)
         self.Bind(wx.EVT_KEY_UP, self.OnKeyDown)
         self.Bind(wx.EVT_MOTION, self.OnMouse)
+        self.SetSize(50,50)
         self.SetTransparent(220)
         self.Show(True)
 
@@ -27,6 +31,8 @@ class FancyFrame(wx.Frame):
         """quit if user press q or Esc"""
         if event.GetKeyCode() == 27 or event.GetKeyCode() == ord("Q"):  # 27 is Esc
             self.Close(force=True)
+        elif event.GetKeyCode() == ord('H'):
+            self.Show()
         else:
             event.Skip()
 
