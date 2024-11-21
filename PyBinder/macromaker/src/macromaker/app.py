@@ -5,6 +5,48 @@ A utility for managing keybinds and macros.
 import wx
 
 
+class FancyFrame(wx.Frame):
+
+    _dragPos: wx.Point | None = None
+
+    def __init__(self):
+        style = (
+            wx.CLIP_CHILDREN
+            | wx.STAY_ON_TOP
+            | wx.FRAME_NO_TASKBAR
+            | wx.NO_BORDER
+            | wx.FRAME_SHAPED
+        )
+        wx.Frame.__init__(self, None, title="Fancy", style=style)
+        self.Bind(wx.EVT_KEY_UP, self.OnKeyDown)
+        self.Bind(wx.EVT_MOTION, self.OnMouse)
+        self.SetTransparent(220)
+        self.Show(True)
+
+    def OnKeyDown(self, event):
+        """quit if user press q or Esc"""
+        if event.GetKeyCode() == 27 or event.GetKeyCode() == ord("Q"):  # 27 is Esc
+            self.Close(force=True)
+        else:
+            event.Skip()
+
+    def OnMouse(self, event: wx.MouseEvent):
+        """implement dragging"""
+        if not event.Dragging():
+            if self.HasCapture():
+                self.ReleaseMouse()
+            self._dragPos = None
+            return
+        if not self.HasCapture():
+            self.CaptureMouse()
+        if not self._dragPos:
+            self._dragPos = event.GetPosition()
+        else:
+            pos = event.GetPosition()
+            displacement = self._dragPos - pos
+            self.SetPosition(self.GetPosition() - displacement)
+
+
 class HelloFrame(wx.Frame):
     """
     A Frame that says Hello World
@@ -101,7 +143,8 @@ def main():
 
     # Then a frame.
     # frm = wx.Frame(None, title="Hello World")
-    frm = HelloFrame(None, title="Hello World")
+    # frm = HelloFrame(None, title="Hello World")
+    frm = FancyFrame()
 
     # Show it.
     frm.Show()
