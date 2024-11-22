@@ -16,11 +16,11 @@ Groups=Start:1,Uncommon:2,RepeatCount:10,Common:13
 04|Scratch|_null := |1|0|Function||||||
 05|BorderAnnotation|_null := |1|0|Function||||||
 06|ResizeCable|_null := |1|0|Function||||||
-07|AddressToAmp|_null := |1|0|Function||||||
+7|AddressToAmp|_null := |1|0|Function||||||
 08|Left Move & Click|1414, 119 Left, 1|1|200|Click|||Floating Clicker|||
 09|AnnoUpdateStreet|_null := |1|0|Function||||||
-10|RepeatOffset|_null := |1|0|Function||||||
-11|[Text]|{BACKSPACE}|1|0|Send||||||
+010|RepeatOffset|_null := |1|0|Function||||||
+011|[Text]|{BACKSPACE}|1|0|Send||||||
 012|OffsetCount|_null := |1|0|Function||||||
 013|PowerPole|_null := |1|0|Function|||||3|
 014|SlackSpan|_null := |1|0|Function||||||
@@ -31,8 +31,8 @@ Groups=Start:1,Uncommon:2,RepeatCount:10,Common:13
 019|Left Move & Click|1413, 204 Left, 1|1|200|Click|||Floating Clicker|||
 020|CircleUp|_null := |1|0|Function||||||
 021|PlaceLeader|_null := |1|0|Function|||||3|
-022|Left Move & Click|1321, 391 Left, 1|1|500|Click|||TARGET|||
-023|[Text]|C|1|50|Send||||||
+022|Left Move & Click|1354, 205 Left, 1|1|500|Click|||TARGET|||
+023|[Text]|ACTION BEHAVIOR CENTERS|1|50|Send||||||
 024|Left Move & Click|1377, 92 Left, 1|1|200|Click|||Update Object||3|
 025|Left Move & Click|1439, 756 Left, 2|1|200|Click||||||
 026|Left Move & Click|1503, 120 Left, 1|1|200|Click||||||
@@ -43,11 +43,11 @@ Context=None|
 Groups=Start:1,Actions:2,END:21
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 02|[Text]|+|1|0|SendRaw|||Passthrough||3|
-3|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
+03|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
 04|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
 05|Left Move & Click|1560, 232 Left, 1|2|800|Click|||Row 2 END||3|
 06|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
-07|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
+7|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
 08|Left Move & Click|1335, 290 Left, 1|1|200|Click|||Row 5|||
 09|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
 010|Left Move & Click|1335, 330 Left, 1|1|200|Click|||Row 7|||
