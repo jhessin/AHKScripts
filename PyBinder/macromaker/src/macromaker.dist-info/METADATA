@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Briefcase-Version: 0.3.20
+Name: macromaker
+Formal-Name: Macro Maker
+App-ID: com.grillbrickstudios.macromaker
+Version: 0.0.1
+Home-page: https://grillbrickstudios.com/macromaker
+Download-URL: https://grillbrickstudios.com/macromaker
+Author: Jim Hessin
+Author-email: jhessin@gmail.com
+Summary: A utility for managing keybinds and macros.
