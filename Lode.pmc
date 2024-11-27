@@ -2,19 +2,24 @@
 [PMC Code v5.4.1]|^p||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|Powering
 Context=None|
 Groups=Start:1
-1|Left Move & Click|86, 30 Left, 1|1|10|Click||||||
-2|Left Move & Click|121, 117 Left, 1|1|10|Click||||||
+01|[Text]|!m|1|30|Send||||||
+2|Left Move & Click|86, 30 Left, 1|1|30|Click||||||
+03|[Text]|!l|1|30|Send||||||
+4|Left Move & Click|121, 117 Left, 1|1|30|Click||||||
 
 [PMC Code v5.4.1]|^d||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|Design
 Context=None|
 Groups=Start:1
-1|Left Move & Click|86, 30 Left, 1|1|10|Click||||||
-2|Left Move & Click|131, 79 Left, 1|1|10|Click||||||
+01|[Text]|!m|1|30|Send||||||
+2|Left Move & Click|86, 30 Left, 1|1|30|Click||||||
+03|[Text]|!e|1|30|Send||||||
+4|Left Move & Click|131, 79 Left, 1|1|30|Click||||||
+5|[Text]|/|1|30|SendRaw||||||
 
 [PMC Code v5.4.1]|Space||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|SpaceMacro
 Context=None|
 Groups=Start:1
-01|[Text]| |1|0|SendRaw|||Passthrough|||
-2|[Text]|0..104{ENTER}{ENTER}|1|0|Send||||||
-03|[Text]|0..6{ENTER}{ENTER}|1|0|Send||||||
+1|[Text]| |1|0|SendRaw|||Passthrough|||
+02|[Text]|0..104{ENTER}{ENTER}|1|0|Send||||||
+03|[Text]|/|1|0|SendRaw||||||
 
