@@ -23,8 +23,8 @@ Groups=Start:1,OffsetTools:4
 011|Left Move & Click|1414, 119 Left, 1|1|200|Click|||Floating Clicker|||
 012|AnnoUpdateStreet|_null := |1|0|Function||||||
 013|PowerPole|_null := |1|0|Function|||||3|
-14|SlackSpan|_null := |1|0|Function||||||
-015|TrimDrop|_null := |1|0|Function|||||5|
+014|SlackSpan|_null := |1|0|Function||||||
+15|TrimDrop|_null := |1|0|Function|||||5|
 016|MoveByTrail|_null := |1|0|Function||||||
 017|UpdateGeometry|_null := |1|0|Function||||||
 018|Left Move & Click|1414, 119 Left, 1|1|200|Click|||Floating Clicker|||
