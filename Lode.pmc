@@ -1,23 +1,16 @@
 ﻿[PMC Globals]|WinActive|ahk_class Win32sConsole|
-[PMC Code v5.4.1]|^p||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|Powering
+[PMC Code v5.4.1]|F3||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|Powering
 Context=None|
 Groups=Start:1
 1|[Text]|{ALT DOWN}|1|0|Send||||||
 2|[Text]|mp|1|30|SendRaw||||||
 3|[Text]|{ALT UP}|1|0|Send||||||
 
-[PMC Code v5.4.1]|^d||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|Design
+[PMC Code v5.4.1]|F4||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|Design
 Context=None|
 Groups=Start:1
 1|[Text]|{ALT DOWN}|1|0|Send||||||
 2|[Text]|md|1|30|SendRaw||||||
 3|[Text]|{ALT UP}|1|0|Send||||||
 4|[Text]|/|1|30|SendRaw||||||
-
-[PMC Code v5.4.1]|Space||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|SpaceMacro
-Context=None|
-Groups=Start:1
-1|[Text]| |1|0|SendRaw|||Passthrough|||
-02|[Text]|mp|1|30|SendRaw||||||
-03|[Text]|/|1|0|SendRaw||||||
 
