@@ -17,7 +17,7 @@ Groups=Start:1,OffsetTools:2,Common:6
 05|BorderAnnotation|_null := |1|0|Function||||||
 06|Scratch|_null := |1|0|Function||||||
 07|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
-08|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
+8|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
 09|CircleUp|_null := |1|0|Function||||||
 010|SlackSpan|_null := |1|0|Function||||||
 011|ResizeCable|_null := |1|0|Function||||||
@@ -26,7 +26,7 @@ Groups=Start:1,OffsetTools:2,Common:6
 014|AnnoUpdateStreet|_null := |1|0|Function||||||
 015|PowerPole|_null := |1|0|Function|||||3|
 016|PlaceText|_null := |1|0|Function||||||
-17|TrimDrop|_null := |1|0|Function|||||5|
+017|TrimDrop|_null := |1|0|Function|||||5|
 018|MoveByTrail|_null := |1|0|Function||||||
 019|UpdateGeometry|_null := |1|0|Function||||||
 020|Left Move & Click|1358, 249 Left, 1|1|200|Click|||Floating Clicker|||
@@ -117,21 +117,22 @@ Groups=Start:1
 2|Left Move & Click|1470, 234 Left, 1|1|10|Click||||||
 3|[Pause]||1|300|Sleep||||||
 04|[Text]|m|10|0|SendRaw|||MC.540|||
-05|[Text]|p|1|0|SendRaw|||P1-412-A|||
-06|[Text]|p|2|0|SendRaw|||P1-412-UG|||
-07|[Text]|p|3|0|SendRaw|||P1-500-A|||
-08|[Text]|p|4|0|SendRaw|||P1-500-UG|||
-09|[Text]|p|5|0|SendRaw|||P1-750-UG|||
-010|[Text]|p|6|0|SendRaw|||P1-750-A|||
-011|[Text]|p|11|0|SendRaw|||P3-500-A|||
-012|[Text]|p|15|0|SendRaw|||P3-500-UG|||
-13|[Text]|l|22|0|SendRaw|||P3-625-Aerial|||
-014|[Text]|p|26|0|SendRaw|||P3-625-UG|||
-015|[Text]|p|33|0|SendRaw|||P3-750-A|||
-016|[Text]|p|37|0|SendRaw|||P3-750-U|||
-017|[Text]|p|40|0|SendRaw|||P3-875-A|||
-018|[Text]|p|42|0|SendRaw|||P3-625-UG|||
-19|Left Move & Click|1379, 91 Left, 1|1|200|Click||||||
+05|[Text]|P|1|0|SendRaw|||P1-412-A|||
+06|[Text]|P|2|0|SendRaw|||P1-412-UG|||
+07|[Text]|P|3|0|SendRaw|||P1-500-A|||
+08|[Text]|P|4|0|SendRaw|||P1-500-UG|||
+09|[Text]|P|5|0|SendRaw|||P1-750-UG|||
+010|[Text]|P|6|0|SendRaw|||P1-750-A|||
+011|[Text]|P|11|0|SendRaw|||P3-500-A|||
+012|[Text]|P|15|0|SendRaw|||P3-500-UG|||
+013|[Text]|P|22|0|SendRaw|||P3-625-Aerial|||
+014|[Text]|P|26|0|SendRaw|||P3-625-UG|||
+015|[Text]|P|33|0|SendRaw|||P3-750-A|||
+016|[Text]|P|37|0|SendRaw|||P3-750-U|||
+017|[Text]|P|40|0|SendRaw|||P3-875-A|||
+18|[Text]|P|42|0|SendRaw|||P3-875-UG|||
+019|[Text]|P|42|0|SendRaw|||P3-625-UG|||
+20|Left Move & Click|1379, 91 Left, 1|1|200|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|BorderAnnotation()
 Context=None|
