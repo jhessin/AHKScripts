@@ -17,22 +17,22 @@ Groups=Start:1,OffsetTools:2,Common:6
 05|BorderAnnotation|_null := |1|0|Function||||||
 06|Scratch|_null := |1|0|Function||||||
 07|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
-8|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
-09|CircleUp|_null := |1|0|Function||||||
-010|SlackSpan|_null := |1|0|Function||||||
-011|ResizeCable|_null := |1|0|Function||||||
-012|AddressToAmp|_null := |1|0|Function||||||
-013|Left Move & Click|1414, 119 Left, 1|1|200|Click|||Floating Clicker|||
-014|AnnoUpdateStreet|_null := |1|0|Function||||||
-015|PowerPole|_null := |1|0|Function|||||3|
-016|PlaceText|_null := |1|0|Function||||||
-017|TrimDrop|_null := |1|0|Function|||||5|
-018|MoveByTrail|_null := |1|0|Function||||||
-019|UpdateGeometry|_null := |1|0|Function||||||
-020|Left Move & Click|1358, 249 Left, 1|1|200|Click|||Floating Clicker|||
-021|Left Move & Click|1413, 204 Left, 1|1|200|Click|||Floating Clicker|||
-022|PlaceLeader|_null := |1|0|Function|||||3|
-023|Left Move & Click|1455, 392 Left, 1|1|500|Click|||TARGET|||
+08|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
+09|Left Move & Click|457, 145 Left, 1|1|500|Click|||Place Text|||
+10|CircleUp|_null := |1|0|Function||||||
+011|SlackSpan|_null := |1|0|Function||||||
+012|ResizeCable|_null := |1|0|Function||||||
+013|AddressToAmp|_null := |1|0|Function||||||
+014|Left Move & Click|1395, 119 Left, 1|1|200|Click|||Floating Clicker|||
+015|AnnoUpdateStreet|_null := |1|0|Function||||||
+016|PowerPole|_null := |1|0|Function|||||3|
+017|PlaceText|_null := |1|0|Function||||||
+018|TrimDrop|_null := |1|0|Function|||||5|
+019|MoveByTrail|_null := |1|0|Function||||||
+020|UpdateGeometry|_null := |1|0|Function||||||
+021|Left Move & Click|1386, 137 Left, 1|1|200|Click|||Floating Clicker|||
+022|Left Move & Click|166, 147 Left, 1|1|200|Click|||Floating Clicker|||
+023|PlaceLeader|_null := |1|0|Function|||||3|
 024|[Text]|P|1|50|Send||||||
 025|Left Move & Click|1377, 92 Left, 1|1|200|Click|||Update Object||3|
 026|Left Move & Click|1439, 756 Left, 2|1|200|Click||||||
@@ -45,9 +45,9 @@ Groups=Start:1,Actions:2,END:23
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 02|[Text]|+|1|0|SendRaw|||Passthrough||3|
 03|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
-4|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
+04|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
 05|Left Move & Click|1560, 232 Left, 1|2|800|Click|||Row 2 END||3|
-06|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
+6|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
 07|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
 08|Left Move & Click|1335, 290 Left, 1|1|200|Click|||Row 5|||
 09|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
@@ -61,8 +61,8 @@ Groups=Start:1,Actions:2,END:23
 017|[Text]|1{ENTER}1|1|50|Send||||||
 018|Left Move & Click|572, 1005 Left, 1|1|200|Click|||Zoom|||
 019|StandardZoom|_null := 500|1|0|Function||||||
-020|Left Move & Click|1379, 91 Left, 1|1|200|Click||||||
-021|[Text]|u|1|0|Send|||Paste|||
+020|[Text]|P|1|0|Send|||Paste|||
+021|Left Move & Click|1378, 95 Left, 1|1|200|Click||||||
 022|Left Move & Click|57, 1005 Left, 1|1|200|Click|||Trail Length|||
 23|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||6|
 
