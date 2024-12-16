@@ -19,7 +19,7 @@ Groups=Start:1,OffsetTools:2,Common:6
 07|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
 08|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
 09|Left Move & Click|457, 145 Left, 1|1|500|Click|||Place Text|||
-10|CircleUp|_null := |1|0|Function||||||
+010|CircleUp|_null := |1|0|Function||||||
 011|SlackSpan|_null := |1|0|Function||||||
 012|ResizeCable|_null := |1|0|Function||||||
 013|AddressToAmp|_null := |1|0|Function||||||
@@ -27,7 +27,7 @@ Groups=Start:1,OffsetTools:2,Common:6
 015|AnnoUpdateStreet|_null := |1|0|Function||||||
 016|PowerPole|_null := |1|0|Function|||||3|
 017|PlaceText|_null := |1|0|Function||||||
-018|TrimDrop|_null := |1|0|Function|||||5|
+18|TrimDrop|_null := |1|0|Function|||||5|
 019|MoveByTrail|_null := |1|0|Function||||||
 020|UpdateGeometry|_null := |1|0|Function||||||
 021|Left Move & Click|1386, 137 Left, 1|1|200|Click|||Floating Clicker|||
