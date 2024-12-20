@@ -11,8 +11,8 @@ Groups=Start:1,Other:3,End:3,New group:29
 Context=None|
 Groups=Start:1,OffsetTools:2,Common:6
 1|[FunctionStart]|SpaceFunc|1|0|UserFunction|Local| / |||1|
-02|RepeatOffset|_null := |1|0|Function||||||
-03|[Text]|{BACKSPACE}|1|0|Send||||||
+2|RepeatOffset|_null := |1|0|Function||||||
+3|[Text]|{BACKSPACE}|1|0|Send||||||
 04|OffsetCount|_null := |1|0|Function||||||
 05|BorderAnnotation|_null := |1|0|Function||||||
 06|Scratch|_null := |1|0|Function||||||
@@ -21,7 +21,7 @@ Groups=Start:1,OffsetTools:2,Common:6
 09|Left Move & Click|457, 145 Left, 1|1|500|Click|||Place Text|||
 010|CircleUp|_null := |1|0|Function||||||
 011|SlackSpan|_null := |1|0|Function||||||
-12|ResizeCable|_null := |1|0|Function||||||
+012|ResizeCable|_null := |1|0|Function||||||
 013|AddressToAmp|_null := |1|0|Function||||||
 014|Left Move & Click|1395, 119 Left, 1|1|200|Click|||Floating Clicker|||
 015|AnnoUpdateStreet|_null := |1|0|Function||||||
@@ -45,9 +45,9 @@ Groups=Start:1,Actions:2,END:23
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 02|[Text]|+|1|0|SendRaw|||Passthrough||3|
 03|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
-4|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
+04|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
 05|Left Move & Click|1560, 232 Left, 1|2|800|Click|||Row 2 END||3|
-06|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
+6|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
 07|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
 08|Left Move & Click|1335, 290 Left, 1|1|200|Click|||Row 5|||
 09|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
