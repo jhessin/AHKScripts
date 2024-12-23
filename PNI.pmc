@@ -11,8 +11,8 @@ Groups=Start:1,Other:3,End:3,New group:29
 Context=None|
 Groups=Start:1,OffsetTools:2,Common:6
 1|[FunctionStart]|SpaceFunc|1|0|UserFunction|Local| / |||1|
-2|RepeatOffset|_null := |1|0|Function||||||
-3|[Text]|{BACKSPACE}|1|0|Send||||||
+02|RepeatOffset|_null := |1|0|Function||||||
+03|[Text]|{BACKSPACE}|1|0|Send||||||
 04|OffsetCount|_null := |1|0|Function||||||
 05|BorderAnnotation|_null := |1|0|Function||||||
 06|Scratch|_null := |1|0|Function||||||
@@ -27,7 +27,7 @@ Groups=Start:1,OffsetTools:2,Common:6
 015|AnnoUpdateStreet|_null := |1|0|Function||||||
 016|PowerPole|_null := |1|0|Function|||||3|
 017|PlaceText|_null := |1|0|Function||||||
-018|TrimDrop|_null := |1|0|Function|||||5|
+18|TrimDrop|_null := |1|0|Function|||||5|
 019|MoveByTrail|_null := |1|0|Function||||||
 020|UpdateGeometry|_null := |1|0|Function||||||
 021|Left Move & Click|1386, 137 Left, 1|1|200|Click|||Floating Clicker|||
@@ -47,8 +47,8 @@ Groups=Start:1,Actions:2,END:23
 03|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
 04|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
 05|Left Move & Click|1560, 232 Left, 1|2|800|Click|||Row 2 END||3|
-6|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
-07|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
+06|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
+7|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
 08|Left Move & Click|1335, 290 Left, 1|1|200|Click|||Row 5|||
 09|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
 010|Left Move & Click|1335, 330 Left, 1|1|200|Click|||Row 7|||
