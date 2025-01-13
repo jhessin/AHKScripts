@@ -11,10 +11,10 @@ Groups=Start:1,Other:3,End:3,New group:29
 Context=None|
 Groups=Start:1,OffsetTools:2,Common:6
 1|[FunctionStart]|SpaceFunc|1|0|UserFunction|Local| / |||1|
-02|RepeatOffset|_null := |1|0|Function||||||
+2|RepeatOffset|_null := |1|0|Function||||||
 03|[Text]|{BACKSPACE}|1|0|Send||||||
 04|OffsetCount|_null := |1|0|Function||||||
-05|BorderAnnotation|_null := |1|0|Function||||||
+5|BorderAnnotation|_null := |1|0|Function||||||
 06|Scratch|_null := |1|0|Function||||||
 07|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
 08|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
@@ -22,7 +22,7 @@ Groups=Start:1,OffsetTools:2,Common:6
 010|CircleUp|_null := |1|0|Function||||||
 011|SlackSpan|_null := |1|0|Function||||||
 012|ResizeCable|_null := |1|0|Function||||||
-13|AddressToAmp|_null := |1|0|Function||||||
+013|AddressToAmp|_null := |1|0|Function||||||
 014|Left Move & Click|1395, 119 Left, 1|1|200|Click|||Floating Clicker|||
 015|AnnoUpdateStreet|_null := |1|0|Function||||||
 016|PowerPole|_null := |1|0|Function|||||3|
