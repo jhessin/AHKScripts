@@ -11,33 +11,34 @@ Groups=Start:1,Other:3,End:3,New group:29
 Context=None|
 Groups=Start:1,OffsetTools:2,Common:6
 1|[FunctionStart]|SpaceFunc|1|0|UserFunction|Local| / |||1|
-2|RepeatOffset|_null := |1|0|Function||||||
+02|RepeatOffset|_null := |1|0|Function||||||
 03|[Text]|{BACKSPACE}|1|0|Send||||||
 04|OffsetCount|_null := |1|0|Function||||||
-5|BorderAnnotation|_null := |1|0|Function||||||
+05|BorderAnnotation|_null := |1|0|Function||||||
 06|Scratch|_null := |1|0|Function||||||
 07|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
 08|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
 09|Left Move & Click|457, 145 Left, 1|1|500|Click|||Place Text|||
 010|CircleUp|_null := |1|0|Function||||||
-011|SlackSpan|_null := |1|0|Function||||||
+11|SlackSpan|_null := |1|0|Function||||||
 012|ResizeCable|_null := |1|0|Function||||||
 013|AddressToAmp|_null := |1|0|Function||||||
-014|Left Move & Click|1395, 119 Left, 1|1|200|Click|||Floating Clicker|||
+014|Left Move & Click|1400, 94 Left, 1|1|200|Click|||Floating Clicker|||
 015|AnnoUpdateStreet|_null := |1|0|Function||||||
 016|PowerPole|_null := |1|0|Function|||||3|
 017|PlaceText|_null := |1|0|Function||||||
 018|TrimDrop|_null := |1|0|Function|||||5|
 019|MoveByTrail|_null := |1|0|Function||||||
-020|UpdateGeometry|_null := |1|0|Function||||||
-021|Left Move & Click|1386, 137 Left, 1|1|200|Click|||Floating Clicker|||
-022|Left Move & Click|166, 147 Left, 1|1|200|Click|||Floating Clicker|||
-023|PlaceLeader|_null := |1|0|Function|||||3|
-024|[Text]|P|1|50|Send||||||
-025|Left Move & Click|1377, 92 Left, 1|1|200|Click|||Update Object||3|
-026|Left Move & Click|1439, 756 Left, 2|1|200|Click||||||
-027|Left Move & Click|1503, 120 Left, 1|1|200|Click||||||
-028|Left Move & Click|1502, 145 Left, 1|1|200|Click||||||
+020|Left Move & Click|1386, 137 Left, 1|1|200|Click|||Floating Clicker|||
+021|Left Move & Click|166, 147 Left, 1|1|200|Click|||Floating Clicker|||
+022|PlaceLeader|_null := |1|0|Function|||||3|
+023|[Text]|P|1|50|Send||||||
+024|UpdateGeometry|_null := |1|0|Function||||||
+025|RespecAmp|_null := |1|0|Function||||||
+026|Left Move & Click|1399, 93 Left, 1|1|200|Click|||Update Object||3|
+027|Left Move & Click|1439, 756 Left, 2|1|200|Click||||||
+028|Left Move & Click|1503, 120 Left, 1|1|200|Click||||||
+029|Left Move & Click|1502, 145 Left, 1|1|200|Click||||||
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
@@ -124,13 +125,13 @@ Groups=Start:1
 09|[Text]|P|5|0|SendRaw|||P1-750-UG|||
 010|[Text]|P|6|0|SendRaw|||P1-750-A|||
 011|[Text]|P|11|0|SendRaw|||P3-500-A|||
-12|[Text]|P|15|0|SendRaw|||P3-500-UG|||
+012|[Text]|P|15|0|SendRaw|||P3-500-UG|||
 013|[Text]|P|22|0|SendRaw|||P3-625-Aerial|||
 014|[Text]|P|26|0|SendRaw|||P3-625-UG|||
 015|[Text]|P|33|0|SendRaw|||P3-750-A|||
 016|[Text]|P|37|0|SendRaw|||P3-750-U|||
 017|[Text]|P|40|0|SendRaw|||P3-875-A|||
-018|[Text]|P|42|0|SendRaw|||P3-875-UG|||
+18|[Text]|P|42|0|SendRaw|||P3-875-UG|||
 019|[Text]|P|42|0|SendRaw|||P3-625-UG|||
 20|Left Move & Click|1379, 91 Left, 1|1|200|Click||||||
 
@@ -391,4 +392,13 @@ Context=None|
 Groups=Start:1
 1|[FunctionStart]|PlaceText|1|0|UserFunction|Local| / ||||
 2|Left Move & Click|1428, 231 Left, 1|1|200|Click||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|RespecAmp()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|RespecAmp|1|0|UserFunction|Local| / ||||
+2|Left Move & Click|1447, 311 Left, 1|1|200|Click||||||
+3|[Text]|6|12|0|SendRaw|||6LE95/28|||
+04|[Text]|8|2|0|SendRaw|||8-T550/29 TB|||
+5|Left Move & Click|1397, 92 Left, 1|1|200|Click||||||
 
