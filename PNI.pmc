@@ -24,11 +24,11 @@ Groups=Start:1,OffsetTools:2,Common:6
 012|ResizeCable|_null := |1|0|Function||||||
 013|AddressToAmp|_null := |1|0|Function||||||
 014|Left Move & Click|410, 147 Left, 1|1|200|Click|||Drafting Line|||
-15|AddressToStreet|_null := |1|0|Function||||||
+015|AddressToStreet|_null := |1|0|Function||||||
 016|AnnoUpdateStreet|_null := |1|0|Function||||||
 017|PowerPole|_null := |1|0|Function|||||3|
 018|PlaceText|_null := |1|0|Function||||||
-019|TrimDrop|_null := |1|0|Function|||||5|
+19|TrimDrop|_null := |1|0|Function|||||5|
 020|MoveByTrail|_null := |1|0|Function||||||
 021|DataBlocks|_null := |1|0|Function||||||
 022|PlaceLeader|_null := |1|0|Function|||||3|
@@ -46,9 +46,9 @@ Groups=Start:1,Actions:2,END:23
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 02|[Text]|+|1|0|SendRaw|||Passthrough||3|
 03|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
-4|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
+04|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
 05|Left Move & Click|1560, 232 Left, 1|2|800|Click|||Row 2 END||3|
-06|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
+6|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
 07|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
 08|Left Move & Click|1335, 290 Left, 1|1|200|Click|||Row 5|||
 09|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
@@ -360,10 +360,9 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|Scratch|1|0|UserFunction|Global| / |||1|
-2|Left Move & Click|1059, 155 Left, 1|1|200|Click||||||
-3|Left Move & Click|1491, 123 Left, 1|1|200|Click||||||
-4|Left Move & Click|1476, 277 Left, 1|1|200|Click||||||
-5|Left Move & Click|1128, 153 Left, 1|1|200|Click||||||
+2|Left Move & Click|1447, 251 Left, 1|1|200|Click||||||
+3|[Text]|{DELETE}|1|0|Send||||||
+4|Left Move & Click|1352, 89 Left, 1|1|200|Click||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|StandardZoom()
 Context=None|
@@ -429,5 +428,5 @@ Context=None|
 Groups=Start:1
 1|[FunctionStart]|AddressToStreet|1|300|UserFunction|Local| / ||||
 2|Left Move & Click|1494, 119 Left, 1|1|300|Click|||Associate|||
-3|Left Move & Click|1501, 142 Left, 1|1|300|Click|||Addresses|||
+3|[Text]|{DELETE}|1|0|Send|||Addresses|||
 
