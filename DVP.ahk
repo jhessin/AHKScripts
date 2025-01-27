@@ -1,6 +1,5 @@
 #Requires AutoHotkey v2.0
 
-#HotIf WinActive("ahk_exe vmware-view.exe")
 
 ; The number keys
 SC029::$
@@ -16,6 +15,22 @@ SC00A::+
 SC00B::]
 SC00C::!
 SC00D::#
+
+
+; The number keys
++SC029::~
++SC002::%
++SC003::7
++SC004::5
++SC005::3
++SC006::1
++SC007::9
++SC008::0
++SC009::2
++SC00A::4
++SC00B::6
++SC00C::8
++SC00D::`
 
 ; The Top Row
 SC010::s
