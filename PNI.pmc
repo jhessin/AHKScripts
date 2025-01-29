@@ -26,11 +26,11 @@ Groups=Start:1,OffsetTools:2,Common:6
 014|Left Move & Click|484, 147 Left, 1|1|200|Click|||Update Drafting Line|||
 015|Left Move & Click|410, 147 Left, 1|1|200|Click|||Drafting Line|||
 016|Left Move & Click|1523, 120 Left, 1|1|200|Click|||Building Outline|||
-17|AddressToStreet|_null := |1|0|Function||||||
+017|AddressToStreet|_null := |1|0|Function||||||
 018|AnnoUpdateStreet|_null := |1|0|Function||||||
 019|PowerPole|_null := |1|0|Function|||||3|
 020|PlaceText|_null := |1|0|Function||||||
-021|TrimDrop|_null := |1|0|Function|||||5|
+21|TrimDrop|_null := |1|0|Function|||||5|
 022|MoveByTrail|_null := |1|0|Function||||||
 023|DataBlocks|_null := |1|0|Function||||||
 024|PlaceLeader|_null := |1|0|Function|||||3|
