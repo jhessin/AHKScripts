@@ -14,3 +14,13 @@ Groups=Start:1
 3|[Text]|{ALT UP}|1|0|Send||||||
 4|[Text]|/|1|30|SendRaw||||||
 
+[PMC Code v5.4.1]|F5||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|NextAmp
+Context=None|
+Groups=Start:1
+1|[Text]|{NUMPAD1}{DOWN}|1|0|Send||||||
+
+[PMC Code v5.4.1]|F6||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|Rename
+Context=None|
+Groups=Start:1
+1|[Text]|{NUMPADDOT}{NUMPADADD}|1|0|Send||||||
+
