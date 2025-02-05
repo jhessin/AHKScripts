@@ -17,7 +17,7 @@ Groups=Start:1,OffsetTools:2,Common:6
 05|BorderAnnotation|_null := |1|0|Function||||||
 06|Scratch|_null := |1|0|Function||||||
 07|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
-08|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
+8|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
 09|Left Move & Click|457, 145 Left, 1|1|500|Click|||Place Text|||
 010|CircleUp|_null := |1|0|Function||||||
 011|SlackSpan|_null := |1|0|Function||||||
@@ -29,7 +29,7 @@ Groups=Start:1,OffsetTools:2,Common:6
 017|Left Move & Click|1523, 120 Left, 1|1|200|Click|||Building Outline|||
 018|AddressToStreet|_null := |1|0|Function||||||
 019|AnnoUpdateStreet|_null := |1|0|Function||||||
-020|PowerPole|_null := |1|0|Function|||||3|
+20|PowerPole|_null := |1|0|Function|||||3|
 021|PlaceText|_null := |1|0|Function||||||
 022|TrimDrop|_null := |1|0|Function|||||5|
 023|MoveByTrail|_null := |1|0|Function||||||
@@ -39,7 +39,7 @@ Groups=Start:1,OffsetTools:2,Common:6
 027|UpdateGeometry|_null := |1|0|Function||||||
 028|RespecAmp|_null := |1|0|Function||||||
 029|Left Move & Click|1399, 93 Left, 1|1|200|Click|||Update Object||3|
-30|Left Move & Click|88, 429 Left, 1|1|200|Click||||||
+030|Left Move & Click|88, 429 Left, 1|1|200|Click||||||
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
