@@ -61,7 +61,7 @@ Groups=Start:1,Actions:2,END:24
 014|Left Move & Click|1335, 430 Left, 1|1|200|Click|||Row 12|||
 015|Left Move & Click|1335, 510 Left, 1|1|200|Click|||Row 16|||
 016|Left Move & Click|1335, 550 Left, 1|1|200|Click|||ROW 18|||
-017|[Text]|C|1|50|Send||||||
+017|[Text]|R|1|50|Send||||||
 018|Left Move & Click|572, 1005 Left, 1|1|200|Click|||Zoom|||
 019|StandardZoom|_null := 500|1|0|Function||||||
 020|[Text]|P|1|0|Send|||Paste|||
