@@ -16,7 +16,7 @@ Groups=Start:1,OffsetTools:2,Common:6
 04|OffsetCount|_null := |1|0|Function||||||
 05|BorderAnnotation|_null := |1|0|Function||||||
 06|Scratch|_null := |1|0|Function||||||
-7|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
+07|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
 08|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
 09|Left Move & Click|457, 145 Left, 1|1|500|Click|||Place Text|||
 010|CircleUp|_null := |1|0|Function||||||
@@ -31,26 +31,27 @@ Groups=Start:1,OffsetTools:2,Common:6
 019|AnnoUpdateStreet|_null := |1|0|Function||||||
 020|PowerPole|_null := |1|0|Function|||||3|
 021|PlaceText|_null := |1|0|Function||||||
-022|TrimDrop|_null := |1|0|Function|||||5|
-023|MoveByTrail|_null := |1|0|Function||||||
-024|DataBlocks|_null := |1|0|Function||||||
-025|PlaceLeader|_null := |1|0|Function|||||3|
-026|Left Move & Click|1422, 213 Left, 1|1|200|Click||||||
-027|[Text]|U|1|50|Send||||||
-028|UpdateGeometry|_null := |1|0|Function||||||
-029|RespecAmp|_null := |1|0|Function||||||
-030|Left Move & Click|1356, 93 Left, 1|1|200|Click|||Update Object||3|
-031|Left Move & Click|88, 429 Left, 1|1|200|Click||||||
+22|StrandAnnotation|_null := |1|0|Function||||||
+023|TrimDrop|_null := |1|0|Function|||||5|
+024|MoveByTrail|_null := |1|0|Function||||||
+025|DataBlocks|_null := |1|0|Function||||||
+026|PlaceLeader|_null := |1|0|Function|||||3|
+027|Left Move & Click|1417, 390 Left, 1|1|200|Click||||||
+028|[Text]|M|2|50|Send||||||
+029|UpdateGeometry|_null := |1|0|Function||||||
+030|RespecAmp|_null := |1|0|Function||||||
+031|Left Move & Click|1377, 93 Left, 1|1|200|Click|||Update Object||3|
+032|Left Move & Click|88, 429 Left, 1|1|200|Click||||||
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
 Groups=Start:1,Actions:2,END:24
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 02|[Text]|+|1|0|SendRaw|||Passthrough||3|
-3|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
+03|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
 04|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
 05|Left Move & Click|1560, 232 Left, 1|2|800|Click|||Row 2 END||3|
-06|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
+6|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
 07|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
 08|Left Move & Click|1335, 290 Left, 1|1|200|Click|||Row 5|||
 09|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
@@ -440,4 +441,13 @@ Groups=Start:1
 2|Left Move & Click|1494, 122 Left, 1|1|500|Click||||||
 3|Left Move & Click|1492, 147 Left, 1|1|200|Click||||||
 4|AddressToBuilding|_null := |1|0|Function||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|StrandAnnotation()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|StrandAnnotation|1|600|UserFunction|Local| / ||||
+2|Left Move & Click|1418, 117 Left, 1|1|600|Click||||||
+3|Left Move & Click|1404, 160 Left, 1|1|600|Click||||||
+4|Left Move & Click|1418, 117 Left, 1|1|600|Click||||||
+5|Left Move & Click|1413, 143 Left, 1|1|600|Click||||||
 
