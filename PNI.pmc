@@ -26,22 +26,19 @@ Groups=Start:1,OffsetTools:2,Common:6
 014|AddressToAmp|_null := |1|0|Function||||||
 015|Left Move & Click|484, 147 Left, 1|1|200|Click|||Update Drafting Line|||
 016|Left Move & Click|410, 147 Left, 1|1|200|Click|||Drafting Line|||
-017|Left Move & Click|1523, 120 Left, 1|1|200|Click|||Building Outline|||
+17|Left Move & Click|1523, 120 Left, 1|1|200|Click|||Building Outline|||
 018|AddressToStreet|_null := |1|0|Function||||||
 019|AnnoUpdateStreet|_null := |1|0|Function||||||
 020|PowerPole|_null := |1|0|Function|||||3|
 021|PlaceText|_null := |1|0|Function||||||
-22|StrandAnnotation|_null := |1|0|Function||||||
+022|StrandAnnotation|_null := |1|0|Function||||||
 023|TrimDrop|_null := |1|0|Function|||||5|
 024|MoveByTrail|_null := |1|0|Function||||||
 025|DataBlocks|_null := |1|0|Function||||||
 026|PlaceLeader|_null := |1|0|Function|||||3|
-027|Left Move & Click|1417, 390 Left, 1|1|200|Click||||||
-028|[Text]|M|2|50|Send||||||
-029|UpdateGeometry|_null := |1|0|Function||||||
-030|RespecAmp|_null := |1|0|Function||||||
-031|Left Move & Click|1377, 93 Left, 1|1|200|Click|||Update Object||3|
-032|Left Move & Click|88, 429 Left, 1|1|200|Click||||||
+027|UpdateGeometry|_null := |1|0|Function||||||
+028|RespecAmp|_null := |1|0|Function||||||
+029|RenameAddress|_null := |1|0|Function||||||
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
@@ -360,14 +357,6 @@ Groups=Start:1
 5|[Pause]||1|300|Sleep|||||7|
 6|[LoopEnd]|LoopEnd|1|0|Loop|||||8|
 
-[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Scratch()
-Context=None|
-Groups=Start:1
-1|[FunctionStart]|Scratch|1|0|UserFunction|Global| / |||1|
-2|Left Move & Click|1368, 214 Left, 1|1|200|Click||||||
-3|[Text]|R|1|0|Send||||||
-4|Left Move & Click|1377, 92 Left, 1|1|200|Click||||||
-
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|StandardZoom()
 Context=None|
 Groups=Start:1
@@ -450,4 +439,20 @@ Groups=Start:1
 3|Left Move & Click|1404, 160 Left, 1|1|600|Click||||||
 4|Left Move & Click|1418, 117 Left, 1|1|600|Click||||||
 5|Left Move & Click|1413, 143 Left, 1|1|600|Click||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|RenameAddress()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|RenameAddress|1|0|UserFunction|Local| / ||||
+2|Left Move & Click|1381, 210 Left, 1|1|200|Click||||||
+3|[Text]|^k|1|0|Send||||||
+4|Left Move & Click|1376, 91 Left, 1|1|200|Click|||Update Object||3|
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|Scratch()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|Scratch|1|0|UserFunction|Global| / |||1|
+2|Left Move & Click|1439, 391 Left, 1|1|200|Click||||||
+3|[Text]|M|1|0|Send||||||
+4|Left Move & Click|1377, 94 Left, 1|1|200|Click||||||
 
