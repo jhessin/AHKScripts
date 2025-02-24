@@ -15,14 +15,14 @@ Groups=Start:1,OffsetTools:2,Common:6
 03|[Text]|{BACKSPACE}|1|0|Send||||||
 04|OffsetCount|_null := |1|0|Function||||||
 05|BorderAnnotation|_null := |1|0|Function||||||
-6|Scratch|_null := |1|0|Function||||||
+06|Scratch|_null := |1|0|Function||||||
 07|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
 08|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
 09|Left Move & Click|457, 145 Left, 1|1|500|Click|||Place Text|||
 010|CircleUp|_null := |1|0|Function||||||
 011|SlackSpan|_null := |1|0|Function||||||
 012|ResizeCable|_null := |1|0|Function||||||
-013|AddressToBuilding|_null := |1|0|Function||||||
+13|AddressToBuilding|_null := |1|0|Function||||||
 014|AddressToAmp|_null := |1|0|Function||||||
 015|Left Move & Click|484, 147 Left, 1|1|200|Click|||Update Drafting Line|||
 016|Left Move & Click|410, 147 Left, 1|1|200|Click|||Drafting Line|||
@@ -49,10 +49,10 @@ Groups=Start:1,Actions:2,END:24
 03|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
 04|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
 05|Left Move & Click|1560, 232 Left, 1|2|800|Click|||Row 2 END||3|
-6|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
+06|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
 07|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
 08|Left Move & Click|1335, 290 Left, 1|1|200|Click|||Row 5|||
-09|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
+9|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
 010|Left Move & Click|1335, 330 Left, 1|1|200|Click|||Row 7|||
 011|Left Move & Click|1335, 350 Left, 1|1|200|Click|||Row 8|||
 012|Left Move & Click|1335, 370 Left, 1|1|200|Click|||Row 9|||
@@ -428,7 +428,6 @@ Groups=Start:1
 1|[FunctionStart]|AddressToBuilding|1|0|UserFunction|Local| / ||||
 2|Left Move & Click|1494, 122 Left, 1|1|500|Click||||||
 3|Left Move & Click|1492, 147 Left, 1|1|200|Click||||||
-4|AddressToBuilding|_null := |1|0|Function||||||
 
 [PMC Code v5.4.1]|||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|StrandAnnotation()
 Context=None|
@@ -451,8 +450,8 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|Scratch|1|0|UserFunction|Global| / |||1|
-2|Left Move & Click|1447, 392 Left, 1|1|200|Click||||||
+02|Left Move & Click|1447, 392 Left, 1|1|200|Click||||||
 03|[Text]|2{ENTER}2{ENTER}{ENTER}{ENTER}MM|1|0|Send||||||
-4|[Text]|MM|1|0|Send||||||
+04|[Text]|MM|1|0|Send||||||
 5|Left Move & Click|1376, 92 Left, 1|1|200|Click||||||
 
