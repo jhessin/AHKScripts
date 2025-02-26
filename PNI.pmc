@@ -23,7 +23,7 @@ Groups=Start:1,OffsetTools:2,Common:6
 011|SlackSpan|_null := |1|0|Function||||||
 012|ResizeCable|_null := |1|0|Function||||||
 013|AddressToBuilding|_null := |1|0|Function||||||
-014|AddressToAmp|_null := |1|0|Function||||||
+14|AddressToAmp|_null := |1|0|Function||||||
 015|Left Move & Click|484, 147 Left, 1|1|200|Click|||Update Drafting Line|||
 016|Left Move & Click|410, 147 Left, 1|1|200|Click|||Drafting Line|||
 017|Left Move & Click|1523, 120 Left, 1|1|200|Click|||Building Outline|||
