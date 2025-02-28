@@ -22,8 +22,8 @@ Groups=Start:1,OffsetTools:2,Common:6
 010|CircleUp|_null := |1|0|Function||||||
 011|SlackSpan|_null := |1|0|Function||||||
 012|ResizeCable|_null := |1|0|Function||||||
-013|AddressToBuilding|_null := |1|0|Function||||||
-14|AddressToAmp|_null := |1|0|Function||||||
+13|AddressToBuilding|_null := |1|0|Function||||||
+014|AddressToAmp|_null := |1|0|Function||||||
 015|Left Move & Click|484, 147 Left, 1|1|200|Click|||Update Drafting Line|||
 016|Left Move & Click|410, 147 Left, 1|1|200|Click|||Drafting Line|||
 017|Left Move & Click|1523, 120 Left, 1|1|200|Click|||Building Outline|||
@@ -450,8 +450,8 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|Scratch|1|0|UserFunction|Global| / |||1|
-02|Left Move & Click|1447, 392 Left, 1|1|200|Click||||||
+2|Left Move & Click|1407, 391 Left, 1|1|200|Click||||||
 03|[Text]|2{ENTER}2{ENTER}{ENTER}{ENTER}MM|1|0|Send||||||
-04|[Text]|MM|1|0|Send||||||
-5|Left Move & Click|1376, 92 Left, 1|1|200|Click||||||
+4|[Text]|MM|1|0|Send||||||
+5|Left Move & Click|1379, 94 Left, 1|1|200|Click||||||
 
