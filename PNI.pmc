@@ -16,14 +16,14 @@ Groups=Start:1,OffsetTools:2,Common:6
 04|OffsetCount|_null := |1|0|Function||||||
 05|BorderAnnotation|_null := |1|0|Function||||||
 06|Scratch|_null := |1|0|Function||||||
-07|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
+7|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
 08|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
 09|Left Move & Click|457, 145 Left, 1|1|500|Click|||Place Text|||
 010|CircleUp|_null := |1|0|Function||||||
 011|SlackSpan|_null := |1|0|Function||||||
 012|ResizeCable|_null := |1|0|Function||||||
-13|AddressToBuilding|_null := |1|0|Function||||||
-014|AddressToAmp|_null := |1|0|Function||||||
+013|AddressToBuilding|_null := |1|0|Function||||||
+14|AddressToAmp|_null := |1|0|Function||||||
 015|Left Move & Click|484, 147 Left, 1|1|200|Click|||Update Drafting Line|||
 016|Left Move & Click|410, 147 Left, 1|1|200|Click|||Drafting Line|||
 017|Left Move & Click|1523, 120 Left, 1|1|200|Click|||Building Outline|||
@@ -39,18 +39,20 @@ Groups=Start:1,OffsetTools:2,Common:6
 027|UpdateGeometry|_null := |1|0|Function||||||
 028|RespecAmp|_null := |1|0|Function||||||
 029|RenameAddress|_null := |1|0|Function||||||
-030|Left Move & Click|1375, 91 Left, 1|1|200|Click||||||
+30|Left Move & Click|138, 434 Left, 1|1|600|Click||||||
+31|Left Move & Click|1274, 735 Left, 1|1|600|Click||||||
+32|Left Move & Click|1358, 753 Left, 2|1|600|Click||||||
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
 Groups=Start:1,Actions:2,END:24
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 02|[Text]|+|1|0|SendRaw|||Passthrough||3|
-03|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
+3|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
 04|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
 05|Left Move & Click|1560, 232 Left, 1|2|800|Click|||Row 2 END||3|
 06|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
-7|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
+07|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
 08|Left Move & Click|1335, 290 Left, 1|1|200|Click|||Row 5|||
 09|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
 010|Left Move & Click|1335, 330 Left, 1|1|200|Click|||Row 7|||
@@ -452,6 +454,6 @@ Groups=Start:1
 1|[FunctionStart]|Scratch|1|0|UserFunction|Global| / |||1|
 2|Left Move & Click|1407, 391 Left, 1|1|200|Click||||||
 03|[Text]|2{ENTER}2{ENTER}{ENTER}{ENTER}MM|1|0|Send||||||
-4|[Text]|MM|1|0|Send||||||
+4|[Text]|M|1|0|Send||||||
 5|Left Move & Click|1379, 94 Left, 1|1|200|Click||||||
 
