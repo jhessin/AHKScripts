@@ -16,7 +16,7 @@ Groups=Start:1,OffsetTools:2,Common:6
 04|OffsetCount|_null := |1|0|Function||||||
 05|BorderAnnotation|_null := |1|0|Function||||||
 06|Scratch|_null := |1|0|Function||||||
-7|Left Move & Click|88, 431 Left, 1|1|200|Click|||Open||3|
+7|Left Move & Click|186, 435 Left, 1|1|200|Click|||Open||3|
 08|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
 09|Left Move & Click|457, 145 Left, 1|1|500|Click|||Place Text|||
 010|CircleUp|_null := |1|0|Function||||||
@@ -40,8 +40,8 @@ Groups=Start:1,OffsetTools:2,Common:6
 028|RespecAmp|_null := |1|0|Function||||||
 029|RenameAddress|_null := |1|0|Function||||||
 30|Left Move & Click|138, 434 Left, 1|1|600|Click||||||
-31|Left Move & Click|1274, 735 Left, 1|1|600|Click||||||
-32|Left Move & Click|1358, 753 Left, 2|1|600|Click||||||
+031|Left Move & Click|1274, 735 Left, 1|1|600|Click||||||
+032|Left Move & Click|1358, 753 Left, 2|1|600|Click||||||
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
