@@ -26,7 +26,7 @@ Groups=Start:1,OffsetTools:2,Common:6
 014|AddressToAmp|_null := |1|0|Function||||||
 015|AddressToStreet|_null := |1|0|Function||||||
 016|Left Move & Click|484, 147 Left, 1|1|200|Click|||Update Drafting Line|||
-017|Left Move & Click|410, 147 Left, 1|1|200|Click|||Drafting Line|||
+17|Left Move & Click|410, 147 Left, 1|1|200|Click|||Drafting Line|||
 018|Left Move & Click|1523, 120 Left, 1|1|200|Click|||Building Outline|||
 019|AnnoUpdateStreet|_null := |1|0|Function||||||
 020|PowerPole|_null := |1|0|Function|||||3|
