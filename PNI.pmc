@@ -19,10 +19,10 @@ Groups=Start:1,OffsetTools:2,Common:6
 07|Left Move & Click|186, 435 Left, 1|1|200|Click|||Open||3|
 08|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
 09|Left Move & Click|457, 145 Left, 1|1|500|Click|||Place Text|||
-010|CircleUp|_null := |1|0|Function||||||
+10|CircleUp|_null := |1|0|Function||||||
 011|SlackSpan|_null := |1|0|Function||||||
 012|ResizeCable|_null := |1|0|Function||||||
-13|AddressToBuilding|_null := |1|0|Function||||||
+013|AddressToBuilding|_null := |1|0|Function||||||
 014|AddressToAmp|_null := |1|0|Function||||||
 015|AddressToStreet|_null := |1|0|Function||||||
 016|Left Move & Click|484, 147 Left, 1|1|200|Click|||Update Drafting Line|||
@@ -52,7 +52,7 @@ Groups=Start:1,Actions:2,END:24
 04|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
 05|Left Move & Click|1560, 232 Left, 1|2|800|Click|||Row 2 END||3|
 06|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
-7|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
+07|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
 08|Left Move & Click|1335, 290 Left, 1|1|200|Click|||Row 5|||
 09|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
 010|Left Move & Click|1335, 330 Left, 1|1|200|Click|||Row 7|||
@@ -68,7 +68,7 @@ Groups=Start:1,Actions:2,END:24
 020|[Text]|P|1|0|Send|||Paste|||
 021|Left Move & Click|1267, 124 Left, 1|1|200|Click|||GOTO|||
 022|Left Move & Click|1378, 92 Left, 1|1|200|Click|||Update Address|||
-023|Left Move & Click|57, 1005 Left, 1|1|200|Click|||Trail Length|||
+23|Left Move & Click|57, 1005 Left, 1|1|200|Click|||Trail Length|||
 24|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||6|
 
 [PMC Code v5.4.1]|F11||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|F11
@@ -452,17 +452,18 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|Scratch|1|0|UserFunction|Global| / |||1|
-02|Left Move & Click|1460, 252 Left, 1|1|200|Click|||Count|||
+2|Left Move & Click|1460, 252 Left, 1|1|200|Click|||Count|||
 03|Left Move & Click|1452, 371 Left, 1|1|200|Click|||Cable Type|||
-04|Left Move & Click|1442, 388 Left, 1|1|200|Click|||Address|||
-5|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
-06|Left Move & Click|1502, 120 Left, 1|1|200|Click||||||
-07|[Text]|2{ENTER}2{ENTER}{ENTER}{ENTER}MM|1|0|Send||||||
+04|Left Move & Click|1438, 313 Left, 1|1|200|Click|||Address Count|||
+05|Left Move & Click|1405, 393 Left, 1|1|200|Click|||Address Type|||
+06|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
+07|[Text]|2{ENTER}2{ENTER}{ENTER}{ENTER}MM|1|200|Send||||||
 08|Left Move & Click|1482, 161 Left, 1|1|200|Click||||||
-9|[Text]|^k|1|0|Send||||||
-010|[Text]|R|1|0|Send||||||
-011|[Text]|MM|1|0|Send||||||
-012|Left Move & Click|1398, 89 Left, 1|1|200|Click|||Count|||
-13|Left Move & Click|1375, 91 Left, 1|1|200|Click|||Address|||
-014|Left Move & Click|1377, 94 Left, 1|1|200|Click|||Cable|||
+09|[Text]|^k|1|200|Send||||||
+10|[Text]|R|1|200|Send||||||
+011|[Text]|1{ENTER}1{ENTER}{ENTER}{ENTER}R|1|200|Send||||||
+012|[Text]|MM|1|200|Send||||||
+13|Left Move & Click|1398, 89 Left, 1|1|200|Click|||Count|||
+014|Left Move & Click|1375, 91 Left, 1|1|200|Click|||Address|||
+015|Left Move & Click|1377, 94 Left, 1|1|200|Click|||Cable|||
 
