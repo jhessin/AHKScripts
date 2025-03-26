@@ -29,7 +29,7 @@ Groups=Start:1,OffsetTools:2,Common:6
 017|Left Move & Click|410, 147 Left, 1|1|200|Click|||Drafting Line|||
 018|Left Move & Click|1523, 120 Left, 1|1|200|Click|||Building Outline|||
 019|AnnoUpdateStreet|_null := |1|0|Function||||||
-020|PowerPole|_null := |1|0|Function|||||3|
+20|PowerPole|_null := |1|0|Function|||||3|
 021|PlaceText|_null := |1|0|Function||||||
 022|StrandAnnotation|_null := |1|0|Function||||||
 023|TrimDrop|_null := |1|0|Function|||||5|
@@ -140,8 +140,8 @@ Groups=Start:1
 010|[Text]|P|6|0|SendRaw|||P1-750-A|||
 011|[Text]|P|11|0|SendRaw|||P3-500-A|||
 012|[Text]|P|15|0|SendRaw|||P3-500-UG|||
-013|[Text]|P|22|0|SendRaw|||P3-625-Aerial|||
-14|[Text]|P|26|0|SendRaw|||P3-625-UG|||
+13|[Text]|P|22|0|SendRaw|||P3-625-Aerial|||
+014|[Text]|P|26|0|SendRaw|||P3-625-UG|||
 015|[Text]|P|33|0|SendRaw|||P3-750-A|||
 016|[Text]|P|37|0|SendRaw|||P3-750-U|||
 017|[Text]|P|40|0|SendRaw|||P3-875-A|||
