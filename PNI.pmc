@@ -39,7 +39,7 @@ Groups=Start:1,OffsetTools:2,Common:6
 027|UpdateGeometry|_null := |1|0|Function||||||
 028|RespecAmp|_null := |1|0|Function||||||
 029|RenameAddress|_null := |1|0|Function||||||
-030|Left Move & Click|138, 434 Left, 1|1|600|Click||||||
+030|Left Move & Click|1379, 92 Left, 1|1|600|Click||||||
 031|Left Move & Click|1274, 735 Left, 1|1|600|Click||||||
 032|Left Move & Click|1358, 753 Left, 2|1|600|Click||||||
 
@@ -51,8 +51,8 @@ Groups=Start:1,Actions:2,END:24
 03|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
 04|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
 05|Left Move & Click|1560, 232 Left, 1|2|800|Click|||Row 2 END||3|
-06|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
-7|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
+6|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
+07|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
 08|Left Move & Click|1335, 290 Left, 1|1|200|Click|||Row 5|||
 09|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
 010|Left Move & Click|1335, 330 Left, 1|1|200|Click|||Row 7|||
