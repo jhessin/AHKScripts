@@ -48,10 +48,10 @@ Context=None|
 Groups=Start:1,Actions:2,END:24
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 02|[Text]|+|1|0|SendRaw|||Passthrough||3|
-03|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
+3|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
 04|Left Move & Click|1335, 230 Left, 1|1|30|Click|||Row 2||3|
 05|Left Move & Click|1560, 232 Left, 1|2|800|Click|||Row 2 END||3|
-6|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
+06|Left Move & Click|1335, 250 Left, 1|1|200|Click|||Row 3|||
 07|Left Move & Click|1335, 270 Left, 1|1|200|Click|||Row 4|||
 08|Left Move & Click|1335, 290 Left, 1|1|200|Click|||Row 5|||
 09|Left Move & Click|1335, 310 Left, 1|1|200|Click|||Row 6|||
@@ -452,18 +452,23 @@ Groups=Start:1
 Context=None|
 Groups=Start:1
 1|[FunctionStart]|Scratch|1|0|UserFunction|Global| / |||1|
-02|Left Move & Click|1460, 252 Left, 1|1|200|Click|||Count|||
-03|Left Move & Click|1452, 371 Left, 1|1|200|Click|||Cable Type|||
-04|Left Move & Click|1438, 313 Left, 1|1|200|Click|||Address Count|||
-5|Left Move & Click|1405, 393 Left, 1|1|200|Click|||Address Type|||
-06|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
-07|[Text]|2{ENTER}2{ENTER}{ENTER}{ENTER}MM|1|200|Send||||||
-08|Left Move & Click|1482, 161 Left, 1|1|200|Click||||||
-09|[Text]|^k|1|200|Send||||||
-10|[Text]|C|1|200|Send||||||
-011|[Text]|1{ENTER}1{ENTER}{ENTER}{ENTER}R|1|200|Send||||||
-012|[Text]|MM|1|200|Send||||||
-013|Left Move & Click|1398, 89 Left, 1|1|200|Click|||Count|||
-14|Left Move & Click|1375, 91 Left, 1|1|200|Click|||Address|||
-015|Left Move & Click|1377, 94 Left, 1|1|200|Click|||Cable|||
+02|Left Move & Click|1447, 253 Left, 1|1|200|Click|||Pole Type|||
+03|Left Move & Click|1460, 252 Left, 1|1|200|Click|||Count|||
+04|Left Move & Click|1452, 371 Left, 1|1|200|Click|||Cable Type|||
+05|Left Move & Click|1438, 313 Left, 1|1|200|Click|||Address Count|||
+06|Left Move & Click|1405, 393 Left, 1|1|200|Click|||Address Type|||
+7|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Drop Type|||
+08|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
+09|[Text]|2{ENTER}2{ENTER}{ENTER}{ENTER}MM|1|200|Send||||||
+010|Left Move & Click|1482, 161 Left, 1|1|200|Click||||||
+011|[Text]|^k|1|200|Send||||||
+012|[Text]|P|1|200|Send||||||
+13|[Text]|U|1|200|Send||||||
+014|[Text]|C|1|200|Send||||||
+015|[Text]|1{ENTER}1{ENTER}{ENTER}{ENTER}R|1|200|Send||||||
+016|[Text]|MM|1|200|Send||||||
+017|Left Move & Click|1398, 89 Left, 1|1|200|Click|||Count|||
+018|Left Move & Click|1375, 91 Left, 1|1|200|Click|||Address|||
+019|Left Move & Click|1377, 94 Left, 1|1|200|Click|||Cable|||
+20|Left Move & Click|1352, 94 Left, 1|1|200|Click|||Drop|||
 
