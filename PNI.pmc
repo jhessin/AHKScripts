@@ -45,7 +45,7 @@ Groups=Start:1,OffsetTools:2,Common:6
 
 [PMC Code v5.4.1]|NumpadAdd||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|NumPlusMacro
 Context=None|
-Groups=Start:1,Actions:2,END:24
+Groups=Start:1,Actions:2,END:25
 1|MouseGetPos|StartX, StartY|1|30|MouseGetPos|||||1|
 02|[Text]|+|1|0|SendRaw|||Passthrough||3|
 03|Left Move & Click|1335, 210 Left, 1|1|200|Click|||Row 1|||
@@ -68,8 +68,9 @@ Groups=Start:1,Actions:2,END:24
 020|[Text]|P|1|0|Send|||Paste|||
 021|Left Move & Click|1267, 124 Left, 1|1|200|Click|||GOTO|||
 022|Left Move & Click|1378, 92 Left, 1|1|200|Click|||Update Address|||
-23|Left Move & Click|57, 1005 Left, 1|1|200|Click|||Trail Length|||
-24|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||6|
+23|Left Move & Click|116, 147 Left, 1|1|200|Click|||Reverse Trail||3|
+024|Left Move & Click|57, 1005 Left, 1|1|200|Click|||Trail Length|||
+25|Move|{Click, %StartX%, %StartY%, 0}|1|30|SendEvent|||||6|
 
 [PMC Code v5.4.1]|F11||1|Screen,2,Fast,1,1,Input,-1,-1,1|1|F11
 Context=None|
