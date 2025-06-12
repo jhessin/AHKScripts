@@ -33,44 +33,44 @@ SC00D::#
 +SC00D::`
 
 ; The Top Row
-SC010::s
-SC011::w
-SC012::v
-SC013::l
-SC014::f
-SC015::u
-SC016::i
-SC017::j
-SC018::p
-SC019::n
-SC01A::z
-SC01B::7
+SC010::;
+SC011::,
+SC012::.
+SC013::p
+SC014::y
+SC015::f
+SC016::g
+SC017::c
+SC018::r
+SC019::l
+SC01A::/
+SC01B::@
 SC02B::\
 
 ; Row 2
 SC01E::a
-SC01F::r
-SC020::.
-SC021::g
-SC022::c
-SC023::e
-SC024::d
-SC025::y
-SC026::b
-SC027::o
-SC028::!
+SC01F::o
+SC020::e
+SC021::u
+SC022::i
+SC023::d
+SC024::h
+SC025::t
+SC026::n
+SC027::s
+SC028::-
 
 ; Row 3
-SC02C::-
-SC02D::;
-SC02E::h
-SC02F::t
-SC030::q
-SC031::x
+SC02C::'
+SC02D::q
+SC02E::j
+SC02F::k
+SC030::x
+SC031::b
 SC032::m
 SC033::w
-SC034::k
-SC035::'
+SC034::v
+SC035::z
 
 ; The Numpad
 SC047::1
