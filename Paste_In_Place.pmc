@@ -1,0 +1,6 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|F3||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|[Text]|{ctrl down}{right}{shift down}v{shift up}{ctrl up}|1|0|Send||||||
+
