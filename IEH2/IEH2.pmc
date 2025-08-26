@@ -2,25 +2,7 @@
 [PMC Code v5.4.1]|F3||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|Macro1
 Context=None|
 Groups=Start:1
-1|[LoopStart]|LoopStart|0|0|Loop|||||1|
-2|Left Click, Continue, FoundX, FoundY, 1|1062, 182, 1729, 502, C:\Users\jhess\repos\AHKScripts\IEH2\Screen_20250111214117.png|1|0|ImageSearch|UntilNotFound|Screen|||3|
-3|Move|302, 628, 0|1|10|Click|||||12|
-4|Left Click, Continue, FoundX, FoundY, 1|1062, 182, 1729, 502, C:\Users\jhess\repos\AHKScripts\IEH2\Screen_20250111214129.png|1|0|ImageSearch|UntilNotFound|Screen|||14|
-5|Move|302, 628, 0|1|10|Click|||||23|
-6|Left Click, Continue, FoundX, FoundY, 1|1062, 182, 1729, 502, C:\Users\jhess\repos\AHKScripts\IEH2\Screen_20250111230231.png|1|0|ImageSearch|UntilNotFound|Screen|||25|
-7|Move|302, 628, 0|1|10|Click|||||34|
-8|Continue, Continue, FoundX, FoundY, 1|1061, 168, 1851, 567, C:\Users\jhess\repos\AHKScripts\IEH2\Screen_20250111214236.png|1|0|ImageSearch||Screen|||36|
-9|If Image/Pixel Found||1|0|If_Statement|||||39|
-10|Left Move & Click|1392, 467 Left, 1|1|10|Click|||||41|
-11|Move|302, 628, 0|1|10|Click|||||43|
-12|[Else]|Else|1|0|If_Statement|||||45|
-13|Continue, Continue, FoundX, FoundY, 0|1034, 54, 1162, 106, C:\Users\jhess\repos\AHKScripts\IEH2\Screen_20250111220744.png|1|0|ImageSearch||Screen|||48|
-14|If Image/Pixel Found||1|0|If_Statement|||||50|
-15|Left Move & Click|1545, 466 Left, 1|1|10|Click|||||52|
-16|Move|302, 628, 0|1|10|Click|||||54|
-17|[End If]|EndIf|1|0|If_Statement|||||56|
-18|[End If]|EndIf|1|0|If_Statement|||||57|
-19|[LoopEnd]|LoopEnd|1|0|Loop|||||58|
+1|ClickFavorite|_null := |1|0|Function||||||
 
 [PMC Code v5.4.1]|F4||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|LabNitro
 Context=None|
@@ -45,13 +27,13 @@ Context=None|
 Groups=Start:1,ESC CHECK:2,End:8
 1|[LoopStart]|LoopStart|0|0|Loop|||||1|
 2|MouseGetPos|StartX, StartY|1|300|MouseGetPos|||||3|
-3|Left Move & Click|935, 178 Left, 1|1|300|Click|||Manual Rebirth||5|
-4|RebirthUpgrades|_null := |1|300|Function|||||7|
-5|Evaluate Expression|GetKeyState("Escape", "P")|1|300|If_Statement|||||8|
-6|Break||1|300|Break|||||10|
-7|[End If]|EndIf|1|300|If_Statement|||||12|
-8|Move|StartX, StartY, 0|1|10|Click|||||13|
-9|[LoopEnd]|LoopEnd|1|0|Loop|||||15|
+03|Left Move & Click|935, 178 Left, 1|1|300|Click|||Manual Rebirth||5|
+4|RebirthUpgrades|_null := |1|300|Function|||||8|
+5|Evaluate Expression|GetKeyState("Escape", "P")|1|300|If_Statement|||||10|
+6|Break||1|300|Break|||||12|
+7|[End If]|EndIf|1|300|If_Statement|||||14|
+8|Move|StartX, StartY, 0|1|10|Click|||||15|
+9|[LoopEnd]|LoopEnd|1|0|Loop|||||17|
 
 [PMC Code v5.4.1]|NumpadMult||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|RebirthUpgrades()
 Context=None|
@@ -67,4 +49,10 @@ Groups=Start:1
 9|Left Move & Click|995, 849 Left, 1|1|300|Click|||8||17|
 10|Left Move & Click|1000, 893 Left, 1|1|300|Click|||9||19|
 11|Left Move & Click|997, 932 Left, 1|1|300|Click|||10||21|
+
+[PMC Code v5.4.1]|F7||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|ClickFavorite()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|ClickFavorite|1|0|UserFunction|Local| / |||1|
+2|Left Move & Click|971, 233 Left, 1|1|10|Click|||||3|
 
