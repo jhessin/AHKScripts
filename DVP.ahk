@@ -1,6 +1,38 @@
 #Requires AutoHotkey v2.0
 
 
+; Some simple tweaks
+SetCapsLockState "AlwaysOff"
+SetNumLockState "AlwaysOn"
+CapsLock::Esc
+
+NeovimTest() {
+	; return RegExMatch(title, "(Neov(im)|(ide))")
+	return (
+		WinActive("ahk_exe Code.exe")
+		or WinActive("ahk_exe nvim-qt.exe")
+		or WinActive("ahk_exe WindowsTerminal.exe")
+	)
+}
+
+XBUTTON1::{
+	if (NeovimTest()) {
+		send("y")
+	} else {
+		send("{CTRL DOWN}c{CTRL UP}")
+	}
+}
+
+XBUTTON2::{
+	if (NeovimTest()) {
+		send("p")
+	} else {
+		send("{CTRL DOWN}v{CTRL UP}")
+		; send("{CTRL DOWN}k{CTRL UP}")
+	}
+}
+
+
 ; The number keys
 SC029::$
 SC002::&
