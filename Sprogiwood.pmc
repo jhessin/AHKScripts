@@ -1,0 +1,68 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|F3||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|WinActivate||1|333|WinActivate||Sproggiwood ahk_class UnityWndClass||||
+2|RestartAndSell|_null := |1|0|Function||||||
+3|[Pause]||1|300|Sleep||||||
+4|Flee|_null := |1|0|Function||||||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|RestartAndSell()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|RestartAndSell|1|0|UserFunction|Local| / ||||
+2|Left Move & Click|1564, 1328 Left, 1|1|0|Click|||Retry|||
+3|[Pause]||1|3391|Sleep||||||
+4|Left Move & Click|433, 1261 Left, 1|1|0|Click|||Potion|||
+5|[Pause]||1|219|Sleep||||||
+6|Left Move & Click|1580, 965 Left, 1|1|0|Click|||Sell|||
+
+[PMC Code v5.4.1]|||1|Screen,2,Fast,0,1,Input,-1,-1,1|1|Flee()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|Flee|1|0|UserFunction|Local| / ||||
+2|Escape|{Escape}|1|0|Send||||||
+3|[Pause]||1|641|Sleep||||||
+4|Left Move & Click|493, 1225 Left, 1|1|0|Click|||Flee|||
+5|[Pause]||1|300|Sleep||||||
+6|Continue, Continue, FoundX, FoundY|1114, 767, 1209, 874, 0x150505, 0, Fast RGB|1|0|PixelSearch||Screen||||
+7|If Image/Pixel Found||1|0|If_Statement||||||
+8|Down|{Down}|1|0|Send||||||
+9|Left|{Left}|1|0|Send||||||
+10|Down|{Down}|1|0|Send||||||
+11|[End If]|EndIf|1|0|If_Statement||||||
+12|Continue, Continue, FoundX, FoundY|1230, 771, 1329, 876, 0x150505, 0, Fast RGB|1|0|PixelSearch||Screen||||
+13|If Image/Pixel Found||1|0|If_Statement||||||
+14|Down|{Down}|1|0|Send||||||
+15|[End If]|EndIf|1|0|If_Statement||||||
+16|Continue, Continue, FoundX, FoundY|1334, 772, 1464, 868, 0x150505, 0, Fast RGB|1|0|PixelSearch||Screen||||
+17|If Image/Pixel Found||1|0|If_Statement||||||
+18|Down|{Down}|1|0|Send||||||
+19|Right|{Right}|1|0|Send||||||
+20|Down|{Down}|1|0|Send||||||
+21|[End If]|EndIf|1|0|If_Statement||||||
+22|Continue, Continue, FoundX, FoundY|1344, 653, 1456, 754, 0x150505, 0, Fast RGB|1|0|PixelSearch||Screen||||
+23|If Image/Pixel Found||1|0|If_Statement||||||
+24|Right|{Right}|1|0|Send||||||
+25|[End If]|EndIf|1|0|If_Statement||||||
+26|Continue, Continue, FoundX, FoundY|1351, 535, 1460, 645, 0x150505, 0, Fast RGB|1|0|PixelSearch||Screen||||
+27|If Image/Pixel Found||1|0|If_Statement||||||
+28|Right|{Right}|1|0|Send||||||
+29|Up|{Up}|1|0|Send||||||
+30|Right|{Right}|1|0|Send||||||
+31|[End If]|EndIf|1|0|If_Statement||||||
+32|Continue, Continue, FoundX, FoundY|1232, 529, 1341, 639, 0x150505, 0, Fast RGB|1|0|PixelSearch||Screen||||
+33|If Image/Pixel Found||1|0|If_Statement||||||
+34|Up|{Up}|1|0|Send||||||
+35|[End If]|EndIf|1|0|If_Statement||||||
+36|Continue, Continue, FoundX, FoundY|1115, 535, 1225, 640, 0x150505, 0, Fast RGB|1|0|PixelSearch||Screen||||
+37|If Image/Pixel Found||1|0|If_Statement||||||
+38|Up|{Up}|1|0|Send||||||
+39|Left|{Left}|1|0|Send||||||
+40|Up|{Up}|1|0|Send||||||
+41|[End If]|EndIf|1|0|If_Statement||||||
+42|Continue, Continue, FoundX, FoundY|1112, 650, 1218, 760, 0x150505, 0, Fast RGB|1|0|PixelSearch||Screen||||
+43|If Image/Pixel Found||1|0|If_Statement||||||
+44|Left|{Left}|1|0|Send||||||
+45|[End If]|EndIf|1|0|If_Statement||||||
+
