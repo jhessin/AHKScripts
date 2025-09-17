@@ -17,6 +17,7 @@ CapsLock::Esc
 DisableTest() {
 	return (WinActive("ahk_exe Gw2-64.exe")
 		or WinActive("ahk_exe GeForceNOW.exe")
+or WinActive("ahk_exe mstsc.exe")
 	)
 }
 
