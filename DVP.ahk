@@ -32,6 +32,7 @@ XBUTTON2::{
 	}
 }
 
+#HotIf NOT DisableTest()
 
 ; The number keys
 SC029::$
