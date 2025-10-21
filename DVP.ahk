@@ -6,17 +6,17 @@ SetCapsLockState "AlwaysOff"
 SetNumLockState "AlwaysOn"
 CapsLock::Esc
 
-NeovimTest() {
-	; return RegExMatch(title, "(Neov(im)|(ide))")
-	return (
-		WinActive("ahk_exe Code.exe")
-		or WinActive("ahk_exe nvim-qt.exe")
-		or WinActive("ahk_exe WindowsTerminal.exe")
+; This is the RegEx I use to test if Neovim or Neovide are active
+DisableTest() {
+	return (WinActive("ahk_exe Gw2-64.exe")
+		or WinActive("ahk_exe GeForceNOW.exe")
+		or WinActive("ahk_class EQ2ApplicationClass")
+		or WinActive("ahk_exe mstsc.exe")
 	)
 }
 
 XBUTTON1::{
-	if (NeovimTest()) {
+	if (DisableTest()) {
 		send("y")
 	} else {
 		send("{CTRL DOWN}c{CTRL UP}")
@@ -24,7 +24,7 @@ XBUTTON1::{
 }
 
 XBUTTON2::{
-	if (NeovimTest()) {
+	if (DisableTest()) {
 		send("p")
 	} else {
 		send("{CTRL DOWN}v{CTRL UP}")
