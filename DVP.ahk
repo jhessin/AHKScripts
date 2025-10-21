@@ -32,7 +32,7 @@ XBUTTON2::{
 	}
 }
 
-#HotIf NOT DisableTest()
+#HotIf NOT WinActive("ahk_exe mstsc.exe")
 
 ; The number keys
 SC029::$
