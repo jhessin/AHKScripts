@@ -8,10 +8,9 @@ CapsLock::Esc
 
 ; This is the RegEx I use to test if Neovim or Neovide are active
 DisableTest() {
-	return (WinActive("ahk_exe Gw2-64.exe")
-		or WinActive("ahk_exe GeForceNOW.exe")
-		or WinActive("ahk_class EQ2ApplicationClass")
-		or WinActive("ahk_exe mstsc.exe")
+	return (
+		WinActive("ahk_exe nvim-qt.exe")
+		; or WinActive("ahk_exe mstsc.exe")
 	)
 }
 
@@ -32,7 +31,7 @@ XBUTTON2::{
 	}
 }
 
-#HotIf NOT WinActive("ahk_exe mstsc.exe")
+; #HotIf NOT WinActive("ahk_exe mstsc.exe")
 
 ; The number keys
 SC029::$
