@@ -66,44 +66,13 @@ SC00D::#
 
 ; The Top Row
 SC010::;
-SC011::,
-SC012::.
-SC013::p
-SC014::y
-SC015::f
-SC016::g
-SC017::c
-SC018::r
-SC019::l
-SC01A::/
 SC01B::@
 +SC01B::^
-SC02B::\
 
 ; Row 2
-SC01E::a
-SC01F::o
-SC020::e
-SC021::u
-SC022::i
-SC023::d
-SC024::h
-SC025::t
-SC026::n
-SC027::s
-SC028::-
 
 ; Row 3
 SC02C::'
-SC02D::q
-SC02E::j
-SC02F::k
-SC030::x
-SC031::b
-SC032::m
-SC033::w
-SC034::v
-SC035::z
 
 ; The Numpad
 SC047::Numpad1
