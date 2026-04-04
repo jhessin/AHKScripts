@@ -5,6 +5,9 @@
 SetCapsLockState "AlwaysOff"
 SetNumLockState "AlwaysOn"
 CapsLock::Esc
+#SuspendExempt
+^CapsLock::Suspend
+#SuspendExempt False
 
 ; This is the RegEx I use to test if Neovim or Neovide are active
 DisableTest() {
