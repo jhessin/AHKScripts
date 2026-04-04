@@ -6,7 +6,15 @@ SetCapsLockState "AlwaysOff"
 SetNumLockState "AlwaysOn"
 CapsLock::Esc
 #SuspendExempt
-^CapsLock::Suspend
+^CapsLock::{
+	if (A_IsSuspended) {
+	 Tooltip "Resuming DVP"
+	} else {
+	 Tooltip "Suspending DVP"
+	}
+	SetTimer () => ToolTip(), 5000
+	Suspend
+}
 #SuspendExempt False
 
 ; This is the RegEx I use to test if Neovim or Neovide are active
