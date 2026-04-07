@@ -29,7 +29,7 @@ XBUTTON1::{
 	if (DisableTest()) {
 		send("y")
 	} else {
-		send("{CTRL DOWN}c{CTRL UP}")
+		send("{CTRL DOWN}{SC017}{CTRL UP}")
 	}
 }
 
@@ -37,8 +37,7 @@ XBUTTON2::{
 	if (DisableTest()) {
 		send("p")
 	} else {
-		send("{CTRL DOWN}v{CTRL UP}")
-		; send("{CTRL DOWN}k{CTRL UP}")
+		send("{CTRL DOWN}{SC034}{CTRL UP}")
 	}
 }
 
