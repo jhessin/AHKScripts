@@ -21,7 +21,7 @@ CapsLock::Esc
 DisableTest() {
 	return (
 		WinActive("ahk_exe nvim-qt.exe")
-		; or WinActive("ahk_exe mstsc.exe")
+		or WinActive("ahk_exe WindowsTerminal.exe")
 	)
 }
 
