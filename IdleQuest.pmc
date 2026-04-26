@@ -1,0 +1,64 @@
+﻿[PMC Globals]|WinActive|Idlequest ahk_class Chrome_WidgetWin_1|
+[PMC Code v5.4.1]|Left||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Prev_Level
+Context=None|
+Groups=Start:1
+1|Left Move & Click|22, 47 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|Right||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Next_Level
+Context=None|
+Groups=Start:1
+1|Left Move & Click|229, 51 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|Space||0|Window,2,Fast,0,1,Input,-1,-1,1|1|Click_madness
+Context=None|
+Groups=Start:1
+1|Evaluate Expression|GetKeyState("Space", "P")|1|0|If_Statement|||||1|
+2|Move|127, 46, 0|1|10|Click|||||3|
+3|[Else]|Else|1|0|If_Statement|||||5|
+4|ClickZone|_null := |1|0|Function|||||8|
+5|[End If]|EndIf|1|0|If_Statement|||||9|
+
+[PMC Code v5.4.1]|Numpad7||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Upgrade1
+Context=None|
+Groups=Start:1
+1|Left Move & Click|688, 89 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|Numpad8||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Upgrade2
+Context=None|
+Groups=Start:1
+1|Left Move & Click|704, 152 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|Numpad9||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Upgrade3
+Context=None|
+Groups=Start:1
+1|Left Move & Click|674, 195 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|Numpad4||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Upgrade4
+Context=None|
+Groups=Start:1
+1|Left Move & Click|685, 245 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|Numpad5||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Upgrade5
+Context=None|
+Groups=Start:1
+1|Left Move & Click|704, 299 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|Numpad0||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Team
+Context=None|
+Groups=Start:1
+1|Left Move & Click|668, 513 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|NumpadDot||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Gear
+Context=None|
+Groups=Start:1
+1|Left Move & Click|753, 513 Left, 1|1|10|Click||||||
+
+[PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|ClickZone()
+Context=None|
+Groups=Start:1
+1|[FunctionStart]|ClickZone|1|0|UserFunction|Global| / ||||
+2|Left Move & Click|300, 50 Left, 1|1|10|Click||||||
+3|Left Move & Click|300, 50 Left, 1|1|10|Click||||||
+4|Left Move & Click|300, 50 Left, 1|1|10|Click||||||
+5|Left Move & Click|600, 600 Left, 1|1|10|Click||||||
+
