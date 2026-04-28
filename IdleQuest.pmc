@@ -1,15 +1,15 @@
 ﻿[PMC Globals]|WinActive|Idlequest ahk_class Chrome_WidgetWin_1|
-[PMC Code v5.4.1]|Left||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Prev_Level
+[PMC Code v5.4.1]|4||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Prev_Level
 Context=None|
 Groups=Start:1
 1|Left Move & Click|22, 47 Left, 1|1|10|Click||||||
 
-[PMC Code v5.4.1]|Right||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Next_Level
+[PMC Code v5.4.1]|5||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Next_Level
 Context=None|
 Groups=Start:1
 1|Left Move & Click|229, 51 Left, 1|1|10|Click||||||
 
-[PMC Code v5.4.1]|Space||0|Window,2,Fast,0,1,Input,-1,-1,1|1|Click_madness
+[PMC Code v5.4.1]|2||0|Window,2,Fast,0,1,Input,-1,-1,1|1|Click_madness
 Context=None|
 Groups=Start:1
 1|Evaluate Expression|GetKeyState("Space", "P")|1|0|If_Statement|||||1|
@@ -18,27 +18,27 @@ Groups=Start:1
 4|ClickZone|_null := |1|0|Function|||||8|
 5|[End If]|EndIf|1|0|If_Statement|||||9|
 
-[PMC Code v5.4.1]|Numpad7||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Upgrade1
+[PMC Code v5.4.1]|7||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Upgrade1
 Context=None|
 Groups=Start:1
 1|Left Move & Click|688, 89 Left, 1|1|10|Click||||||
 
-[PMC Code v5.4.1]|Numpad8||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Upgrade2
+[PMC Code v5.4.1]|8||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Upgrade2
 Context=None|
 Groups=Start:1
 1|Left Move & Click|704, 152 Left, 1|1|10|Click||||||
 
-[PMC Code v5.4.1]|Numpad9||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Upgrade3
+[PMC Code v5.4.1]|9||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Upgrade3
 Context=None|
 Groups=Start:1
 1|Left Move & Click|674, 195 Left, 1|1|10|Click||||||
 
-[PMC Code v5.4.1]|Numpad4||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Upgrade4
+[PMC Code v5.4.1]|0||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Upgrade4
 Context=None|
 Groups=Start:1
 1|Left Move & Click|685, 245 Left, 1|1|10|Click||||||
 
-[PMC Code v5.4.1]|Numpad5||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Upgrade5
+[PMC Code v5.4.1]|NumpadAdd||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Upgrade5
 Context=None|
 Groups=Start:1
 1|Left Move & Click|704, 299 Left, 1|1|10|Click||||||
@@ -56,9 +56,76 @@ Groups=Start:1
 [PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|ClickZone()
 Context=None|
 Groups=Start:1
-1|[FunctionStart]|ClickZone|1|0|UserFunction|Global| / ||||
-2|Left Move & Click|300, 50 Left, 1|1|10|Click||||||
-3|Left Move & Click|300, 50 Left, 1|1|10|Click||||||
-4|Left Move & Click|300, 50 Left, 1|1|10|Click||||||
-5|Left Move & Click|600, 600 Left, 1|1|10|Click||||||
+1|[FunctionStart]|ClickZone|50|0|UserFunction|Global| / ||||
+2|Left Move & Click|300, 50 Left, 1|50|0|Click||||||
+3|Left Move & Click|350, 50 Left, 1|50|0|Click||||||
+4|Left Move & Click|400, 50 Left, 1|50|0|Click||||||
+5|Left Move & Click|450, 50 Left, 1|50|0|Click||||||
+6|Left Move & Click|500, 50 Left, 1|50|0|Click||||||
+7|Left Move & Click|550, 50 Left, 1|50|0|Click||||||
+8|Left Move & Click|300, 100 Left, 1|50|0|Click||||||
+9|Left Move & Click|350, 100 Left, 1|50|0|Click||||||
+10|Left Move & Click|400, 100 Left, 1|50|0|Click||||||
+11|Left Move & Click|450, 100 Left, 1|50|0|Click||||||
+12|Left Move & Click|500, 100 Left, 1|50|0|Click||||||
+13|Left Move & Click|550, 100 Left, 1|50|0|Click||||||
+14|Left Move & Click|300, 150 Left, 1|50|0|Click||||||
+15|Left Move & Click|350, 150 Left, 1|50|0|Click||||||
+16|Left Move & Click|400, 150 Left, 1|50|0|Click||||||
+17|Left Move & Click|450, 150 Left, 1|50|0|Click||||||
+18|Left Move & Click|500, 150 Left, 1|50|0|Click||||||
+19|Left Move & Click|550, 150 Left, 1|50|0|Click||||||
+20|Left Move & Click|300, 200 Left, 1|50|0|Click||||||
+21|Left Move & Click|350, 200 Left, 1|50|0|Click||||||
+22|Left Move & Click|400, 200 Left, 1|50|0|Click||||||
+23|Left Move & Click|450, 200 Left, 1|50|0|Click||||||
+24|Left Move & Click|500, 200 Left, 1|50|0|Click||||||
+25|Left Move & Click|550, 200 Left, 1|50|0|Click||||||
+26|Left Move & Click|300, 250 Left, 1|50|0|Click||||||
+27|Left Move & Click|350, 250 Left, 1|50|0|Click||||||
+28|Left Move & Click|400, 250 Left, 1|50|0|Click||||||
+29|Left Move & Click|450, 250 Left, 1|50|0|Click||||||
+30|Left Move & Click|500, 250 Left, 1|50|0|Click||||||
+31|Left Move & Click|550, 250 Left, 1|50|0|Click||||||
+32|Left Move & Click|300, 300 Left, 1|50|0|Click||||||
+33|Left Move & Click|350, 300 Left, 1|50|0|Click||||||
+34|Left Move & Click|400, 300 Left, 1|50|0|Click||||||
+35|Left Move & Click|450, 300 Left, 1|50|0|Click||||||
+36|Left Move & Click|500, 300 Left, 1|50|0|Click||||||
+37|Left Move & Click|550, 300 Left, 1|50|0|Click||||||
+38|Left Move & Click|300, 350 Left, 1|50|0|Click||||||
+39|Left Move & Click|350, 350 Left, 1|50|0|Click||||||
+40|Left Move & Click|400, 350 Left, 1|50|0|Click||||||
+41|Left Move & Click|450, 350 Left, 1|50|0|Click||||||
+42|Left Move & Click|500, 350 Left, 1|50|0|Click||||||
+43|Left Move & Click|550, 350 Left, 1|50|0|Click||||||
+44|Left Move & Click|300, 400 Left, 1|50|0|Click||||||
+45|Left Move & Click|350, 400 Left, 1|50|0|Click||||||
+46|Left Move & Click|400, 400 Left, 1|50|0|Click||||||
+47|Left Move & Click|450, 400 Left, 1|50|0|Click||||||
+48|Left Move & Click|500, 400 Left, 1|50|0|Click||||||
+49|Left Move & Click|550, 400 Left, 1|50|0|Click||||||
+50|Left Move & Click|300, 450 Left, 1|50|0|Click||||||
+51|Left Move & Click|350, 450 Left, 1|50|0|Click||||||
+52|Left Move & Click|400, 450 Left, 1|50|0|Click||||||
+53|Left Move & Click|450, 450 Left, 1|50|0|Click||||||
+54|Left Move & Click|500, 450 Left, 1|50|0|Click||||||
+55|Left Move & Click|550, 450 Left, 1|50|0|Click||||||
+56|Left Move & Click|300, 500 Left, 1|50|0|Click||||||
+57|Left Move & Click|350, 500 Left, 1|50|0|Click||||||
+58|Left Move & Click|400, 500 Left, 1|50|0|Click||||||
+59|Left Move & Click|450, 500 Left, 1|50|0|Click||||||
+60|Left Move & Click|500, 500 Left, 1|50|0|Click||||||
+61|Left Move & Click|550, 500 Left, 1|50|0|Click||||||
+62|Left Move & Click|300, 550 Left, 1|50|0|Click||||||
+63|Left Move & Click|350, 550 Left, 1|50|0|Click||||||
+64|Left Move & Click|400, 550 Left, 1|50|0|Click||||||
+65|Left Move & Click|450, 550 Left, 1|50|0|Click||||||
+66|Left Move & Click|500, 550 Left, 1|50|0|Click||||||
+67|Left Move & Click|550, 550 Left, 1|50|0|Click||||||
+
+[PMC Code v5.4.1]|1||0|Window,2,Fast,0,1,Input,-1,-1,1|1|TurboClick
+Context=None|
+Groups=Start:1
+1|Left Click|Left, 1, |50|2|Click||||||
 
