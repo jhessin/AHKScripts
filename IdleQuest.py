@@ -50,7 +50,7 @@ async def main_loop():
 				ahk.start_hotkeys()
 				is_running = True
 			if is_clicking:
-				ahk.show_tooltip('Clicking!!')
+				ahk.show_tooltip('Clicking!!',0,0)
 				ahk.click()
 			if is_moving:
 				"""TODO: Implement mouse moving here"""
