@@ -11,11 +11,12 @@ ahk = AHK(version='v2')
 
 ahk.menu_tray_icon_hide()
 
-# use the window coord mode.
-ahk.set_coord_mode('Mouse', 'Window')
-
+ACTIVE_WINDOW = 'Idlequest'
 is_clicking = False
 is_moving = False
+
+# use the window coord mode.
+ahk.set_coord_mode('Mouse', 'Window')
 
 run_once = {
 	'click_n_return': False,
@@ -23,6 +24,30 @@ run_once = {
 	'reload_level': False,
 }
 
+
+def over_window(window_title: str = ACTIVE_WINDOW):
+	"""
+	Returns True if the mouse is currently over the window with the given title.
+	"""
+	mouse_position = ahk.get_mouse_position(coord_mode='Screen')  # Returns (x, y)
+
+	# Find the window by title (partial match supported)
+	window = ahk.find_window(title=window_title)
+	if not window:
+		return False  # Window is not found
+
+	# Get the window's position and size
+	x, y, width, height = window.get_position()
+
+	# Check if the mouse coordinates are inside the window's rectangle
+	mouse_x, mouse_y = mouse_position
+	# print(f"""
+	# 	Mouse position: {mouse_x, mouse_y}
+	# 	Window position: {window.get_position()}
+	# 	""")
+	if x <= mouse_x <= x + width and y <= mouse_y <= y + height:
+		return True
+	return False
 
 def click_n_return(x: int, y: int, hotkey: str) -> None:
 	global is_clicking, is_moving, run_once
@@ -98,7 +123,7 @@ async def main_loop():
 	global is_clicking, is_moving, run_once
 	is_running = False
 	while True:
-		if ahk.win_is_active(title='Idlequest'):
+		if over_window():
 			if not is_running:
 				ahk.start_hotkeys()
 				is_running = True
@@ -109,9 +134,9 @@ async def main_loop():
 				"""TODO: Implement mouse moving here"""
 		else:
 			if is_clicking:
-				toggle_click('')
+				toggle_click('SPACE')
 			if is_moving:
-				toggle_moving('')
+				toggle_moving('SPACE')
 			if is_running:
 				ahk.stop_hotkeys()
 				is_running = False
