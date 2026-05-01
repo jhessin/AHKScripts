@@ -18,6 +18,8 @@ is_moving = False
 # use the window coord mode.
 ahk.set_coord_mode('Mouse', 'Window')
 
+is_locked = False
+
 run_once = {
 	'click_n_return': False,
 	'toggle_click': False,
@@ -36,6 +38,8 @@ def over_window(window_title: str = ACTIVE_WINDOW):
 	if not window:
 		return False  # Window is not found
 
+	window.set_always_on_top('On')
+
 	# Get the window's position and size
 	x, y, width, height = window.get_position()
 
@@ -50,9 +54,11 @@ def over_window(window_title: str = ACTIVE_WINDOW):
 	return False
 
 def click_n_return(x: int, y: int, hotkey: str) -> None:
-	global is_clicking, is_moving, run_once
-	if run_once['click_n_return']:
+	global is_clicking, is_moving, run_once, is_locked
+	if run_once['click_n_return'] or is_locked:
 		return
+	is_locked = True
+	ahk.block_input('MouseMove')
 	run_once['click_n_return'] = True
 	was_clicking = False
 	was_moving = False
@@ -71,18 +77,21 @@ def click_n_return(x: int, y: int, hotkey: str) -> None:
 		is_moving = True
 	ahk.key_wait(hotkey, logical_state=True, released=True)
 	run_once['click_n_return'] = False
+	is_locked = False
+	ahk.block_input('MouseMoveOff')
 
 
 def toggle_moving(hotkey: str):
-	global is_moving, is_clicking, run_once
+	global is_moving, is_clicking
 	is_moving = not is_moving
 	is_clicking = is_moving
 
 
 def toggle_click(hotkey: str):
-	global is_clicking, run_once
-	if run_once['toggle_click']:
+	global is_clicking, run_once, is_locked
+	if run_once['toggle_click'] or is_locked:
 		return
+	is_locked = True
 	run_once['toggle_click'] = True
 	is_clicking = not is_clicking
 	if not is_clicking:
@@ -90,6 +99,7 @@ def toggle_click(hotkey: str):
 		Timer(5, ahk.hide_tooltip).start()
 	ahk.key_wait(hotkey, logical_state=True, released=True)
 	run_once['toggle_click'] = False
+	is_locked = False
 
 
 def prev_level(hotkey: str):
@@ -101,9 +111,11 @@ def next_level(hotkey: str):
 
 
 def reload_level(hotkey: str):
-	global is_clicking, run_once
-	if run_once['reload_level']:
+	global is_clicking, run_once, is_locked
+	if run_once['reload_level'] or is_locked:
 		return
+	is_locked = True
+	ahk.block_input('MouseMove')
 	run_once['reload_level'] = True
 	was_clicking = False
 	if is_clicking:
@@ -117,10 +129,12 @@ def reload_level(hotkey: str):
 		is_clicking = True
 	ahk.key_wait(hotkey, logical_state=True, released=True)
 	run_once['reload_level'] = False
+	is_locked = False
+	ahk.block_input('MouseMoveOff')
 
 
 async def main_loop():
-	global is_clicking, is_moving, run_once
+	global is_clicking, is_moving
 	is_running = False
 	while True:
 		if over_window():
@@ -143,15 +157,13 @@ async def main_loop():
 
 
 # Assign all hotkeys here
-ahk.add_hotkey('1', callback=lambda k='1': toggle_click(k))
-ahk.add_hotkey('NUMPAD1', callback=lambda k='NUMPAD1': toggle_click(k))
-ahk.add_hotkey('space', callback=lambda k='space': toggle_click(k))
-ahk.add_hotkey('2', callback=lambda k='2': prev_level(k))
-ahk.add_hotkey('NUMPAD2', callback=lambda k='NUMPAD2': prev_level(k))
+ahk.add_hotkey('RBUTTON', callback=lambda k='RBUTTON': toggle_click(k))
+ahk.add_hotkey('1', callback=lambda k='1': prev_level(k))
+ahk.add_hotkey('LEFT', callback=lambda k='LEFT': prev_level(k))
 ahk.add_hotkey('3', callback=lambda k='3': next_level(k))
-ahk.add_hotkey('NUMPAD3', callback=lambda k='NUMPAD3': next_level(k))
-ahk.add_hotkey('4', callback=lambda k='4': reload_level(k))
-ahk.add_hotkey('NUMPAD4', callback=lambda k='NUMPAD4': reload_level(k))
+ahk.add_hotkey('RIGHT', callback=lambda k='RIGHT': next_level(k))
+ahk.add_hotkey('2', callback=lambda k='2': reload_level(k))
+ahk.add_hotkey('SPACE', callback=lambda k='SPACE': reload_level(k))
 
 # Run the main loop
 asyncio.run(main_loop())
