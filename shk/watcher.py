@@ -41,7 +41,7 @@ class Watcher:
         if not window:
             return False  # Window is not found
 
-        window.set_always_on_top("On")
+        # window.set_always_on_top("On")
 
         # Get the window's position and size
         x, y, width, height = window.get_position()

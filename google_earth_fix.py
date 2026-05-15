@@ -17,6 +17,6 @@ def test(_: str):
     ahk.hide_tooltip()
 
 
-watcher.add_hotkey("MButton", test)
+watcher.add_hotkey("MButton", disable)
 
 watcher.start()
