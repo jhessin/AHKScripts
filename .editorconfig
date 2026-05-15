@@ -1,12 +1,34 @@
-# EditorConfig is awesome: https://EditorConfig.org
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs.
+# https://editorconfig.org
 
-# top-most EditorConfig file
 root = true
 
+# Global settings for all files
 [*]
-indent_style = tab
-indent_size = 2
-end_of_line = crlf
-charset = utf-8
-trim_trailing_whitespace = true
+end_of_line = lf
 insert_final_newline = true
+trim_trailing_whitespace = true
+charset = utf-8
+indent_style = space
+indent_size = 4
+
+# Python specific settings (PEP 8 Compliant)
+[*.py]
+indent_style = space
+indent_size = 4
+max_line_length = 79
+
+# Python test, build, and configuration files
+[{*.pyi,setup.cfg,tox.ini}]
+indent_style = space
+indent_size = 4
+
+# JSON, YAML, and Markdown configuration files (Standard 2-space layout)
+[{*.json,*.yaml,*.yml,*.md}]
+indent_style = space
+indent_size = 2
+
+# Tab-separated files (like Makefiles)
+[Makefile]
+indent_style = tab
