@@ -1,6 +1,8 @@
-from typing import Callable
+from typing import Callable, Optional
 from ahk import AHK
-import asyncio
+
+# import asyncio
+import multiprocessing
 
 ahk = AHK(version="v2")
 
@@ -10,32 +12,44 @@ is_locked, is_clicking, is_moving = False, False, False
 class Watcher:
     watched_window: str
     is_running: bool = False
-    is_started: bool = False
+    process: Optional[multiprocessing.Process] = None
+    over_window_tasks: list[Callable] = []
+    not_over_window_tasks: list[Callable] = []
 
     def __init__(self, window: str) -> None:
         self.watched_window = window
 
-    def start(self):
-        if not self.is_started:
-            self.is_started = True
-            asyncio.run(self._watch())
-
     def stop(self):
-        if self.is_started:
-            self.is_started = False
+        if self.process:
+            self.process.interrupt()
+            self.process = None
 
-    async def _watch(self):
-        while self.is_started:
+    def _watch(self):
+        print("🚀 Success: Daemon started. Press Ctrl-C to quit.")
+        while True:
             if self.over_window():
                 # ahk.show_tooltip("OVER WINDOW")
+                for task in self.over_window_tasks:
+                    task()
                 if not self.is_running:
                     ahk.start_hotkeys()
                     self.is_running = True
             else:
                 # ahk.show_tooltip("NOT OVER WINDOW")
+                for task in self.not_over_window_tasks:
+                    task()
                 if self.is_running:
                     ahk.stop_hotkeys()
                     self.is_running = False
+
+    def start(self):
+        """
+        Entry point for the background process to host the async loop.
+        """
+        try:
+            self._watch()
+        except KeyboardInterrupt:
+            print("Interrupted - closing.")
 
     def over_window(self):
         """

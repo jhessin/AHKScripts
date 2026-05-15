@@ -2,7 +2,6 @@
 This is a clicking helper for idle quest.
 """
 
-import asyncio
 from threading import Timer
 
 from shk.watcher import ahk, Watcher
@@ -67,27 +66,19 @@ def reload_level(hotkey: str):
     ahk.block_input("MouseMoveOff")
 
 
-async def main_loop():
-    global is_clicking, is_moving
-    is_running = False
-    while True:
-        if watcher.over_window():
-            if not is_running:
-                ahk.start_hotkeys()
-                is_running = True
-            if is_clicking:
-                ahk.show_tooltip("Clicking!!", 0, 0)
-                ahk.click()
-            if is_moving:
-                """TODO: Implement mouse moving here"""
-        else:
-            if is_clicking:
-                toggle_click("SPACE")
-            if is_moving:
-                toggle_moving("SPACE")
-            if is_running:
-                ahk.stop_hotkeys()
-                is_running = False
+def active_tasks():
+    if is_clicking:
+        ahk.show_tooltip("Clicking!!", 0, 0)
+        ahk.click()
+    if is_moving:
+        """TODO: Implement mouse moving here"""
+
+
+def inactive_tasks():
+    if is_clicking:
+        toggle_click("SPACE")
+    if is_moving:
+        toggle_moving("SPACE")
 
 
 # Assign all hotkeys here
@@ -100,4 +91,6 @@ watcher.add_hotkey("2", reload_level)
 watcher.add_hotkey("SPACE", reload_level)
 
 # Run the main loop
-asyncio.run(main_loop())
+watcher.over_window_tasks.append(active_tasks)
+watcher.not_over_window_tasks.append(inactive_tasks)
+watcher.start()
