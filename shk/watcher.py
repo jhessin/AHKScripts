@@ -10,15 +10,22 @@ is_locked, is_clicking, is_moving = False, False, False
 class Watcher:
     watched_window: str
     is_running: bool = False
+    is_started: bool = False
 
     def __init__(self, window: str) -> None:
         self.watched_window = window
 
     def start(self):
-        asyncio.run(self._watch())
+        if not self.is_started:
+            self.is_started = True
+            asyncio.run(self._watch())
+
+    def stop(self):
+        if self.is_started:
+            self.is_started = False
 
     async def _watch(self):
-        while True:
+        while self.is_started:
             if self.over_window():
                 # ahk.show_tooltip("OVER WINDOW")
                 if not self.is_running:
