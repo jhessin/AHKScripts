@@ -1,22 +1,22 @@
-from typing import Callable, Optional
+from typing import Callable
 from ahk import AHK
 
 # import asyncio
 import multiprocessing
 
-ahk = AHK(version="v2")
+ahk: AHK = AHK(version="v2")
 
 is_locked, is_clicking, is_moving = False, False, False
 
 
 class Watcher:
-    watched_window: str
+    watched_window: str | None = None
     is_running: bool = False
-    process: Optional[multiprocessing.Process] = None
+    process: multiprocessing.Process | None = None
     over_window_tasks: list[Callable] = []
     not_over_window_tasks: list[Callable] = []
 
-    def __init__(self, window: str) -> None:
+    def __init__(self, window: str | None = None) -> None:
         self.watched_window = window
 
     def stop(self):
@@ -58,9 +58,12 @@ class Watcher:
         mouse_position = ahk.get_mouse_position(coord_mode="Screen")  # Returns (x, y)
 
         # Find the window by title (partial match supported)
-        window = ahk.find_window(title=self.watched_window)
-        if not window:
-            return False  # Window is not found
+        if self.watched_window:
+            window = ahk.find_window(title=self.watched_window)
+            if not window:
+                return False  # Window is not found
+        else:
+            return True  # Window watching disabled
 
         # window.set_always_on_top("On")
 
@@ -73,12 +76,10 @@ class Watcher:
         # 		Mouse position: {mouse_x, mouse_y}
         # 		Window position: {window.get_position()}
         # 		""")
-        if x <= mouse_x <= x + width and y <= mouse_y <= y + height:
-            return True
-        return False
+        return x <= mouse_x <= x + width and y <= mouse_y <= y + height
 
     def click_n_return(self, x: int, y: int, hotkey: str) -> None:
-        global is_clicking, is_moving, run_once, is_locked
+        global is_clicking, is_moving, is_locked
         if is_locked:
             return
         is_locked = True

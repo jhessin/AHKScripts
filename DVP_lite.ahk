@@ -105,3 +105,6 @@ SC051::Numpad9
 +SC051:::
 +SC052::\
 +SC053::;
+
+; Temporary remap for data entry
+; SC053::,
