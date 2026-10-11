@@ -1,10 +1,10 @@
-from typing import Callable, Optional
-from ahk import AHK
-
 # import asyncio
 import multiprocessing
+from typing import Callable, Optional
 
-ahk = AHK(version="v2")
+from ahk import AHK
+
+ahk = AHK(version='v2')
 
 is_locked, is_clicking, is_moving = False, False, False
 
@@ -25,7 +25,7 @@ class Watcher:
             self.process = None
 
     def _watch(self):
-        print("🚀 Success: Daemon started. Press Ctrl-C to quit.")
+        print('🚀 Success: Daemon started. Press Ctrl-C to quit.')
         while True:
             if self.over_window():
                 # ahk.show_tooltip("OVER WINDOW")
@@ -49,13 +49,13 @@ class Watcher:
         try:
             self._watch()
         except KeyboardInterrupt:
-            print("Interrupted - closing.")
+            print('Interrupted - closing.')
 
     def over_window(self):
         """
         Returns True if the mouse is currently over the window with the given title.
         """
-        mouse_position = ahk.get_mouse_position(coord_mode="Screen")  # Returns (x, y)
+        mouse_position = ahk.get_mouse_position(coord_mode='Screen')  # Returns (x, y)
 
         # Find the window by title (partial match supported)
         window = ahk.find_window(title=self.watched_window)
@@ -82,7 +82,7 @@ class Watcher:
         if is_locked:
             return
         is_locked = True
-        ahk.block_input("MouseMove")
+        ahk.block_input('MouseMove')
         was_clicking = False
         was_moving = False
         if is_clicking:
@@ -92,7 +92,7 @@ class Watcher:
             is_moving = False
             was_moving = True
         home = ahk.get_mouse_position()
-        ahk.click(x, y, "left")
+        ahk.click(x, y, 'left')
         ahk.mouse_position = home.x, home.y
         if was_clicking:
             is_clicking = True
@@ -100,7 +100,7 @@ class Watcher:
             is_moving = True
         ahk.key_wait(hotkey, logical_state=True, released=True)
         is_locked = False
-        ahk.block_input("MouseMoveOff")
+        ahk.block_input('MouseMoveOff')
 
     def add_hotkey(self, key: str, callback: Callable[[str], None]):
         ahk.add_hotkey(key, callback=lambda k=key: callback(k))
