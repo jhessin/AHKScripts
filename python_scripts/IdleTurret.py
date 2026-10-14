@@ -78,22 +78,36 @@ def click_all(key: str):
 
 def focus_loop(key: str):
     click_retry(key)
-    click1(key)
-    click_all(key)
     click3(key)
     click_all(key)
+    if not is_clicking:
+        return
+    click23(key)
+    click_all(key)
+    if not is_clicking:
+        return
+    click25(key)
+    click_all(key)
+    if not is_clicking:
+        return
+    click1(key)
+    click_all(key)
+    if not is_clicking:
+        return
     click5(key)
     click_all(key)
+    if not is_clicking:
+        return
 
     click_tower(key)
     click_all(key)
+    if not is_clicking:
+        return
 
     click21(key)
     click_all(key)
-    click23(key)
-    click_all(key)
-    click25(key)
-    click_all(key)
+    if not is_clicking:
+        return
 
 
 def full_loop(key: str):
