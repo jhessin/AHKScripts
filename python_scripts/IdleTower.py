@@ -50,6 +50,23 @@ def click_retry(key: str):
 
 
 def main_loop(key: str):
+    full_loop(key)
+
+
+def focus_loop(key: str):
+    click_retry(key)
+    click_attack(key)
+    click_one(key)
+    click_defense(key)
+    click_three(key)
+    click_utility(key)
+    click_one(key)
+    click_two(key)
+    click_three(key)
+    click_four(key)
+
+
+def full_loop(key: str):
     click_retry(key)
     click_attack(key)
     click_one(key)
