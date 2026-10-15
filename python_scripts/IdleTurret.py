@@ -16,102 +16,167 @@ ahk.set_coord_mode('Mouse', 'Window')
 
 is_locked = False
 
-
-def click_damage(key: str):
-    watcher.click_n_return(891, 846, key)
-
-
-def click_attk_spd(key: str):
-    watcher.click_n_return(1195, 847, key)
-
-
-def click_range(key: str):
-    watcher.click_n_return(892, 935, key)
-
-
-def click_rot_spd(key: str):
-    watcher.click_n_return(1196, 934, key)
+ROW1 = 450
+ROW2 = ROW1 + 50
+ROW3 = ROW2 + 50
+ROW4 = ROW3 + 50
+ROW5 = ROW4 + 50
+COL1 = 875
+COL2 = COL1 + 50
+COL3 = COL2 + 50
+COL4 = COL3 + 50
+COL5 = COL4 + 50
 
 
-def click_retry(key: str):
-    watcher.click_n_return(852, 773, key)
+def scroll_down():
+    watcher.drag(965, 982, 965, 700)
 
 
-def click1(key: str):
-    watcher.click_n_return(868, 445, key)
+def scroll_up():
+    watcher.drag(964, 830, 965, 1050)
 
 
-def click3(key: str):
-    watcher.click_n_return(959, 445, key)
+def click_damage():
+    watcher.click_n_return(891, 846)
 
 
-def click5(key: str):
-    watcher.click_n_return(1049, 450, key)
+def click_attk_spd():
+    watcher.click_n_return(1195, 847)
 
 
-def click_tower(key: str):
-    watcher.click_n_return(965, 539, key)
+def click_range():
+    watcher.click_n_return(892, 935)
 
 
-def click21(key: str):
-    watcher.click_n_return(870, 624, key)
+def click_rot_spd():
+    watcher.click_n_return(1196, 934)
 
 
-def click23(key: str):
-    watcher.click_n_return(959, 624, key)
+def click_retry():
+    watcher.click_n_return(852, 773)
 
 
-def click25(key: str):
-    watcher.click_n_return(1045, 624, key)
+def cell1_1():
+    watcher.click_n_return(COL1, ROW1)
 
 
-def main_loop(key: str):
-    focus_loop(key)
+def cell1_2():
+    watcher.click_n_return(COL2, ROW1)
 
 
-def click_all(key: str):
-    click_damage(key)
-    click_attk_spd(key)
-    click_range(key)
-    click_rot_spd(key)
+def cell1_3():
+    watcher.click_n_return(COL3, ROW1)
 
 
-def focus_loop(key: str):
-    click_retry(key)
-    click3(key)
-    click_all(key)
+def cell1_4():
+    watcher.click_n_return(COL4, ROW1)
+
+
+def cell1_5():
+    watcher.click_n_return(COL5, ROW1)
+
+
+def cell2_1():
+    watcher.click_n_return(COL1, ROW2)
+
+
+def cell2_2():
+    watcher.click_n_return(COL2, ROW2)
+
+
+def cell2_3():
+    watcher.click_n_return(COL3, ROW2)
+
+
+def cell2_4():
+    watcher.click_n_return(COL4, ROW2)
+
+
+def cell2_5():
+    watcher.click_n_return(COL5, ROW2)
+
+
+def cell3_1():
+    watcher.click_n_return(COL1, ROW3)
+
+
+def cell3_2():
+    watcher.click_n_return(COL2, ROW3)
+
+
+def cell3_3():
+    watcher.click_n_return(COL3, ROW3)
+
+
+click_tower = cell3_3
+
+
+def cell3_4():
+    watcher.click_n_return(COL4, ROW3)
+
+
+def cell5_1():
+    watcher.click_n_return(COL1, ROW5)
+
+
+def cell5_3():
+    watcher.click_n_return(COL3, ROW5)
+
+
+def cell5_5():
+    watcher.click_n_return(COL5, ROW5)
+
+
+def main_loop():
+    focus_loop()
+
+
+def click_all():
+    scroll_down()
+    click_damage()
+    click_attk_spd()
+    click_range()
+    click_rot_spd()
     if not is_clicking:
         return
-    click23(key)
-    click_all(key)
+    scroll_up()
+    click_damage()
+    click_attk_spd()
+    click_range()
+    click_rot_spd()
+
+
+def tower_loop():
+    click_retry()
+
+    click_tower()
+    click_all()
+
+
+def focus_loop():
+    click_retry()
+
+    cell1_1()
+    click_all()
     if not is_clicking:
         return
-    click25(key)
-    click_all(key)
+    cell1_5()
+    click_all()
     if not is_clicking:
         return
-    click1(key)
-    click_all(key)
-    if not is_clicking:
-        return
-    click5(key)
-    click_all(key)
+    cell2_3()
+    click_all()
     if not is_clicking:
         return
 
-    click_tower(key)
-    click_all(key)
-    if not is_clicking:
-        return
-
-    click21(key)
-    click_all(key)
+    click_tower()
+    click_all()
     if not is_clicking:
         return
 
 
-def full_loop(key: str):
-    click_retry(key)
+def full_loop():
+    click_retry()
 
 
 def toggle_click(hotkey: str):
@@ -130,7 +195,7 @@ def toggle_click(hotkey: str):
 def active_tasks():
     if is_clicking:
         ahk.show_tooltip('Clicking!!', 0, 0)
-        main_loop('SPACE')
+        main_loop()
 
 
 def inactive_tasks():

@@ -77,7 +77,7 @@ class Watcher:
             return True
         return False
 
-    def click_n_return(self, x: int, y: int, hotkey: str) -> None:
+    def click_n_return(self, x: int, y: int, hotkey: str = '') -> None:
         global is_clicking, is_moving, run_once, is_locked
         if is_locked:
             return
@@ -98,7 +98,44 @@ class Watcher:
             is_clicking = True
         if was_moving:
             is_moving = True
-        ahk.key_wait(hotkey, logical_state=True, released=True)
+        if hotkey != '':
+            ahk.key_wait(hotkey, logical_state=True, released=True)
+        is_locked = False
+        ahk.block_input('MouseMoveOff')
+
+    def drag(
+        self,
+        start_x: int,
+        start_y: int,
+        end_x: int,
+        end_y: int,
+        *,
+        speed: int = 15,
+        hotkey: str = '',
+    ) -> None:
+        global is_clicking, is_moving, run_once, is_locked
+        if is_locked:
+            return
+        is_locked = True
+        ahk.block_input('MouseMove')
+        was_clicking = False
+        was_moving = False
+        if is_clicking:
+            was_clicking = True
+            is_clicking = False
+        if is_moving:
+            is_moving = False
+            was_moving = True
+        home = ahk.get_mouse_position()
+        ahk.mouse_move(start_x, start_y)
+        ahk.mouse_drag(end_x, end_y, from_position=(start_x, start_y), speed=speed)
+        ahk.mouse_position = home.x, home.y
+        if was_clicking:
+            is_clicking = True
+        if was_moving:
+            is_moving = True
+        if hotkey != '':
+            ahk.key_wait(hotkey, logical_state=True, released=True)
         is_locked = False
         ahk.block_input('MouseMoveOff')
 
