@@ -21,7 +21,7 @@ ROW2 = ROW1 + 50
 ROW3 = ROW2 + 50
 ROW4 = ROW3 + 50
 ROW5 = ROW4 + 50
-COL1 = 875
+COL1 = 850
 COL2 = COL1 + 50
 COL3 = COL2 + 50
 COL4 = COL3 + 50
@@ -36,19 +36,19 @@ def scroll_up():
     watcher.drag(964, 830, 965, 1050)
 
 
-def click_damage():
+def upgrade1():
     watcher.click_n_return(891, 846)
 
 
-def click_attk_spd():
+def upgrade2():
     watcher.click_n_return(1195, 847)
 
 
-def click_range():
+def upgrade3():
     watcher.click_n_return(892, 935)
 
 
-def click_rot_spd():
+def upgrade4():
     watcher.click_n_return(1196, 934)
 
 
@@ -127,23 +127,39 @@ def cell5_5():
     watcher.click_n_return(COL5, ROW5)
 
 
+# The Main Loop that is run is selected here.
 def main_loop():
-    focus_loop()
+    coin_loop()
 
 
-def click_all():
-    scroll_down()
-    click_damage()
-    click_attk_spd()
-    click_range()
-    click_rot_spd()
+def click_all() -> bool:
     if not is_clicking:
-        return
+        return True
+    scroll_down()
+    upgrade1()
+    upgrade2()
+    upgrade3()
+    upgrade4()
+    if not is_clicking:
+        return True
     scroll_up()
-    click_damage()
-    click_attk_spd()
-    click_range()
-    click_rot_spd()
+    upgrade1()
+    upgrade2()
+    upgrade3()
+    upgrade4()
+    if not is_clicking:
+        return True
+    return False
+
+
+def coin_loop():
+    click_retry()
+    click_tower()
+    upgrade2()
+    upgrade3()
+    scroll_down()
+    upgrade2()
+    upgrade3()
 
 
 def tower_loop():
@@ -156,23 +172,27 @@ def tower_loop():
 def focus_loop():
     click_retry()
 
-    cell1_1()
-    click_all()
-    if not is_clicking:
-        return
-    cell1_5()
-    click_all()
-    if not is_clicking:
-        return
-    cell2_3()
-    click_all()
-    if not is_clicking:
+    click_tower()
+    if click_all():
         return
 
-    click_tower()
-    click_all()
-    if not is_clicking:
+    cell1_1()
+    if click_all():
         return
+    cell1_2()
+    if click_all():
+        return
+    cell1_4()
+    if click_all():
+        return
+    cell1_5()
+    if click_all():
+        return
+    cell2_3()
+    if click_all():
+        return
+    cell5_3()
+    click_all()
 
 
 def full_loop():
