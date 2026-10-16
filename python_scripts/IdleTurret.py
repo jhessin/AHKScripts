@@ -27,6 +27,9 @@ COL3 = COL2 + 50
 COL4 = COL3 + 50
 COL5 = COL4 + 50
 
+TOGGLE_KEY = 'F3'
+CLICK_ALL_KEY = 'SPACE'
+
 
 def scroll_down():
     watcher.drag(965, 982, 965, 700)
@@ -129,74 +132,87 @@ def cell5_5():
 
 # The Main Loop that is run is selected here.
 def main_loop():
+    click_retry()
     coin_loop()
 
 
-def click_all() -> bool:
+def click_all(hotkey: str = '') -> None:
+    global is_clicking
+    was_clicking = is_clicking
+    if hotkey != '':
+        is_clicking = True
     if not is_clicking:
-        return True
+        return
     scroll_down()
     upgrade1()
     upgrade2()
     upgrade3()
     upgrade4()
     if not is_clicking:
-        return True
+        return
     scroll_up()
     upgrade1()
     upgrade2()
     upgrade3()
     upgrade4()
     if not is_clicking:
-        return True
-    return False
+        return
+    if hotkey != '':
+        is_clicking = was_clicking
 
 
 def coin_loop():
-    click_retry()
     click_tower()
+    upgrade1()
     upgrade2()
-    upgrade3()
+    upgrade4()
     scroll_down()
+    upgrade1()
     upgrade2()
     upgrade3()
 
 
 def tower_loop():
-    click_retry()
 
     click_tower()
     click_all()
 
 
 def focus_loop():
-    click_retry()
 
     click_tower()
-    if click_all():
+    click_all()
+    if not is_clicking:
         return
 
     cell1_1()
-    if click_all():
+    click_all()
+    if not is_clicking:
         return
     cell1_2()
-    if click_all():
+    click_all()
+    if not is_clicking:
         return
     cell1_4()
-    if click_all():
+    click_all()
+    if not is_clicking:
         return
     cell1_5()
-    if click_all():
+    click_all()
+    if not is_clicking:
         return
     cell2_3()
-    if click_all():
+    click_all()
+    if not is_clicking:
         return
     cell5_3()
     click_all()
+    if not is_clicking:
+        return
 
 
 def full_loop():
-    click_retry()
+    pass
 
 
 def toggle_click(hotkey: str):
@@ -220,11 +236,12 @@ def active_tasks():
 
 def inactive_tasks():
     if is_clicking:
-        toggle_click('SPACE')
+        toggle_click(TOGGLE_KEY)
 
 
 # Assign all hotkeys here
-watcher.add_hotkey('SPACE', toggle_click)
+watcher.add_hotkey(TOGGLE_KEY, toggle_click)
+watcher.add_hotkey(CLICK_ALL_KEY, click_all)
 
 # Run the main loop
 watcher.over_window_tasks.append(active_tasks)
