@@ -17,15 +17,20 @@ ahk.set_coord_mode('Mouse', 'Window')
 is_locked = False
 
 ROW1 = 450
-ROW2 = ROW1 + 50
-ROW3 = ROW2 + 50
-ROW4 = ROW3 + 50
-ROW5 = ROW4 + 50
-COL1 = 850
-COL2 = COL1 + 50
-COL3 = COL2 + 50
-COL4 = COL3 + 50
-COL5 = COL4 + 50
+ROW2 = 498
+ROW3 = 542
+ROW4 = 591
+ROW5 = 636
+COL1 = 875
+COL2 = 923
+COL3 = 964
+COL4 = 1015
+COL5 = 1048
+
+UP_COL1 = 900
+UP_COL2 = 1205
+UP_ROW1 = 854
+UP_ROW2 = 941
 
 TOGGLE_KEY = 'F3'
 CLICK_ALL_KEY = 'SPACE'
@@ -39,20 +44,20 @@ def scroll_up():
     watcher.drag(964, 830, 965, 1050)
 
 
-def upgrade1():
-    watcher.click_n_return(891, 846)
+def upgrade1_1():
+    watcher.click_n_return(UP_COL1, UP_ROW1)
 
 
-def upgrade2():
-    watcher.click_n_return(1195, 847)
+def upgrade1_2():
+    watcher.click_n_return(UP_COL2, UP_ROW1)
 
 
-def upgrade3():
-    watcher.click_n_return(892, 935)
+def upgrade2_1():
+    watcher.click_n_return(UP_COL1, UP_ROW2)
 
 
-def upgrade4():
-    watcher.click_n_return(1196, 934)
+def upgrade2_2():
+    watcher.click_n_return(UP_COL2, UP_ROW2)
 
 
 def click_retry():
@@ -118,12 +123,44 @@ def cell3_4():
     watcher.click_n_return(COL4, ROW3)
 
 
+def cell3_5():
+    watcher.click_n_return(COL5, ROW3)
+
+
+def cell4_1():
+    watcher.click_n_return(COL1, ROW4)
+
+
+def cell4_2():
+    watcher.click_n_return(COL2, ROW4)
+
+
+def cell4_3():
+    watcher.click_n_return(COL3, ROW4)
+
+
+def cell4_4():
+    watcher.click_n_return(COL4, ROW4)
+
+
+def cell4_5():
+    watcher.click_n_return(COL5, ROW4)
+
+
 def cell5_1():
     watcher.click_n_return(COL1, ROW5)
 
 
+def cell5_2():
+    watcher.click_n_return(COL2, ROW5)
+
+
 def cell5_3():
     watcher.click_n_return(COL3, ROW5)
+
+
+def cell5_4():
+    watcher.click_n_return(COL4, ROW5)
 
 
 def cell5_5():
@@ -132,44 +169,53 @@ def cell5_5():
 
 # The Main Loop that is run is selected here.
 def main_loop():
+    watcher.activate_window()
     click_retry()
-    coin_loop()
+    # focus_loop()
+    # finish_loop()
 
 
-def click_all(hotkey: str = '') -> None:
-    global is_clicking
-    was_clicking = is_clicking
+def click_all(hotkey: str = '', scroll: bool = False) -> None:
+
+    def click_upgrades():
+        watcher.activate_window()
+        if scroll:
+            scroll_down()
+        upgrade1_1()
+        upgrade1_2()
+        upgrade2_1()
+        upgrade2_2()
+        if scroll:
+            scroll_up()
+        upgrade1_1()
+        upgrade1_2()
+        upgrade2_1()
+        upgrade2_2()
+
+    global is_locked
+    if is_locked:
+        return
+    is_locked = True
     if hotkey != '':
-        is_clicking = True
-    if not is_clicking:
-        return
-    scroll_down()
-    upgrade1()
-    upgrade2()
-    upgrade3()
-    upgrade4()
-    if not is_clicking:
-        return
-    scroll_up()
-    upgrade1()
-    upgrade2()
-    upgrade3()
-    upgrade4()
-    if not is_clicking:
-        return
+        while ahk.key_state(hotkey, mode='P'):
+            click_upgrades()
+    else:
+        click_upgrades()
+
     if hotkey != '':
-        is_clicking = was_clicking
+        ahk.key_wait(hotkey, logical_state=True, released=True)
+    is_locked = False
 
 
 def coin_loop():
     click_tower()
-    upgrade1()
-    upgrade2()
-    upgrade4()
+    upgrade1_1()
+    upgrade1_2()
+    upgrade2_2()
     scroll_down()
-    upgrade1()
-    upgrade2()
-    upgrade3()
+    upgrade1_1()
+    upgrade1_2()
+    upgrade2_1()
 
 
 def tower_loop():
@@ -178,37 +224,57 @@ def tower_loop():
     click_all()
 
 
-def focus_loop():
+def finish_loop():
+    cell4_3()
+    # cell4_3()
+    # upgrade2_2()
+    click_all()
 
+
+def simple_loop():
     click_tower()
     click_all()
     if not is_clicking:
         return
 
-    cell1_1()
+    cell4_3()
+    # cell4_3()
+    # upgrade2_2()
     click_all()
-    if not is_clicking:
-        return
+
+
+def click_common():
     cell1_2()
     click_all()
     if not is_clicking:
         return
+    click_retry()
     cell1_4()
     click_all()
     if not is_clicking:
         return
-    cell1_5()
+    click_retry()
+    cell5_2()
     click_all()
     if not is_clicking:
         return
-    cell2_3()
+    click_retry()
+    cell5_4()
     click_all()
     if not is_clicking:
         return
-    cell5_3()
-    click_all()
+    click_retry()
+
+
+def focus_loop():
+
+    cell4_3()
+    # click_all()
+    upgrade2_1()
+    upgrade2_2()
     if not is_clicking:
         return
+    click_retry()
 
 
 def full_loop():

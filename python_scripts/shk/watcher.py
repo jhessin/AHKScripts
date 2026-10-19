@@ -51,6 +51,13 @@ class Watcher:
         except KeyboardInterrupt:
             print('Interrupted - closing.')
 
+    def activate_window(self):
+        # Find the window by title (partial match supported)
+        window = ahk.find_window(title=self.watched_window)
+        if not window:
+            return
+        window.activate()
+
     def over_window(self):
         """
         Returns True if the mouse is currently over the window with the given title.

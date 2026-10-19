@@ -16,6 +16,9 @@ ahk.set_coord_mode('Mouse', 'Window')
 
 is_locked = False
 
+TOGGLE_KEY = 'F3'
+CLICK_ALL_KEY = 'SPACE'
+
 
 def click_attack(key: str):
     watcher.click_n_return(793, 1048, key)
@@ -66,6 +69,13 @@ def focus_loop(key: str):
     click_four(key)
 
 
+def click_all(key: str = '') -> None:
+    click_one(key)
+    click_two(key)
+    click_three(key)
+    click_four(key)
+
+
 def full_loop(key: str):
     click_retry(key)
     click_attack(key)
@@ -101,16 +111,17 @@ def toggle_click(hotkey: str):
 def active_tasks():
     if is_clicking:
         ahk.show_tooltip('Clicking!!', 0, 0)
-        main_loop('SPACE')
+        main_loop(TOGGLE_KEY)
 
 
 def inactive_tasks():
     if is_clicking:
-        toggle_click('SPACE')
+        toggle_click(TOGGLE_KEY)
 
 
 # Assign all hotkeys here
-watcher.add_hotkey('SPACE', toggle_click)
+watcher.add_hotkey(TOGGLE_KEY, toggle_click)
+watcher.add_hotkey(CLICK_ALL_KEY, click_all)
 
 # Run the main loop
 watcher.over_window_tasks.append(active_tasks)
