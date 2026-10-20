@@ -171,6 +171,10 @@ def cell5_5():
 def main_loop():
     watcher.activate_window()
     click_retry()
+
+    cell4_3()
+    upgrade1_2()
+    # click_all()
     # focus_loop()
     # finish_loop()
 
