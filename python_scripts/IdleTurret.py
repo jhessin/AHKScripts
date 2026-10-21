@@ -33,7 +33,8 @@ UP_ROW1 = 854
 UP_ROW2 = 941
 
 TOGGLE_KEY = 'F3'
-CLICK_ALL_KEY = 'SPACE'
+CLICK_ALL_KEY = 'F4'
+TURBO_KEY = 'SPACE'
 
 
 def scroll_down():
@@ -172,10 +173,7 @@ def main_loop():
     watcher.activate_window()
     click_retry()
 
-    cell4_3()
-    upgrade1_2()
-    # click_all()
-    # focus_loop()
+    focus_loop()
     # finish_loop()
 
 
@@ -197,17 +195,28 @@ def click_all(hotkey: str = '', scroll: bool = False) -> None:
         upgrade2_2()
 
     global is_locked
-    if is_locked:
-        return
-    is_locked = True
     if hotkey != '':
+        if is_locked:
+            return
+        is_locked = True
         while ahk.key_state(hotkey, mode='P'):
             click_upgrades()
+        ahk.key_wait(hotkey, logical_state=True, released=True)
+        is_locked = False
     else:
         click_upgrades()
 
+
+def turbo_click(hotkey: str = '') -> None:
+    global is_locked
+    if is_locked:
+        return
     if hotkey != '':
+        while ahk.key_state(hotkey, mode='P'):
+            ahk.click()
+
         ahk.key_wait(hotkey, logical_state=True, released=True)
+
     is_locked = False
 
 
@@ -272,13 +281,16 @@ def click_common():
 
 def focus_loop():
 
-    cell4_3()
+    cell5_2()
     # click_all()
-    upgrade2_1()
-    upgrade2_2()
+    upgrade1_2()
     if not is_clicking:
         return
-    click_retry()
+    cell5_4()
+    # click_all()
+    upgrade1_2()
+    if not is_clicking:
+        return
 
 
 def full_loop():
@@ -312,6 +324,7 @@ def inactive_tasks():
 # Assign all hotkeys here
 watcher.add_hotkey(TOGGLE_KEY, toggle_click)
 watcher.add_hotkey(CLICK_ALL_KEY, click_all)
+watcher.add_hotkey(TURBO_KEY, turbo_click)
 
 # Run the main loop
 watcher.over_window_tasks.append(active_tasks)

@@ -99,7 +99,7 @@ class Watcher:
             is_moving = False
             was_moving = True
         home = ahk.get_mouse_position()
-        ahk.click(x, y, 'left')
+        ahk.click(x, y)
         ahk.mouse_position = home.x, home.y
         if was_clicking:
             is_clicking = True
