@@ -8,11 +8,11 @@ from shk.watcher import Watcher, ahk
 
 ahk.menu_tray_icon_hide()
 
-watcher = Watcher('Idle Turret Tower Defense - Grillbrick')
+watcher = Watcher("Idle Turret Tower Defense - Grillbrick")
 is_clicking = False
 
 # use the window coord mode.
-ahk.set_coord_mode('Mouse', 'Window')
+ahk.set_coord_mode("Mouse", "Window")
 
 is_locked = False
 
@@ -32,9 +32,9 @@ UP_COL2 = 1205
 UP_ROW1 = 854
 UP_ROW2 = 941
 
-TOGGLE_KEY = 'F3'
-CLICK_ALL_KEY = 'F4'
-TURBO_KEY = 'SPACE'
+TOGGLE_KEY = "F3"
+CLICK_ALL_KEY = "F4"
+TURBO_KEY = "SPACE"
 
 
 def scroll_down():
@@ -177,7 +177,7 @@ def main_loop():
     # finish_loop()
 
 
-def click_all(hotkey: str = '', scroll: bool = False) -> None:
+def click_all(hotkey: str = "", scroll: bool = False) -> None:
 
     def click_upgrades():
         watcher.activate_window()
@@ -195,11 +195,11 @@ def click_all(hotkey: str = '', scroll: bool = False) -> None:
         upgrade2_2()
 
     global is_locked
-    if hotkey != '':
+    if hotkey != "":
         if is_locked:
             return
         is_locked = True
-        while ahk.key_state(hotkey, mode='P'):
+        while ahk.key_state(hotkey, mode="P"):
             click_upgrades()
         ahk.key_wait(hotkey, logical_state=True, released=True)
         is_locked = False
@@ -207,12 +207,12 @@ def click_all(hotkey: str = '', scroll: bool = False) -> None:
         click_upgrades()
 
 
-def turbo_click(hotkey: str = '') -> None:
+def turbo_click(hotkey: str = "") -> None:
     global is_locked
     if is_locked:
         return
-    if hotkey != '':
-        while ahk.key_state(hotkey, mode='P'):
+    if hotkey != "":
+        while ahk.key_state(hotkey, mode="P"):
             ahk.click()
 
         ahk.key_wait(hotkey, logical_state=True, released=True)
@@ -281,14 +281,19 @@ def click_common():
 
 def focus_loop():
 
-    cell5_2()
-    # click_all()
-    upgrade1_2()
+    cell3_2()
+    click_all()
+    # upgrade1_2()
     if not is_clicking:
         return
-    cell5_4()
-    # click_all()
-    upgrade1_2()
+    click_tower()
+    click_all()
+    # upgrade1_2()
+    if not is_clicking:
+        return
+    cell3_4()
+    click_all()
+    # upgrade1_2()
     if not is_clicking:
         return
 
@@ -304,7 +309,7 @@ def toggle_click(hotkey: str):
     is_locked = True
     is_clicking = not is_clicking
     if not is_clicking:
-        ahk.show_tooltip('stopped clicking!', 0, 0)
+        ahk.show_tooltip("stopped clicking!", 0, 0)
         Timer(5, ahk.hide_tooltip).start()
     ahk.key_wait(hotkey, logical_state=True, released=True)
     is_locked = False
@@ -312,7 +317,7 @@ def toggle_click(hotkey: str):
 
 def active_tasks():
     if is_clicking:
-        ahk.show_tooltip('Clicking!!', 0, 0)
+        ahk.show_tooltip("Clicking!!", 0, 0)
         main_loop()
 
 
