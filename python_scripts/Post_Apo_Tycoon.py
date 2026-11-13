@@ -61,7 +61,7 @@ def inactive_tasks():
 # Assign all hotkeys here
 watcher.add_hotkey("RBUTTON", toggle_click)
 watcher.add_hotkey("SPACE", add_target)
-watcher.add_hotkey("^SPACE", clear_targets)
+watcher.add_hotkey("MBUTTON", clear_targets)
 
 # Run the main loop
 watcher.over_window_tasks.append(active_tasks)
