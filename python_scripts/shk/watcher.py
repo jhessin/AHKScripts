@@ -10,14 +10,12 @@ is_locked, is_clicking, is_moving = False, False, False
 
 
 class Watcher:
-    watched_window: str
-    is_running: bool = False
-    process: multiprocessing.Process | None = None
-    over_window_tasks: list[Callable] = []
-    not_over_window_tasks: list[Callable] = []
-
-    def __init__(self, window: str) -> None:
-        self.watched_window = window
+    def __init__(self, window: str | None = None) -> None:
+        self.watched_window: str | None = window
+        self.is_running: bool = False
+        self.process: multiprocessing.Process | None = None
+        self.over_window_tasks: list[Callable] = []
+        self.not_over_window_tasks: list[Callable] = []
 
     def stop(self):
         if self.process:
@@ -52,16 +50,23 @@ class Watcher:
             print("Interrupted - closing.")
 
     def activate_window(self):
+        if self.watched_window is None:
+            return
         # Find the window by title (partial match supported)
         window = ahk.find_window(title=self.watched_window)
         if not window:
             return
         window.activate()
 
-    def over_window(self):
+    def over_window(self) -> bool:
         """
         Returns True if the mouse is currently over the window with the given title.
+        Also returns True if there is no title provided
         """
+
+        if self.watched_window is None:
+            return True
+
         mouse_position = ahk.get_mouse_position(coord_mode="Screen")  # Returns (x, y)
 
         # Find the window by title (partial match supported)
@@ -80,9 +85,7 @@ class Watcher:
         # 		Mouse position: {mouse_x, mouse_y}
         # 		Window position: {window.get_position()}
         # 		""")
-        if x <= mouse_x <= x + width and y <= mouse_y <= y + height:
-            return True
-        return False
+        return x <= mouse_x <= x + width and y <= mouse_y <= y + height
 
     def click_n_return(self, x: int, y: int, hotkey: str = "") -> None:
         if hotkey != "":
@@ -125,7 +128,7 @@ class Watcher:
         speed: int = 15,
         hotkey: str = "",
     ) -> None:
-        global is_clicking, is_moving, run_once, is_locked
+        global is_clicking, is_moving, is_locked
         if is_locked:
             return
         is_locked = True
